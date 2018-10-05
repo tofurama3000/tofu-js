@@ -1,15 +1,4 @@
-export function isFunction(param: any) {
-  return typeof param === 'function';
-}
-
-export function isUndefined(param: any) {
-  return typeof param === 'undefined';
-}
-
-export function isNull(param: any) {
-  return param === null;
-}
-
-export function isNil(param: any) {
-  return isNull(param) || isUndefined(param);
-}
+export const isFunction = (param: any) => typeof param === 'function';
+export const isUndefined = (param: any) => typeof param === 'undefined';
+export const isNull = (param: any) => param === null;
+export const isNil = (param: any) => isNull(param) || isUndefined(param);

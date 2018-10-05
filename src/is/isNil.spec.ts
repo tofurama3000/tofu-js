@@ -13,6 +13,9 @@ describe('isNil', () => {
     expect(isNil('string')).toBe(false);
     expect(isNil(() => {})).toBe(false);
     expect(isNil(5.34)).toBe(false);
+    expect(isNil(false)).toBe(false);
+    expect(isNil(0)).toBe(false);
+    expect(isNil('')).toBe(false);
     expect(isNil(Symbol.iterator)).toBe(false);
     expect(isNil({})).toBe(false);
     expect(isNil([])).toBe(false);

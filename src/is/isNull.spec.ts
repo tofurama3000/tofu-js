@@ -1,4 +1,4 @@
-import { isNull } from './index';
+import { isNil, isNull } from './index';
 
 describe('isNull', () => {
   it('can detect null', () => {
@@ -10,6 +10,9 @@ describe('isNull', () => {
     expect(isNull('string')).toBe(false);
     expect(isNull(() => {})).toBe(false);
     expect(isNull(5.34)).toBe(false);
+    expect(isNil(false)).toBe(false);
+    expect(isNil(0)).toBe(false);
+    expect(isNil('')).toBe(false);
     expect(isNull(Symbol.iterator)).toBe(false);
     expect(isNull({})).toBe(false);
     expect(isNull([])).toBe(false);

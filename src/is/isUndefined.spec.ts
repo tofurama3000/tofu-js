@@ -10,6 +10,9 @@ describe('isUndefined', () => {
     expect(isUndefined('string')).toBe(false);
     expect(isUndefined(() => {})).toBe(false);
     expect(isUndefined(5.34)).toBe(false);
+    expect(isUndefined(false)).toBe(false);
+    expect(isUndefined(0)).toBe(false);
+    expect(isUndefined('')).toBe(false);
     expect(isUndefined(Symbol.iterator)).toBe(false);
     expect(isUndefined({})).toBe(false);
     expect(isUndefined([])).toBe(false);

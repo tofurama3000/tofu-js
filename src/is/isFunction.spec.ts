@@ -49,6 +49,9 @@ describe('isFunction', () => {
     expect(isFunction('string')).toBe(false);
     expect(isFunction(5.34)).toBe(false);
     expect(isFunction(Symbol.iterator)).toBe(false);
+    expect(isFunction(false)).toBe(false);
+    expect(isFunction(0)).toBe(false);
+    expect(isFunction('')).toBe(false);
     expect(isFunction({})).toBe(false);
     expect(isFunction([])).toBe(false);
   });
