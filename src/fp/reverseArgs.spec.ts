@@ -1,4 +1,4 @@
-import { reverseArgs } from './reverseArgs';
+import { reverseArgs } from './index';
 
 describe('reverseArgs', () => {
   it('reverses function arguments', () => {

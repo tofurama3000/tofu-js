@@ -1,5 +1,5 @@
 import { isFunction } from '../is';
-import { reverseCurry } from './reverseCurry';
+import { reverseCurry } from './index';
 
 describe('reverseCurry', () => {
   it('returns a function', () => {

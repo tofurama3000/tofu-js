@@ -1,4 +1,4 @@
-import { curry } from './curry';
+import { curry } from './index';
 import { isFunction } from '../is';
 
 describe('curry', () => {
