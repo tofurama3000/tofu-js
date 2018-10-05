@@ -1,4 +1,4 @@
-import { collectToArray, limit, map, scan } from './index';
+import { asyncProcess, collectToArray, limit, map, scan, tap, zip } from './index';
 
 describe('collectToArray', () => {
   it('Collects iterators to an array with no limit', () => {
@@ -81,5 +81,75 @@ describe('limit', () => {
         )
       )
     ).toEqual([1, -1]);
+  });
+});
+
+describe('tap', () => {
+  it('works on iterables', () => {
+    let arr: any = [];
+    const t = tap((v: any) => arr.push(v));
+    collectToArray(t([1, 2, 3, 4]));
+    expect(arr).toEqual([1, 2, 3, 4]);
+    arr = [];
+    collectToArray(
+      t(
+        (function*() {
+          yield 1;
+          yield -1;
+          yield 3;
+        })()
+      )
+    );
+    expect(arr).toEqual([1, -1, 3]);
+  });
+});
+
+describe('zip', () => {
+  it('works with two iterables', () => {
+    expect(
+      collectToArray(
+        zip(
+          [1, 2, 3, 4],
+          (function*() {
+            yield 1;
+            yield -1;
+            yield 3;
+          })()
+        )
+      )
+    ).toEqual([[1, 1], [2, -1], [3, 3], [4, null]]);
+  });
+
+  it('works with many iterables', () => {
+    expect(
+      collectToArray(
+        zip(
+          [1, 2, 3, 4],
+          (function*() {
+            yield 1;
+            yield -1;
+            yield 3;
+          })(),
+          [0, 10, null, 3]
+        )
+      )
+    ).toEqual([[1, 1, 0], [2, -1, 10], [3, 3, null], [4, null, 3]]);
+  });
+});
+
+describe('asyncProcess', () => {
+  it('works on iterables', done => {
+    const t = tap((v: any) => {
+      expect(v).toBe(1);
+      done();
+    });
+    t([2]);
+    asyncProcess(
+      t(
+        (function*() {
+          yield 1;
+        })()
+      )
+    );
   });
 });

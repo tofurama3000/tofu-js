@@ -23,6 +23,15 @@ export const map = curry((func: (obj: any) => any, iterable: Iterable<any>) => {
   })();
 });
 
+export const tap = curry((func: (obj: any) => void, iterable: Iterable<any>) => {
+  return (function*() {
+    for (let val of iterable) {
+      func(val);
+      yield val;
+    }
+  })();
+});
+
 export const scan = curry(
   (func: (acc: any, obj: any) => any, start: any, iterable: Iterable<any>) => {
     return (function*() {
@@ -34,3 +43,31 @@ export const scan = curry(
     })();
   }
 );
+
+export const asyncProcess = (iterable: Iterable<any>, delay: number = 0) => {
+  const iterator = iterable[Symbol.iterator]();
+  function getNext() {
+    const item = iterator.next();
+    if (!item.done) {
+      setTimeout(getNext, delay | 0);
+    }
+  }
+  getNext();
+};
+
+export function* zip(
+  iterableLeft: Iterable<any>,
+  iterableRight: Iterable<any>,
+  ...moreIterables: Iterable<any>[]
+) {
+  const iterators = [iterableLeft, iterableRight]
+    .concat(moreIterables)
+    .map(iterable => iterable[Symbol.iterator]());
+
+  while (true) {
+    const next = iterators.map(iterator => iterator.next());
+    const items = next.map(({ value, done }) => (done ? null : value));
+    if (next.reduce((acc, cur) => acc && cur.done, true)) return;
+    yield items;
+  }
+}
