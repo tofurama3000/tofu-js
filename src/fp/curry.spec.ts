@@ -1,27 +1,27 @@
-import { curry } from "./curry";
-import { isFunction } from "./isFunction";
+import { curry } from './curry';
+import { isFunction } from '../is/isFunction';
 
-describe("curry", () => {
-  it("returns a function", () => {
+describe('curry', () => {
+  it('returns a function', () => {
     const curryResult = curry(testFunction);
     expect(isFunction(curryResult)).toBe(true);
   });
 
-  it("returns a function after partial application", () => {
+  it('returns a function after partial application', () => {
     const curryResult = curry(testFunction);
     expect(isFunction(curryResult(3, 4))).toBe(true);
     expect(isFunction(curryResult(3)(4))).toBe(true);
     expect(isFunction(curryResult(3))).toBe(true);
   });
 
-  it("returns a result after full application", () => {
+  it('returns a result after full application', () => {
     const curryResult = curry(testFunction);
     const answer = 3 + 4 + 5;
     expect(curryResult(3, 4, 5)).toBe(answer);
     expect(curryResult(3, 4)(5)).toBe(answer);
   });
 
-  it("can pass additional parameters", () => {
+  it('can pass additional parameters', () => {
     const curryResult = curry(testFunction);
     const answer = 3 + 4 + 5 + 6 + 7;
     expect(curryResult(3, 4, 5, 6, 7)).toBe(answer);
