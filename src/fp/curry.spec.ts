@@ -1,5 +1,5 @@
 import { curry } from './curry';
-import { isFunction } from '../is/isFunction';
+import { isFunction } from '../is';
 
 describe('curry', () => {
   it('returns a function', () => {
