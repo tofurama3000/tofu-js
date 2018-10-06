@@ -8,3 +8,4 @@ export * from './scan';
 export * from './asyncProcess';
 export * from './zip';
 export * from './flatMap';
+export * from './skip';
