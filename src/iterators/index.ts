@@ -7,3 +7,4 @@ export * from './flatten';
 export * from './scan';
 export * from './asyncProcess';
 export * from './zip';
+export * from './flatMap';
