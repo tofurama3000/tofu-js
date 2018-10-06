@@ -1,7 +1,8 @@
 import { curry } from '../fp';
+import { isIterableOrEmpty } from './isIterableOrEmpty';
 
 export const skip = curry(function*(amt: number = 1, iterable: Iterable<any>) {
-  const iter = iterable[Symbol.iterator]();
+  const iter = isIterableOrEmpty(iterable)[Symbol.iterator]();
   let isDone = false;
   for (let i = 0; i < amt && !isDone; ++i) {
     isDone = iter.next().done;

@@ -1,5 +1,8 @@
 import { isInfinite } from '../is';
 import { limit } from './limit';
+import { isIterableOrEmpty } from './isIterableOrEmpty';
 
 export const collectToArray = (iterable: Iterable<any>, max: number = Infinity) =>
-  isInfinite(max) ? [...iterable] : collectToArray(limit(max, iterable));
+  isInfinite(max)
+    ? [...isIterableOrEmpty(iterable)]
+    : collectToArray(limit(max, isIterableOrEmpty(iterable)));

@@ -1,5 +1,7 @@
 import { curry } from '../fp';
+import { isIterableOrEmpty } from './isIterableOrEmpty';
 
 export const map = curry(function*(func: (obj: any) => any, iterable: Iterable<any>) {
-  for (let val of iterable) yield func(val);
+  const iter = isIterableOrEmpty(iterable);
+  for (let val of iter) yield func(val);
 });

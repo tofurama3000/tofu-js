@@ -1,8 +1,10 @@
 import { curry } from '../fp';
 import { isIterable } from '../is';
+import { isIterableOrEmpty } from './isIterableOrEmpty';
 
 export const flatten = curry(function*(iterable: Iterable<any>) {
-  for (let val of iterable) {
+  const iter = isIterableOrEmpty(iterable);
+  for (let val of iter) {
     if (isIterable(val)) {
       for (let innerVal of val) yield innerVal;
     } else {

@@ -1,7 +1,9 @@
 import { curry } from '../fp';
+import { isIterableOrEmpty } from './isIterableOrEmpty';
 
 export const tap = curry(function*(func: (obj: any) => void, iterable: Iterable<any>) {
-  for (let val of iterable) {
+  const iter = isIterableOrEmpty(iterable);
+  for (let val of iter) {
     func(val);
     yield val;
   }
