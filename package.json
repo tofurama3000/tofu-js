@@ -1,24 +1,39 @@
 {
   "name": "tofu-js",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "author": "tofurama3000",
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-typescript": "^7.1.0",
     "@types/jest": "^23.3.3",
     "@types/node": "^10.11.4",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-tailcall-optimization": "^1.0.13",
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
     "ts-jest": "^23.10.3",
+    "ts-loader": "^5.2.1",
     "tslint": "^5.11.0",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "build": "webpack --mode=production"
   },
   "jest": {
-    "coverageReporters": ["cobertura", "lcov"],
+    "coverageReporters": [
+      "cobertura",
+      "lcov"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
