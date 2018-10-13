@@ -1,4 +1,4 @@
-export function curry(func: Function): Function {
+export function curry(func: (...a: any[]) => any): (...a: any[]) => any {
   const curryImpl = (provided_args: any[]) => (...args: any[]) => {
     const concat_args = provided_args.concat(args);
     if (concat_args.length < func.length) {

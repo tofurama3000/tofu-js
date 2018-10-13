@@ -1,4 +1,3 @@
-export * from './collectToArray';
 export * from './filter';
 export * from './flatMap';
 export * from './flatten';
@@ -9,3 +8,4 @@ export * from './skip';
 export * from './tap';
 export * from './zip';
 export * from './takeWhile';
+export * from './toArrayOrEmpty';

@@ -1,5 +1,5 @@
 import { curry } from '../fp';
-import { isIterableOrEmpty } from './isIterableOrEmpty';
+import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 export const zip = curry(function*(
   iterableLeft: Iterable<any>,
@@ -8,7 +8,7 @@ export const zip = curry(function*(
 ) {
   const iterators = [iterableLeft, iterableRight]
     .concat(moreIterables)
-    .map(isIterableOrEmpty)
+    .map(toIterableOrEmpty)
     .map(iterable => iterable[Symbol.iterator]());
 
   while (true) {

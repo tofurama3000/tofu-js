@@ -1,8 +1,8 @@
 import { curry } from '../fp';
-import { isIterableOrEmpty } from './isIterableOrEmpty';
+import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 export const filter = curry(function*(func: (param: any) => boolean, iterable: Iterable<any>) {
-  const iter = isIterableOrEmpty(iterable);
+  const iter = toIterableOrEmpty(iterable);
   for (let val of iter) {
     if (func(val)) yield val;
   }

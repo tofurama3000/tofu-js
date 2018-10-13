@@ -1,8 +1,8 @@
 import { curry } from '../fp';
-import { isIterableOrEmpty } from './isIterableOrEmpty';
+import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 export const limit = curry(function*(max: number, iterable: Iterable<any>) {
-  const iter = isIterableOrEmpty(iterable);
+  const iter = toIterableOrEmpty(iterable);
   let count = 0;
   for (let val of iter) {
     if (count++ < (max | 0)) {
