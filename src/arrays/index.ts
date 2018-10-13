@@ -9,3 +9,4 @@ export * from './tap';
 export * from './zip';
 export * from './takeWhile';
 export * from './toArrayOrEmpty';
+export * from './reduce';
