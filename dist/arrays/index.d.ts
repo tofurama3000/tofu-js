@@ -10,3 +10,4 @@ export * from './zip';
 export * from './takeWhile';
 export * from './toArrayOrEmpty';
 export * from './reduce';
+export * from './chunk';
