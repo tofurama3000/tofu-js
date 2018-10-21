@@ -1,10 +1,10 @@
 export type Predicate = (param: any) => boolean;
 
-export const or = (...predicates: Predicate[]) => (param: any) =>
-  [...predicates].reduce((a, p) => a || p(param), false);
-
 export const and = (...predicates: Predicate[]) => (param: any) =>
   [...predicates].reduce((a, p) => a && p(param), true) && !!predicates.length;
+
+export const or = (...predicates: Predicate[]) => (param: any) =>
+  [...predicates].reduce((a, p) => a || p(param), false);
 
 export const xor = (...predicates: Predicate[]) => (param: any) =>
   [...predicates].map(p => +p(param)).reduce((a, c) => a + c, 0) === 1;
