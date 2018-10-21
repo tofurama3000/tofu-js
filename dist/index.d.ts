@@ -1,6 +1,10 @@
-export * from './fp';
-export * from './is';
-import * as iters from './iterators';
-export declare const iterators: typeof iters;
-export * from './arrays';
-export * from './utils';
+import * as Is from './is';
+export declare const is: typeof Is;
+import * as Fp from './fp';
+export declare const fp: typeof Fp;
+import * as Iterators from './iterators';
+export declare const iterators: typeof Iterators;
+import * as Arrays from './arrays';
+export declare const arrays: typeof Arrays;
+import * as Utils from './utils';
+export declare const utils: typeof Utils;

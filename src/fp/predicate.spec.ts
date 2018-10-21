@@ -1,4 +1,4 @@
-import { and, negate, or, toPredicate, xor } from './predicate';
+import { and, boolToPredicate, negate, or, toPredicate, xor } from './predicate';
 
 describe('predicate', () => {
   describe('or', () => {
@@ -64,6 +64,13 @@ describe('predicate', () => {
     it('converts predicate to output', () => {
       expect(toPredicate(NonPredicate)(5)).toBe(false);
       expect(toPredicate(NonPredicate)(6)).toBe(true);
+    });
+  });
+
+  describe('boolToPredicate', () => {
+    it('converts bool to predicate', () => {
+      expect(boolToPredicate(true)(6)).toBe(true);
+      expect(boolToPredicate(false)(5)).toBe(false);
     });
   });
 });
