@@ -5,3 +5,7 @@ export * from './isNil';
 export * from './isNull';
 export * from './isObject';
 export * from './isUndefined';
+export * from './isNumber';
+export * from './isString';
+export * from './isInteger';
+export * from './isFloat';
