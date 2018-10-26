@@ -10,3 +10,5 @@ import * as Logic from './logic';
 export declare const logic: typeof Logic;
 import * as Utils from './utils';
 export declare const utils: typeof Utils;
+import * as Objects from './objects';
+export declare const objects: typeof Objects;

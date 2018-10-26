@@ -10,3 +10,8 @@ export * from './tap';
 export * from './zip';
 export * from './takeWhile';
 export * from './chunk';
+export * from './first';
+export * from './take';
+export * from './head';
+export * from './firstOr';
+export * from './firstOrNull';

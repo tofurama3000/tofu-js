@@ -11,3 +11,7 @@ export * from './takeWhile';
 export * from './toArrayOrEmpty';
 export * from './reduce';
 export * from './chunk';
+export * from './fromPairs';
+export * from './first';
+export * from './firstOr';
+export * from './firstOrNull';

@@ -15,3 +15,6 @@ export const logic = Logic;
 
 import * as Utils from './utils';
 export const utils = Utils;
+
+import * as Objects from './objects';
+export const objects = Objects;
