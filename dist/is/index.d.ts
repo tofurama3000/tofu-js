@@ -9,3 +9,4 @@ export * from './isNumber';
 export * from './isString';
 export * from './isInteger';
 export * from './isFloat';
+export * from './isArray';
