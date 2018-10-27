@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=development"
   },
   "jest": {
     "coverageReporters": [
@@ -43,5 +43,6 @@
       "\\.(ts|tsx)$": "ts-jest"
     },
     "testRegex": ".*\\.spec\\.(ts|tsx|js)$"
-  }
+  },
+  "dependencies": {}
 }
