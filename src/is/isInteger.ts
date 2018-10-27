@@ -1,1 +1,1 @@
-export const isInteger = (obj: any) => (obj | 0) === obj;
+export const isInteger = (param: any) => (param | 0) === param;

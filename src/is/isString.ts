@@ -1,1 +1,1 @@
-export const isString = (obj: any) => typeof obj === 'string';
+export const isString = (param: any): param is string => typeof param === 'string';

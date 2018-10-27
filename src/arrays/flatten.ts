@@ -1,4 +1,4 @@
 import { curry } from '../fp';
-import { toIterableOrEmpty } from '../iterators/toIterableOrEmpty';
+import { toArrayOrEmpty } from './toArrayOrEmpty';
 
-export const flatten = curry((array: any[]) => [].concat(...toIterableOrEmpty(array)));
+export const flatten = curry<any[], any[]>(array => [].concat(...toArrayOrEmpty(array)));

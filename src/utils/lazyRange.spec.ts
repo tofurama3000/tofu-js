@@ -35,6 +35,10 @@ describe('lazyRange', () => {
     expect(collectToArray(lazyRange(1, Infinity), 10)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
 
+  it('returns [0, 1, 2, ...] as an infinite sequence', () => {
+    expect(collectToArray(lazyRange(), 6)).toEqual([0, 1, 2, 3, 4, 5]);
+  });
+
   it('returns [start, start-1, start-2, ...] as an infinite sequence', () => {
     expect(collectToArray(lazyRange(10, -Infinity, 2), 6)).toEqual([10, 8, 6, 4, 2, 0]);
     expect(collectToArray(lazyRange(10, -Infinity), 10)).toEqual([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);

@@ -15,3 +15,4 @@ export * from './fromPairs';
 export * from './first';
 export * from './firstOr';
 export * from './firstOrNull';
+export * from './join';

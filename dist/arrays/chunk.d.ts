@@ -1,1 +1,1 @@
-export declare const chunk: (...a: any[]) => any;
+export declare const chunk: import("../fp/curry").Curried2<number, any[], any[][]>;

@@ -1,1 +1,1 @@
-export declare function toIterableOrEmpty(param: any): any;
+export declare function toIterableOrEmpty<T1 = any>(param: T1): Iterable<T1>;

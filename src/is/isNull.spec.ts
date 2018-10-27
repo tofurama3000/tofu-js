@@ -8,7 +8,7 @@ describe('isNull', () => {
   it('returns false for everything else', () => {
     expect(isNull(undefined)).toBe(false);
     expect(isNull('string')).toBe(false);
-    expect(isNull(() => {})).toBe(false);
+    expect(isNull(() => ({}))).toBe(false);
     expect(isNull(5.34)).toBe(false);
     expect(isNil(false)).toBe(false);
     expect(isNil(0)).toBe(false);

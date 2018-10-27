@@ -1,13 +1,14 @@
 import { reverseArgs } from './reverseArgs';
+import { Curried } from './curry';
 
-export function reverseCurry(func) {
-  const curryImpl = provided_args => (...args) => {
-    const concat_args = provided_args.concat(args);
-    if (concat_args.length < func.length) {
-      return curryImpl(concat_args);
+export const reverseCurry: Curried = func => {
+  const curryImpl = providedArgs => (...args) => {
+    const concatArgs = providedArgs.concat(args);
+    if (concatArgs.length < func.length) {
+      return curryImpl(concatArgs);
     }
-    return reverseArgs(func)(...concat_args);
+    return reverseArgs(func)(...concatArgs);
   };
 
   return curryImpl([]);
-}
+};

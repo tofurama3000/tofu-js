@@ -1,1 +1,1 @@
-export declare const toPairs: (obj: any) => any;
+export declare const toPairs: (param: any) => any[];

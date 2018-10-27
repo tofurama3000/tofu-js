@@ -1,1 +1,1 @@
-export declare const tap: (...a: any[]) => any;
+export declare const tap: import("../fp/curry").Curried2<(elem: any) => void, Iterable<any>, IterableIterator<Iterable<any>>>;

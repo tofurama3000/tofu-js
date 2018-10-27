@@ -1,1 +1,1 @@
-export declare const filter: (...a: any[]) => any;
+export declare const filter: import("../fp/curry").Curried2<any, any, {}[]>;

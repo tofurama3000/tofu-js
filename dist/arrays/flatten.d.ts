@@ -1,1 +1,1 @@
-export declare const flatten: (...a: any[]) => any;
+export declare const flatten: import("../fp/curry").Curried1<any[], any[]>;

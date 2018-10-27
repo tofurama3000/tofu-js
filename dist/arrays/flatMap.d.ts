@@ -1,1 +1,1 @@
-export declare const flatMap: (...a: any[]) => any;
+export declare const flatMap: import("../fp/curry").Curried2<(elem: any) => any, any[], any[]>;

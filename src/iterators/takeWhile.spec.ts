@@ -1,5 +1,5 @@
 import { collectToArray } from './collectToArray';
-import { takeWhile, takeWhilePushPull } from './takeWhile';
+import { takeWhile, takeWhilePullPush } from './takeWhile';
 
 describe('takeWhile', () => {
   it('will take while a function returns true', () => {
@@ -30,13 +30,13 @@ describe('takeWhile', () => {
   });
 });
 
-describe('takeWhilePushPull', () => {
+describe('takeWhilePullPush', () => {
   it('will work with a generator that takes input then yields output', () => {
     const gen = function*() {
       while (true) {
         yield (yield 3) - 3;
       }
     };
-    expect(collectToArray(takeWhilePushPull(gen(), [1, 2, 3, 4, 5]))).toEqual([1, 2]);
+    expect(collectToArray(takeWhilePullPush(gen(), [1, 2, 3, 4, 5]))).toEqual([1, 2]);
   });
 });

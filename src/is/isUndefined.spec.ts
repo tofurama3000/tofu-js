@@ -8,7 +8,7 @@ describe('isUndefined', () => {
   it('returns false for everything else', () => {
     expect(isUndefined(null)).toBe(false);
     expect(isUndefined('string')).toBe(false);
-    expect(isUndefined(() => {})).toBe(false);
+    expect(isUndefined(() => ({}))).toBe(false);
     expect(isUndefined(5.34)).toBe(false);
     expect(isUndefined(false)).toBe(false);
     expect(isUndefined(0)).toBe(false);

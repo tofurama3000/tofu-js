@@ -1,1 +1,1 @@
-export const isObject = (param: any) => param === Object(param);
+export const isObject = (param: any): param is object => param === Object(param);

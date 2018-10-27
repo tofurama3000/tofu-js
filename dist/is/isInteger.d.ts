@@ -1,1 +1,1 @@
-export declare const isInteger: (obj: any) => boolean;
+export declare const isInteger: (param: any) => boolean;

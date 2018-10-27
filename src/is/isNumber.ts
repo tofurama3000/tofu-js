@@ -1,1 +1,1 @@
-export const isNumber = (obj: any) => typeof obj === 'number';
+export const isNumber = (param: any): param is number => typeof param === 'number';

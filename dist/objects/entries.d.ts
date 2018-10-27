@@ -1,1 +1,1 @@
-export declare const entries: (obj: any) => any;
+export declare const entries: (param: any) => any[];

@@ -1,1 +1,1 @@
-export const isUndefined = (param: any) => typeof param === 'undefined';
+export const isUndefined = (param: any): param is undefined => typeof param === 'undefined';

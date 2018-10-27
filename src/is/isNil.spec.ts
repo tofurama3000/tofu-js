@@ -11,7 +11,7 @@ describe('isNil', () => {
 
   it('returns false for everything else', () => {
     expect(isNil('string')).toBe(false);
-    expect(isNil(() => {})).toBe(false);
+    expect(isNil(() => ({}))).toBe(false);
     expect(isNil(5.34)).toBe(false);
     expect(isNil(false)).toBe(false);
     expect(isNil(0)).toBe(false);

@@ -1,3 +1,3 @@
 import { curry } from './curry';
 
-export const spread = curry((func: (...args: any[]) => any, args: any[]) => func(...args));
+export const spread = curry<(...args: any[]) => any, any[], any>((func, args) => func(...args));

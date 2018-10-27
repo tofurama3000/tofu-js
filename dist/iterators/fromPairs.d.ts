@@ -1,1 +1,1 @@
-export declare const fromPairs: (pairs: Iterable<[string | number, any]>) => IterableIterator<{}>;
+export declare const fromPairs: (pairs: any) => IterableIterator<{}>;

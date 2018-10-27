@@ -2,12 +2,12 @@ import { curry } from '../fp';
 import { isIterable } from '../is';
 import { toArrayOrEmpty } from './toArrayOrEmpty';
 
-export const takeWhile = curry(
-  (whileFunc: (elem: any) => boolean | Iterable<any>, array: any[]) => {
+export const takeWhile = curry<(elem: any) => boolean | Iterable<any>, any[], any[]>(
+  (whileFunc, array) => {
     const arr = toArrayOrEmpty(array);
-    let res: any[] = [];
-    for (let i = 0; i < arr.length; ++i) {
-      if (whileFunc(arr[i])) res.push(arr[i]);
+    const res: any[] = [];
+    for (const val of arr) {
+      if (whileFunc(val)) res.push(val);
       else return res;
     }
     return res;

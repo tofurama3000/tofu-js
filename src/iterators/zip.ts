@@ -1,10 +1,16 @@
 import { curry } from '../fp';
 import { toIterableOrEmpty } from './toIterableOrEmpty';
 
-export const zip = curry(function*(
+export interface ZipInterface {
+  (): ZipInterface;
+  (a: Iterable<any>): (b: Iterable<any>) => Iterable<any>;
+  (a: Iterable<any>, b: Iterable<any>, ...args: Array<Iterable<any>>): Iterable<any>;
+}
+
+export const zip = (curry(function*(
   iterableLeft: Iterable<any>,
   iterableRight: Iterable<any>,
-  ...moreIterables: Iterable<any>[]
+  ...moreIterables: Array<Iterable<any>>
 ) {
   const iterators = [iterableLeft, iterableRight]
     .concat(moreIterables)
@@ -17,4 +23,4 @@ export const zip = curry(function*(
     if (next.reduce((acc, cur) => acc && cur.done, true)) return;
     yield items;
   }
-});
+}) as any) as ZipInterface;

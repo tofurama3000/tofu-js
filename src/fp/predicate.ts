@@ -11,5 +11,5 @@ export const xor = (...predicates: Predicate[]) => (param: any) =>
 
 export const negate = (p1: Predicate) => (param: any) => !p1(param);
 
-export const toPredicate = (p: (obj: any) => any): Predicate => (param: any) => !!p(param);
+export const toPredicate = (p: (param: any) => any): Predicate => (param: any) => !!p(param);
 export const boolToPredicate = (b: boolean): Predicate => () => b;

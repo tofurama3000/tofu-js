@@ -14,7 +14,7 @@ describe('isFunction', () => {
   });
 
   it('can detect arrow functions', () => {
-    const testFunc = () => {};
+    const testFunc = () => ({});
     expect(isFunction(testFunc)).toBe(true);
   });
 

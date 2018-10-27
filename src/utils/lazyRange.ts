@@ -1,10 +1,19 @@
 import { isInfinite, isNil } from '../is';
 
-export const lazyRange = (start: number, end?: number, step: number = 1) => {
+export interface LazyRange {
+  /* tslint:disable */
+  (): Iterable<number>;
+  (end: number): Iterable<number>;
+  (start: number, end: number): Iterable<number>;
+  (start: number, end: number, step: number): Iterable<number>;
+  /* tslint:enable */
+}
+
+export const lazyRange: LazyRange = (start = Infinity, end?: number, step: number = 1) => {
   if (isNil(end)) return lazyRange(0, start, step);
-  const to = +(end || 0),
-    from = +start,
-    stepAmt = Math.abs(step || 1);
+  const to = +(end || 0);
+  const from = +start;
+  const stepAmt = Math.abs(step || 1);
   if (isInfinite(to)) {
     if (isInfinite(from)) {
       return (function*() {

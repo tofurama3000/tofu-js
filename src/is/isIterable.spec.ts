@@ -9,7 +9,7 @@ describe('isIterable', () => {
         })()
       )
     ).toBe(true);
-    expect(isIterable({ [Symbol.iterator]: () => {} })).toBe(true);
+    expect(isIterable({ [Symbol.iterator]: () => ({}) })).toBe(true);
     expect(isIterable([])).toBe(true);
     expect(isIterable(new Map())).toBe(true);
   });
@@ -25,7 +25,7 @@ describe('isIterable', () => {
     expect(isIterable(true)).toBe(false);
     expect(isIterable(false)).toBe(false);
     expect(isIterable({})).toBe(false);
-    expect(isIterable(() => {})).toBe(false);
+    expect(isIterable(() => ({}))).toBe(false);
     expect(isIterable({ [Symbol.iterator]: {} })).toBe(false);
   });
 });

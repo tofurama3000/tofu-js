@@ -10,7 +10,7 @@ export function pipe(paramOrFunc: ((p: any) => any) | any, ...functions: Array<(
 function chain(...funcs: Array<(p: any) => any>) {
   return (param: any) => {
     let lastVal = param;
-    for (let func of funcs) {
+    for (const func of funcs) {
       lastVal = func(lastVal);
     }
     return lastVal;

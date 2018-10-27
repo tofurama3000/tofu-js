@@ -5,7 +5,7 @@ describe('isObject', () => {
     expect(isObject({})).toBe(true);
     expect(isObject({ hello: 'world' })).toBe(true);
     expect(isObject([])).toBe(true);
-    expect(isObject(() => {})).toBe(true);
+    expect(isObject(() => ({}))).toBe(true);
     expect(isObject(Object.create(null))).toBe(true);
     expect(isObject(Object.prototype)).toBe(true);
     expect(isObject(new C())).toBe(true);

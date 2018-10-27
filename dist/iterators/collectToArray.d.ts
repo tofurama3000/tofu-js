@@ -1,1 +1,1 @@
-export declare const collectToArray: (iterable: Iterable<any>, max?: number) => any;
+export declare const collectToArray: (iterable: Iterable<any>, max?: number) => any[];
