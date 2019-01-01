@@ -1,1 +1,1 @@
-export declare var isInfinite: (param: any) => boolean;
+export declare const isInfinite: (param: any) => boolean;

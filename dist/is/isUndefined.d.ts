@@ -1,1 +1,1 @@
-export declare var isUndefined: (param: any) => boolean;
+export declare const isUndefined: (param: any) => param is undefined;

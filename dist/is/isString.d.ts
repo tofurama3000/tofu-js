@@ -1,1 +1,1 @@
-export declare var isString: (param: any) => boolean;
+export declare const isString: (param: any) => param is string;

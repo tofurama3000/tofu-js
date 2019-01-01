@@ -1,1 +1,1 @@
-export declare var isFunction: (param: any) => boolean;
+export declare const isFunction: (param: any) => param is (...args: any[]) => any;

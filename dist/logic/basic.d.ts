@@ -1,5 +1,5 @@
-export declare var and: () => boolean;
-export declare var or: () => any;
-export declare var xor: () => boolean;
-export declare var negate: (b: any) => boolean;
-export declare var negateAll: () => boolean[];
+export declare const and: (...arr: boolean[]) => boolean;
+export declare const or: (...arr: boolean[]) => boolean;
+export declare const xor: (...arr: boolean[]) => boolean;
+export declare const negate: (b: boolean) => boolean;
+export declare const negateAll: (...arr: boolean[]) => boolean[];

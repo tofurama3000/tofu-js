@@ -1,6 +1,7 @@
-export declare var and: () => (param: any) => boolean;
-export declare var or: () => (param: any) => any;
-export declare var xor: () => (param: any) => boolean;
-export declare var negate: (p1: any) => (param: any) => boolean;
-export declare var toPredicate: (p: any) => (param: any) => boolean;
-export declare var boolToPredicate: (b: any) => () => any;
+export declare type Predicate = (param: any) => boolean;
+export declare const and: (...predicates: Predicate[]) => (param: any) => boolean;
+export declare const or: (...predicates: Predicate[]) => (param: any) => boolean;
+export declare const xor: (...predicates: Predicate[]) => (param: any) => boolean;
+export declare const negate: (p1: Predicate) => (param: any) => boolean;
+export declare const toPredicate: (p: (param: any) => any) => Predicate;
+export declare const boolToPredicate: (b: boolean) => Predicate;

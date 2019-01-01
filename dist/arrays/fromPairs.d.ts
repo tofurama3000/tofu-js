@@ -1,1 +1,3 @@
-export declare var fromPairs: (pairs: any) => any;
+export declare const fromPairs: (pairs: [string | number, any][]) => {
+    [x: string]: any;
+};

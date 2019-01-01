@@ -1,1 +1,1 @@
-export declare var isSet: (obj: any) => boolean;
+export declare const isSet: <T>(obj: any) => obj is Set<T>;

@@ -1,1 +1,1 @@
-export declare var firstOrNull: any;
+export declare const firstOrNull: import("../fp/curry").Curried1<Iterable<any>, any>;

@@ -1,1 +1,1 @@
-export declare var isInteger: (param: any) => boolean;
+export declare const isInteger: (param: any) => boolean;
