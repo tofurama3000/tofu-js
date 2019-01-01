@@ -1,7 +1,7 @@
-import { isArray, isBuffer, isIterable, isMap, isObject, isSet } from '../is';
-import { zip } from '../arrays';
-import { map, reduce } from '../iterators';
-import { pipe } from '../fp';
+import { isArray, isBuffer, isIterable, isMap, isObject, isSet } from '../is/index';
+import { zip } from '../arrays/index';
+import { map, reduce } from '../iterators/index';
+import { pipe } from '../fp/index';
 
 export function isEqual(left: any, right: any): boolean {
   if (typeof left !== typeof right) return false;

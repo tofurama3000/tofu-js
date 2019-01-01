@@ -5,3 +5,5 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./lazyRange"));
 __export(require("./range"));
+__export(require("./clone"));
+__export(require("./isEqual"));
