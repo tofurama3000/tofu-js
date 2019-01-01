@@ -9,4 +9,3 @@ exports.filter = fp_1.curry(function* (func, iterable) {
             yield val;
     }
 });
-//# sourceMappingURL=filter.js.map

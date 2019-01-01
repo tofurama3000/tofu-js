@@ -37,4 +37,3 @@ describe('takeWhilePullPush', () => {
         expect(collectToArray_1.collectToArray(takeWhile_1.takeWhilePullPush(gen(), [1, 2, 3, 4, 5]))).toEqual([1, 2]);
     });
 });
-//# sourceMappingURL=takeWhile.spec.js.map

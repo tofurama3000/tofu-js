@@ -6,4 +6,3 @@ exports.firstOr = fp_1.curry((defaultValue, array) => {
     const arr = toArrayOrEmpty_1.toArrayOrEmpty(array);
     return arr.length ? arr[0] : defaultValue;
 });
-//# sourceMappingURL=firstOr.js.map

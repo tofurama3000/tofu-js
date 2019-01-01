@@ -67,13 +67,12 @@ describe('predicate', () => {
         });
     });
 });
-function T() {
+function T(_) {
     return true;
 }
-function F() {
+function F(_) {
     return false;
 }
 function NonPredicate(val) {
     return val - 5;
 }
-//# sourceMappingURL=predicate.spec.js.map

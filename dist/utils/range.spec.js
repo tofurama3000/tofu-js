@@ -25,4 +25,3 @@ describe('range', () => {
         expect(index_1.range(1, 5, 10)).toEqual([1]);
     });
 });
-//# sourceMappingURL=range.spec.js.map

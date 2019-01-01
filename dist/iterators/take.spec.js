@@ -16,4 +16,3 @@ describe('take', () => {
         expect(collectToArray_1.collectToArray(t4(gen()))).toEqual(arr.slice(0, 4));
     });
 });
-//# sourceMappingURL=take.spec.js.map

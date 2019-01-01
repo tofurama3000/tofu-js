@@ -4,16 +4,16 @@ import { toArrayOrEmpty } from './toArrayOrEmpty';
 export const chunk = curry((size: number, array: any[]) => {
   const arr = toArrayOrEmpty(array);
   const output: any[][] = [];
-  let chunk: any[] = [];
-  for (let elem of arr) {
-    if (chunk.length >= size) {
-      output.push(chunk);
-      chunk = [];
+  let chnk: any[] = [];
+  for (const elem of arr) {
+    if (chnk.length >= size) {
+      output.push(chnk);
+      chnk = [];
     }
-    chunk.push(elem);
+    chnk.push(elem);
   }
-  if (chunk.length) {
-    output.push(chunk);
+  if (chnk.length) {
+    output.push(chnk);
   }
   return output;
 });

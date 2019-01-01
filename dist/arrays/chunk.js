@@ -5,17 +5,16 @@ const toArrayOrEmpty_1 = require("./toArrayOrEmpty");
 exports.chunk = fp_1.curry((size, array) => {
     const arr = toArrayOrEmpty_1.toArrayOrEmpty(array);
     const output = [];
-    let chunk = [];
-    for (let elem of arr) {
-        if (chunk.length >= size) {
-            output.push(chunk);
-            chunk = [];
+    let chnk = [];
+    for (const elem of arr) {
+        if (chnk.length >= size) {
+            output.push(chnk);
+            chnk = [];
         }
-        chunk.push(elem);
+        chnk.push(elem);
     }
-    if (chunk.length) {
-        output.push(chunk);
+    if (chnk.length) {
+        output.push(chnk);
     }
     return output;
 });
-//# sourceMappingURL=chunk.js.map

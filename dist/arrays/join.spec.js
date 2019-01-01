@@ -7,4 +7,3 @@ describe('join', () => {
         expect(join_1.join(' ', [0, 1, 2, 3])).toBe('0 1 2 3');
     });
 });
-//# sourceMappingURL=join.spec.js.map

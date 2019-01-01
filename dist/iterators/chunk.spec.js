@@ -19,4 +19,3 @@ describe('chunk', () => {
         expect(collectToArray_1.collectToArray(chunk_1.chunk(2, 5))).toEqual([]);
     });
 });
-//# sourceMappingURL=chunk.spec.js.map

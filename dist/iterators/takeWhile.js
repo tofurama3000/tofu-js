@@ -33,4 +33,3 @@ exports.takeWhilePullPush = fp_1.curry(function* (whileIterable, iter) {
         yield val;
     }
 });
-//# sourceMappingURL=takeWhile.js.map

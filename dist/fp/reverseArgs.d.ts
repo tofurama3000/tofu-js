@@ -1,1 +1,1 @@
-export declare function reverseArgs(func: any): (...args: any[]) => any;
+export declare function reverseArgs(func: any): () => any;

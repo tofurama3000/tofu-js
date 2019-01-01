@@ -1,1 +1,0 @@
-{"version":3,"file":"firstOr.js","sourceRoot":"","sources":["../../src/iterators/firstOr.ts"],"names":[],"mappings":";;AAAA,8BAA8B;AAEjB,QAAA,OAAO,GAAG,UAAK,CAAC,CAAC,YAAiB,EAAE,QAAuB,EAAE,EAAE;IAC1E,KAAK,MAAM,CAAC,IAAI,QAAQ,EAAE;QACxB,OAAO,CAAC,CAAC;KACV;IACD,OAAO,YAAY,CAAC;AACtB,CAAC,CAAC,CAAC"}

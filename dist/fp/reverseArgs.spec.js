@@ -9,4 +9,3 @@ describe('reverseArgs', () => {
         expect(func2('Hello', 'World', '?!')).toBe('?!WorldHello');
     });
 });
-//# sourceMappingURL=reverseArgs.spec.js.map

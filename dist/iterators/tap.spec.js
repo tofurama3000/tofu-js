@@ -17,4 +17,3 @@ describe('tap', () => {
         expect(arr).toEqual([1, -1, 3]);
     });
 });
-//# sourceMappingURL=tap.spec.js.map

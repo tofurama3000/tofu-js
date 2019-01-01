@@ -15,4 +15,3 @@ describe('toArrayOrEmpty', () => {
         expect(toArrayOrEmpty_1.toArrayOrEmpty(undefined)).toEqual([]);
     });
 });
-//# sourceMappingURL=toArrayOrEmpty.spec.js.map

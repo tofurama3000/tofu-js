@@ -6,4 +6,3 @@ exports.fromPairs = (pairs) => {
         .map(([key, val]) => ({ [key]: val }))
         .reduce((a, c) => Object.assign(a, c), {});
 };
-//# sourceMappingURL=fromPairs.js.map

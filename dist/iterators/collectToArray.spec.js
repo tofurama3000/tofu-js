@@ -20,4 +20,3 @@ describe('collectToArray', () => {
         })(), 2)).toEqual([1, 2]);
     });
 });
-//# sourceMappingURL=collectToArray.spec.js.map

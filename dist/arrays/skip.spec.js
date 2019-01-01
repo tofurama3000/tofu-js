@@ -9,4 +9,3 @@ describe('skip', () => {
         expect(skip_1.skip(-10, [1, 2, 3, 4, 5, 6, 7, 8])).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
     });
 });
-//# sourceMappingURL=skip.spec.js.map

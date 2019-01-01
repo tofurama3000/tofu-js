@@ -1,2 +1,1 @@
-import { Curried } from './curry';
-export declare const reverseCurry: Curried;
+export declare var reverseCurry: (func: any) => () => any;

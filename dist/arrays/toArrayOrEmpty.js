@@ -6,4 +6,3 @@ function toArrayOrEmpty(obj) {
     return [];
 }
 exports.toArrayOrEmpty = toArrayOrEmpty;
-//# sourceMappingURL=toArrayOrEmpty.js.map

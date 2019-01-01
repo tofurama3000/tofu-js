@@ -9,4 +9,3 @@ exports.tap = fp_1.curry(function* (func, iterable) {
         yield val;
     }
 });
-//# sourceMappingURL=tap.js.map

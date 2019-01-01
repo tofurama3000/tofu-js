@@ -19,4 +19,3 @@ describe('isString', () => {
         expect(isString_1.isString(false)).toBe(false);
     });
 });
-//# sourceMappingURL=isString.spec.js.map

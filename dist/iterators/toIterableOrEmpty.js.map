@@ -1,1 +1,0 @@
-{"version":3,"file":"toIterableOrEmpty.js","sourceRoot":"","sources":["../../src/iterators/toIterableOrEmpty.ts"],"names":[],"mappings":";;AAAA,8BAAmC;AAEnC,SAAgB,iBAAiB,CAAW,KAAS;IACnD,IAAI,CAAC,eAAU,CAAC,KAAK,CAAC;QAAE,OAAO,EAAE,CAAC;IAClC,OAAO,KAAK,CAAC;AACf,CAAC;AAHD,8CAGC"}

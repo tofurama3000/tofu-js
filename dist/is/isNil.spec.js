@@ -20,4 +20,3 @@ describe('isNil', () => {
         expect(index_1.isNil([])).toBe(false);
     });
 });
-//# sourceMappingURL=isNil.spec.js.map

@@ -7,4 +7,3 @@ exports.firstOr = fp_1.curry((defaultValue, iterable) => {
     }
     return defaultValue;
 });
-//# sourceMappingURL=firstOr.js.map

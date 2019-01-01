@@ -1,1 +1,1 @@
-export declare const isNil: (param: any) => param is null | undefined;
+export declare var isNil: (param: any) => boolean;

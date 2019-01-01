@@ -24,4 +24,3 @@ describe('Basic logic', () => {
         expect(arrs.map(fp_1.spread(basic_1.negateAll))).toEqual([[false, true], [false], [true]]);
     });
 });
-//# sourceMappingURL=basic.spec.js.map

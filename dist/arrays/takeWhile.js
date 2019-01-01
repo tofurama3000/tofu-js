@@ -13,4 +13,3 @@ exports.takeWhile = fp_1.curry((whileFunc, array) => {
     }
     return res;
 });
-//# sourceMappingURL=takeWhile.js.map

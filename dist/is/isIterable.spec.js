@@ -25,4 +25,3 @@ describe('isIterable', () => {
         expect(index_1.isIterable({ [Symbol.iterator]: {} })).toBe(false);
     });
 });
-//# sourceMappingURL=isIterable.spec.js.map

@@ -1,1 +1,2 @@
-export const isFunction = (param: any) => typeof param === 'function';
+export const isFunction = (param: any): param is (...args) => any | void =>
+  typeof param === 'function';

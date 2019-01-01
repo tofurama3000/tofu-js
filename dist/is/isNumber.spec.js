@@ -18,4 +18,3 @@ describe('isNumber', () => {
         expect(isNumber_1.isNumber(false)).toBe(false);
     });
 });
-//# sourceMappingURL=isNumber.spec.js.map

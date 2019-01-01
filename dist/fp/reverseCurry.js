@@ -11,4 +11,3 @@ exports.reverseCurry = func => {
     };
     return curryImpl([]);
 };
-//# sourceMappingURL=reverseCurry.js.map

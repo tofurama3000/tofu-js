@@ -29,4 +29,5 @@ describe('isObject', () => {
   });
 });
 
+// tslint:disable-next-line
 function C() {}

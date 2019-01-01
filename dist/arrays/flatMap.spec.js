@@ -9,4 +9,3 @@ describe('flatMap', () => {
         expect(fm([1, 2, 3])).toEqual([0, 0, 1, 0, 1, 2]);
     });
 });
-//# sourceMappingURL=flatMap.spec.js.map

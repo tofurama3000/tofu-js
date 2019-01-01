@@ -27,7 +27,8 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "build": "webpack --mode=development"
+    "build": "webpack --mode=development",
+    "lint": "tslint ./src/**/*"
   },
   "jest": {
     "coverageReporters": [

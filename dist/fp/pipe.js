@@ -16,4 +16,3 @@ function chain(...funcs) {
         return lastVal;
     };
 }
-//# sourceMappingURL=pipe.js.map

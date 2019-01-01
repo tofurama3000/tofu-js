@@ -14,4 +14,3 @@ describe('takeWhile', () => {
         expect(takeWhile_1.takeWhile(fn, [1, 2, 3, 4, 5])).toEqual([1, 2, 3]);
     });
 });
-//# sourceMappingURL=takeWhile.spec.js.map

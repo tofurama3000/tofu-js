@@ -19,4 +19,3 @@ function add1(x) {
 function prefixHello(x) {
     return 'Hello ' + x;
 }
-//# sourceMappingURL=pipe.spec.js.map

@@ -1,1 +1,1 @@
-export declare const isIterable: (param: any) => param is Iterable<any>;
+export declare var isIterable: (param: any) => boolean;

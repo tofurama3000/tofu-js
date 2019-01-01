@@ -28,5 +28,5 @@ describe('isObject', () => {
         expect(index_1.isObject(false)).toBe(false);
     });
 });
+// tslint:disable-next-line
 function C() { }
-//# sourceMappingURL=isObject.spec.js.map

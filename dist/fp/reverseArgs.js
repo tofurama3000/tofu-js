@@ -6,4 +6,3 @@ function reverseArgs(func) {
     };
 }
 exports.reverseArgs = reverseArgs;
-//# sourceMappingURL=reverseArgs.js.map

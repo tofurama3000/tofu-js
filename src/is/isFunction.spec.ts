@@ -1,15 +1,25 @@
 import { isFunction } from './index';
 
-class TestClass {}
+class TestClass {
+  private val: number;
+
+  constructor() {
+    this.val = 5;
+  }
+}
 
 describe('isFunction', () => {
   it('can detect function declarations', () => {
-    function testFunc() {}
+    function testFunc() {
+      return 5;
+    }
     expect(isFunction(testFunc)).toBe(true);
   });
 
   it('can detect function expressions', () => {
-    const testFunc = function() {};
+    const testFunc = function() {
+      return 5;
+    };
     expect(isFunction(testFunc)).toBe(true);
   });
 

@@ -11,4 +11,3 @@ describe('chunk', () => {
         expect(chunk_1.chunk(2, 5)).toEqual([]);
     });
 });
-//# sourceMappingURL=chunk.spec.js.map

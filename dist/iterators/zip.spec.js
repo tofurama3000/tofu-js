@@ -18,4 +18,3 @@ describe('zip', () => {
         })(), [0, 10, null, 3]))).toEqual([[1, 1, 0], [2, -1, 10], [3, 3, null], [4, null, 3]]);
     });
 });
-//# sourceMappingURL=zip.spec.js.map

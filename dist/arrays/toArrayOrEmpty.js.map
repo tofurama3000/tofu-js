@@ -1,1 +1,0 @@
-{"version":3,"file":"toArrayOrEmpty.js","sourceRoot":"","sources":["../../src/arrays/toArrayOrEmpty.ts"],"names":[],"mappings":";;AAAA,SAAgB,cAAc,CAAW,GAAe;IACtD,IAAI,KAAK,CAAC,OAAO,CAAC,GAAG,CAAC;QAAE,OAAO,GAAG,CAAC;IACnC,OAAO,EAAE,CAAC;AACZ,CAAC;AAHD,wCAGC"}

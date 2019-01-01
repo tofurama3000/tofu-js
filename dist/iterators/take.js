@@ -14,4 +14,3 @@ exports.take = fp_1.curry(function* (limit, iterable) {
         }
     }
 });
-//# sourceMappingURL=take.js.map

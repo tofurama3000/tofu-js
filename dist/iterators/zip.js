@@ -15,4 +15,3 @@ exports.zip = fp_1.curry(function* (iterableLeft, iterableRight, ...moreIterable
         yield items;
     }
 });
-//# sourceMappingURL=zip.js.map

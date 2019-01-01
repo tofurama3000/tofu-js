@@ -16,3 +16,4 @@ export * from './head';
 export * from './firstOr';
 export * from './firstOrNull';
 export * from './join';
+export * from './reduce';

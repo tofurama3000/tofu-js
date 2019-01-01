@@ -28,4 +28,3 @@ describe('curry', () => {
 function testFunction(x, y, z, ...a) {
     return x + y + z + a.reduce((b, c) => b + c, 0);
 }
-//# sourceMappingURL=curry.spec.js.map

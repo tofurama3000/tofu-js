@@ -23,4 +23,3 @@ describe('reverseCurry', () => {
 function testFunction(a, b, c) {
     return a + b + c;
 }
-//# sourceMappingURL=reverseCurry.spec.js.map

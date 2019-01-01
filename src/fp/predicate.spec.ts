@@ -75,11 +75,11 @@ describe('predicate', () => {
   });
 });
 
-function T() {
+function T(_?: any) {
   return true;
 }
 
-function F() {
+function F(_?: any) {
   return false;
 }
 

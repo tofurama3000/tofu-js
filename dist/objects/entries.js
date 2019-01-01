@@ -24,4 +24,3 @@ exports.entries = (param) => {
         return [];
     }
 };
-//# sourceMappingURL=entries.js.map

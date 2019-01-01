@@ -8,4 +8,3 @@ describe('first', () => {
         expect(collectToArray_1.collectToArray(first_1.first([]))).toEqual([]);
     });
 });
-//# sourceMappingURL=first.spec.js.map

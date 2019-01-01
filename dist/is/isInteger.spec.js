@@ -19,4 +19,3 @@ describe('isInteger', () => {
         expect(isInteger_1.isInteger(-Infinity)).toBe(false);
     });
 });
-//# sourceMappingURL=isInteger.spec.js.map

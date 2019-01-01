@@ -17,4 +17,3 @@ describe('flatten', () => {
         ]);
     });
 });
-//# sourceMappingURL=flatten.spec.js.map

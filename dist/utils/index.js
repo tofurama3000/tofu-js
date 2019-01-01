@@ -5,4 +5,3 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./lazyRange"));
 __export(require("./range"));
-//# sourceMappingURL=index.js.map

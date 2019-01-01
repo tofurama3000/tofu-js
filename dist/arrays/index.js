@@ -21,4 +21,3 @@ __export(require("./first"));
 __export(require("./firstOr"));
 __export(require("./firstOrNull"));
 __export(require("./join"));
-//# sourceMappingURL=index.js.map

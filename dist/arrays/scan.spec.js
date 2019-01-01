@@ -7,4 +7,3 @@ describe('scan', () => {
         expect(s([1, 2, 3, 4])).toEqual([1, 3, 6, 10]);
     });
 });
-//# sourceMappingURL=scan.spec.js.map

@@ -47,4 +47,3 @@ exports.lazyRange = (start = Infinity, end, step = 1) => {
         }
     }
 };
-//# sourceMappingURL=lazyRange.js.map

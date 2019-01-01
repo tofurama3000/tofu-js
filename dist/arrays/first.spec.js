@@ -7,4 +7,3 @@ describe('first', () => {
         expect(first_1.first([])).toEqual(null);
     });
 });
-//# sourceMappingURL=first.spec.js.map

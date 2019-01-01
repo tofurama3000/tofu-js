@@ -24,4 +24,3 @@ describe('isInfinite', () => {
         expect(index_1.isInfinite(NaN)).toBe(false);
     });
 });
-//# sourceMappingURL=isInfinite.spec.js.map

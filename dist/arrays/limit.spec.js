@@ -6,4 +6,3 @@ describe('limit', () => {
         expect(index_1.limit(2, [1, 2, 3, 4])).toEqual([1, 2]);
     });
 });
-//# sourceMappingURL=limit.spec.js.map

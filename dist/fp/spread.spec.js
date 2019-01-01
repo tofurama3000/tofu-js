@@ -8,4 +8,3 @@ describe('spread', () => {
         expect(spread_1.spread(f)([1, 2, 3, 4])).toBe(10);
     });
 });
-//# sourceMappingURL=spread.spec.js.map

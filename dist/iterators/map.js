@@ -7,4 +7,3 @@ exports.map = fp_1.curry(function* (func, iterable) {
     for (const val of iter)
         yield func(val);
 });
-//# sourceMappingURL=map.js.map

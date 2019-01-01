@@ -15,4 +15,3 @@ describe('toIterableOrEmpty', () => {
         expect(collectToArray_1.collectToArray(toIterableOrEmpty_1.toIterableOrEmpty({}))).toEqual([]);
     });
 });
-//# sourceMappingURL=toIterableOrEmpty.spec.js.map

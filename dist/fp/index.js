@@ -9,4 +9,3 @@ __export(require("./predicate"));
 __export(require("./reverseArgs"));
 __export(require("./reverseCurry"));
 __export(require("./spread"));
-//# sourceMappingURL=index.js.map

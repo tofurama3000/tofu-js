@@ -18,4 +18,3 @@ describe('isNull', () => {
         expect(index_1.isNull([])).toBe(false);
     });
 });
-//# sourceMappingURL=isNull.spec.js.map

@@ -14,4 +14,3 @@ exports.limit = fp_1.curry(function* (max, iterable) {
         }
     }
 });
-//# sourceMappingURL=limit.js.map

@@ -11,4 +11,3 @@ describe('firstOr', () => {
         expect(firstOr_1.firstOr(4, [])).toBe(4);
     });
 });
-//# sourceMappingURL=firstOr.spec.js.map

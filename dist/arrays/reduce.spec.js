@@ -7,4 +7,3 @@ describe('reduce', () => {
         expect(r([1, 2, 3, 4])).toEqual(10);
     });
 });
-//# sourceMappingURL=reduce.spec.js.map

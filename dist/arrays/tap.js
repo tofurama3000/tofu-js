@@ -6,4 +6,3 @@ exports.tap = fp_1.curry((func, array) => {
     toArrayOrEmpty_1.toArrayOrEmpty(array).forEach(func);
     return array;
 });
-//# sourceMappingURL=tap.js.map

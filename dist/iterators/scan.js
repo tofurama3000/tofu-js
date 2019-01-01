@@ -10,4 +10,3 @@ exports.scan = fp_1.curry(function* (func, start, iterable) {
         yield accumulated;
     }
 });
-//# sourceMappingURL=scan.js.map

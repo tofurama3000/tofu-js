@@ -10,4 +10,3 @@ exports.curry = func => {
     };
     return curryImpl([]);
 };
-//# sourceMappingURL=curry.js.map

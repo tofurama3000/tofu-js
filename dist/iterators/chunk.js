@@ -16,4 +16,3 @@ exports.chunk = fp_1.curry(function* (size, iterable) {
         yield chunks;
     }
 });
-//# sourceMappingURL=chunk.js.map

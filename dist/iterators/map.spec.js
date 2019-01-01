@@ -13,4 +13,3 @@ describe('map', () => {
         })()))).toEqual([2, 3, 4]);
     });
 });
-//# sourceMappingURL=map.spec.js.map

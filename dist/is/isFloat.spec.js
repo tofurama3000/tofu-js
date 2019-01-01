@@ -18,4 +18,3 @@ describe('isFloat', () => {
         expect(isFloat_1.isFloat(false)).toBe(false);
     });
 });
-//# sourceMappingURL=isFloat.spec.js.map

@@ -17,4 +17,3 @@ exports.skip = fp_1.curry(function* (amt = 1, iterable) {
         yield value;
     }
 });
-//# sourceMappingURL=skip.js.map

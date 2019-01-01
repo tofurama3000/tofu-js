@@ -16,4 +16,3 @@ exports.flatMap = fp_1.curry(function* (func, iterable) {
         }
     }
 });
-//# sourceMappingURL=flatMap.js.map

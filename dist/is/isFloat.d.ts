@@ -1,1 +1,1 @@
-export declare const isFloat: (param: any) => param is number;
+export declare var isFloat: (param: any) => boolean;

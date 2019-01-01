@@ -11,4 +11,3 @@ describe('limit', () => {
         })()))).toEqual([1, -1]);
     });
 });
-//# sourceMappingURL=limit.spec.js.map

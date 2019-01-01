@@ -9,4 +9,3 @@ exports.fromPairs = function* (pairs) {
     }
     yield obj;
 };
-//# sourceMappingURL=fromPairs.js.map

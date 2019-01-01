@@ -25,4 +25,3 @@ describe('entries', () => {
         expect(entries_1.entries('Hello')).toEqual([]);
     });
 });
-//# sourceMappingURL=entries.spec.js.map

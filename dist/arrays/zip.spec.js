@@ -14,4 +14,3 @@ describe('zip', () => {
         ]);
     });
 });
-//# sourceMappingURL=zip.spec.js.map

@@ -22,4 +22,3 @@ describe('isArray', () => {
         expect(isArray_1.isArray(false)).toBe(false);
     });
 });
-//# sourceMappingURL=isArray.spec.js.map

@@ -13,4 +13,3 @@ describe('scan', () => {
         })()))).toEqual([1, 0, 3]);
     });
 });
-//# sourceMappingURL=scan.spec.js.map

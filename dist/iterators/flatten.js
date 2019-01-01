@@ -15,4 +15,3 @@ exports.flatten = fp_1.curry(function* (iterable) {
         }
     }
 });
-//# sourceMappingURL=flatten.js.map

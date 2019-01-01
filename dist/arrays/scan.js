@@ -9,4 +9,3 @@ exports.scan = fp_1.curry((func, start, array) => {
         return accumulated;
     });
 });
-//# sourceMappingURL=scan.js.map

@@ -2,14 +2,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = require("./index");
 class TestClass {
+    constructor() {
+        this.val = 5;
+    }
 }
 describe('isFunction', () => {
     it('can detect function declarations', () => {
-        function testFunc() { }
+        function testFunc() {
+            return 5;
+        }
         expect(index_1.isFunction(testFunc)).toBe(true);
     });
     it('can detect function expressions', () => {
-        const testFunc = function () { };
+        const testFunc = function () {
+            return 5;
+        };
         expect(index_1.isFunction(testFunc)).toBe(true);
     });
     it('can detect arrow functions', () => {
@@ -49,4 +56,3 @@ describe('isFunction', () => {
         expect(index_1.isFunction([])).toBe(false);
     });
 });
-//# sourceMappingURL=isFunction.spec.js.map

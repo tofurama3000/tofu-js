@@ -10,4 +10,3 @@ exports.zip = fp_1.curry((arrLeft, arrRight, ...moreArrays) => {
     }
     return res;
 });
-//# sourceMappingURL=zip.js.map

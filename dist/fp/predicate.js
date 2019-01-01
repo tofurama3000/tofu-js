@@ -6,4 +6,3 @@ exports.xor = (...predicates) => (param) => [...predicates].map(p => +p(param)).
 exports.negate = (p1) => (param) => !p1(param);
 exports.toPredicate = (p) => (param) => !!p(param);
 exports.boolToPredicate = (b) => () => b;
-//# sourceMappingURL=predicate.js.map

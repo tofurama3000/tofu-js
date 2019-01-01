@@ -10,3 +10,6 @@ export * from './isString';
 export * from './isInteger';
 export * from './isFloat';
 export * from './isArray';
+export * from './isBuffer';
+export * from './isSet';
+export * from './isMap';

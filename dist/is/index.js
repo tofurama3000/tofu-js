@@ -15,4 +15,6 @@ __export(require("./isString"));
 __export(require("./isInteger"));
 __export(require("./isFloat"));
 __export(require("./isArray"));
-//# sourceMappingURL=index.js.map
+__export(require("./isBuffer"));
+__export(require("./isSet"));
+__export(require("./isMap"));
