@@ -6,3 +6,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./toPairs"));
 __export(require("./entries"));
 __export(require("./clone"));
+__export(require("./isEqual"));
