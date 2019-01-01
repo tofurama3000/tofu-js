@@ -5,6 +5,10 @@ const index_2 = require("../arrays/index");
 const index_3 = require("../iterators/index");
 const index_4 = require("../fp/index");
 function isEqual(left, right) {
+    if (index_1.isNull(left) && index_1.isNull(right))
+        return true;
+    if (index_1.isUndefined(left) && index_1.isUndefined(right))
+        return true;
     if (typeof left !== typeof right)
         return false;
     // can't compare, possibly infinite

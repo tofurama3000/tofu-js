@@ -1,1 +1,1 @@
-export declare function isEqual(left: any, right: any): boolean;
+export declare function isEqual(left?: any, right?: any): boolean;

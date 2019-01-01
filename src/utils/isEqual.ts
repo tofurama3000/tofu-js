@@ -1,9 +1,20 @@
-import { isArray, isBuffer, isIterable, isMap, isObject, isSet } from '../is/index';
+import {
+  isArray,
+  isBuffer,
+  isIterable,
+  isMap,
+  isNull,
+  isObject,
+  isSet,
+  isUndefined
+} from '../is/index';
 import { zip } from '../arrays/index';
 import { map, reduce } from '../iterators/index';
 import { pipe } from '../fp/index';
 
-export function isEqual(left: any, right: any): boolean {
+export function isEqual(left?: any, right?: any): boolean {
+  if (isNull(left) && isNull(right)) return true;
+  if (isUndefined(left) && isUndefined(right)) return true;
   if (typeof left !== typeof right) return false;
   // can't compare, possibly infinite
   else if (isIterable(left)) return isIterable(right);
