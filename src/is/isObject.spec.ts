@@ -1,7 +1,7 @@
 import { isObject } from './index';
 
 describe('isObject', () => {
-  it('Detects Objects', () => {
+  it('Detects Obj', () => {
     expect(isObject({})).toBe(true);
     expect(isObject({ hello: 'world' })).toBe(true);
     expect(isObject([])).toBe(true);
@@ -16,7 +16,7 @@ describe('isObject', () => {
     expect(isObject(Object.create(Object.create(null)))).toBe(true);
   });
 
-  it('Detects non-objects', () => {
+  it('Detects non-obj', () => {
     expect(isObject(2.5)).toBe(false);
     expect(isObject('string')).toBe(false);
     expect(isObject(null)).toBe(false);

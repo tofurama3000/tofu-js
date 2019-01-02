@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = require("./index");
 describe('isObject', () => {
-    it('Detects Objects', () => {
+    it('Detects Obj', () => {
         expect(index_1.isObject({})).toBe(true);
         expect(index_1.isObject({ hello: 'world' })).toBe(true);
         expect(index_1.isObject([])).toBe(true);
@@ -16,7 +16,7 @@ describe('isObject', () => {
         expect(index_1.isObject(Array.prototype)).toBe(true);
         expect(index_1.isObject(Object.create(Object.create(null)))).toBe(true);
     });
-    it('Detects non-objects', () => {
+    it('Detects non-obj', () => {
         expect(index_1.isObject(2.5)).toBe(false);
         expect(index_1.isObject('string')).toBe(false);
         expect(index_1.isObject(null)).toBe(false);

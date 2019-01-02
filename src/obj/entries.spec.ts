@@ -1,7 +1,7 @@
 import { entries } from './entries';
 
 describe('entries', () => {
-  it('works on objects', () => {
+  it('works on obj', () => {
     expect(entries({})).toEqual([]);
     expect(entries({ a: 4 })).toEqual([['a', 4]]);
     expect(entries({ a: 4, b: 6 })).toEqual([['a', 4], ['b', 6]]);

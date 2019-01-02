@@ -19,5 +19,5 @@ const Logic = __importStar(require("./logic"));
 exports.logic = Logic;
 const Utils = __importStar(require("./utils"));
 exports.utils = Utils;
-const Objects = __importStar(require("./objects"));
-exports.objects = Objects;
+const Obj = __importStar(require("./obj"));
+exports.obj = Obj;

@@ -55,7 +55,7 @@ describe('isFunction', () => {
     expect(isFunction(undefined)).toBe(false);
   });
 
-  it('returns false for primitives and objects', () => {
+  it('returns false for primitives and obj', () => {
     expect(isFunction('string')).toBe(false);
     expect(isFunction(5.34)).toBe(false);
     expect(isFunction(Symbol.iterator)).toBe(false);

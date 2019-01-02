@@ -1,7 +1,7 @@
 import { cloneShallow, cloneDeep } from './clone';
 
 describe('cloneShallow', () => {
-  it('works on objects', () => {
+  it('works on obj', () => {
     const obj = { a: { foo: 'bar' } };
     const clone: any = cloneShallow(obj);
     clone.b = 'foobar';
@@ -23,7 +23,7 @@ describe('cloneShallow', () => {
 });
 
 describe('cloneDeep', () => {
-  it('works on objects', () => {
+  it('works on obj', () => {
     const obj = { a: { foo: 'bar' } };
     const clone: any = cloneDeep(obj);
     clone.b = 'foobar';

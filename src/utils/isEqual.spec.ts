@@ -2,7 +2,7 @@ import { cloneDeep } from './clone';
 import { isEqual } from './isEqual';
 
 describe('isEqual', () => {
-  it('works on objects', () => {
+  it('works on obj', () => {
     const obj = { a: { foo: 'bar' } };
     const clone: any = cloneDeep(obj);
     expect(isEqual(obj, clone)).toBe(true);

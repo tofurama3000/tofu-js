@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const clone_1 = require("./clone");
 describe('cloneShallow', () => {
-    it('works on objects', () => {
+    it('works on obj', () => {
         const obj = { a: { foo: 'bar' } };
         const clone = clone_1.cloneShallow(obj);
         clone.b = 'foobar';
@@ -22,7 +22,7 @@ describe('cloneShallow', () => {
     });
 });
 describe('cloneDeep', () => {
-    it('works on objects', () => {
+    it('works on obj', () => {
         const obj = { a: { foo: 'bar' } };
         const clone = clone_1.cloneDeep(obj);
         clone.b = 'foobar';
