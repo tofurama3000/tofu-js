@@ -62,6 +62,17 @@ describe('Immutable list', () => {
   it('can drop the first element', () => {
     const list = List.toList([1, 2, 3, 4, 5]);
     assertEqualLists(List.dropFirst(list), list[1]);
+  });
+
+  it('can count the list length', () => {
+    expect(List.count(List.toList([1,2,3,4,5]))).toBe(5);
+    expect(List.count(List.toList([1,2,3]))).toBe(3);
+  });
+
+  it('can split the list', () => {
+    const list = List.toList([1, 2, 3, 4, 5, 6]);
+    assertEqualLists(List.split(list, 3), [[1,[2,[3,[]]]], [4, [5, [6, []]]]]);
+    assertEqualLists(List.splitOn(list, x => x > 4), [[1, [2, [3, [4, []]]]], [5, [6, []]]]);
   })
 });
 

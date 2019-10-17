@@ -1,4 +1,29 @@
 
+export function count(list) {
+  let i = 0;
+  for(const v of list) ++i;
+  return i;
+}
+
+export function splitOn(list, fn) {
+  let previous = [];
+  let curList = list;
+  for(;curList && curList.length && !fn(curList[0]); curList = curList[1]) {
+    previous.push(curList[0]);
+  }
+  return [toList(previous), (curList || [])];
+}
+
+export function split(list, index = 1) {
+  let curList = list;
+  let previous = [];
+  for(let i = 0; i < index && curList && curList.length; ++i) {
+    previous.push(curList[0]);
+    curList = curList[1];
+  }
+  return [toList(previous), (curList || [])];
+}
+
 export function add(list, elem) {
   return ([elem, list]);
 }
