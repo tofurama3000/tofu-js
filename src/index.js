@@ -18,3 +18,6 @@ export const utils = Utils;
 
 import * as Obj from './obj';
 export const obj = Obj;
+
+import * as Imut from './immutable';
+export const immutale = Imut;
