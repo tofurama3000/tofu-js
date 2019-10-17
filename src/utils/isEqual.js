@@ -34,8 +34,8 @@ export function isEqual(left, right) {
     const compare = (lSet, rSet) =>
       pipe(
         lSet,
-        (s) => s.entries(),
-        map((elem) => rSet.has(elem)),
+        s => s.entries(),
+        map(elem => rSet.has(elem)),
         reduce((a, c) => a && c, true)
       );
     return compare(left, right) && compare(right, left);
@@ -44,7 +44,7 @@ export function isEqual(left, right) {
     const compare = (lMap, rMap) =>
       pipe(
         lMap,
-        (s) => s.entries(),
+        s => s.entries(),
         map(([key, val]) => rMap.has(key) && isEqual(val, rMap.get(key))),
         reduce((a, c) => a && c, true)
       );
@@ -54,7 +54,7 @@ export function isEqual(left, right) {
     const compare = (lMap, rMap) =>
       pipe(
         lMap,
-        (s) => Object.entries(s),
+        s => Object.entries(s),
         map(([key, val]) => key in rMap && isEqual(val, rMap[key])),
         reduce((a, c) => a && c, true)
       );

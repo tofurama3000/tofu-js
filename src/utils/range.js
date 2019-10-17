@@ -1,6 +1,6 @@
 import { isNil } from '../is';
 
-export const range = (start= 0, end, step= 1) => {
+export const range = (start = 0, end, step = 1) => {
   if (isNil(end)) return range(0, start, step);
   const arr = [];
   const to = +(end || 0);
