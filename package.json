@@ -7,28 +7,13 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.2.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/preset-typescript": "^7.1.0",
-    "@types/jest": "^23.3.12",
-    "@types/node": "^10.12.18",
-    "babel-loader": "^8.0.5",
-    "babel-plugin-tailcall-optimization": "^1.0.13",
-    "jest": "^23.6.0",
-    "prettier": "^1.15.3",
-    "ts-jest": "^23.10.5",
-    "ts-loader": "^5.3.3",
-    "tslint": "^5.12.1",
-    "typescript": "^2.9.2",
-    "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "jest": "^25.0.0",
+    "parcel-bundler": "^1.12.4"
   },
   "scripts": {
     "test": "jest --coverage",
-    "build": "webpack --mode=development",
-    "lint": "tslint ./src/**/*"
+    "build": "parcel build ./src/index.js",
+    "watch": "parcel watch ./src/index.js"
   },
   "jest": {
     "coverageReporters": [
@@ -36,14 +21,9 @@
       "lcov"
     ],
     "moduleFileExtensions": [
-      "ts",
-      "tsx",
       "js"
     ],
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest"
-    },
-    "testRegex": ".*\\.spec\\.(ts|tsx|js)$"
+    "testRegex": ".*\\.spec\\.js$"
   },
   "dependencies": {}
 }
