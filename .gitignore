@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 .vscode/
 
+*.swp
 # Runtime data
 pids
 *.pid
@@ -41,8 +42,8 @@ dist/
 package-lock.json
 
 # Typescript v1 declaration files
-typings/
-*
+typings/*
+.cache/
 # Optional npm cache directory
 .npm
 
