@@ -1,6 +1,28 @@
-export function concat(list1, list2) {
-  if (!list2.length) return list1;
-  else if (!list1.length) return list2;
+
+export function add(list, elem) {
+  return ([elem, list]);
+}
+
+export function drop(list, count = 1) {
+  let curList = list;
+  for(let i = 0; i < count && curList && curList.length; ++i) {
+    curList = curList[1];
+  }
+  return (curList || []);
+}
+
+export function dropFirst(list) {
+  return drop(list);
+}
+
+export function concat(list1, ...lists) {
+  const [list2, ...rest] = lists;
+  if (!list2 || !list2.length) {
+    return rest.length ? concat(list1, ...rest) : list1;
+  }
+  else if (!list1.length) {
+    return rest.length ? concat(list2, ...rest) : list2;
+  }
   const newList = [];
   let curNewListElem = newList;
   let curList = list1;
@@ -11,11 +33,11 @@ export function concat(list1, list2) {
     curList = curList[1];
   }
   curNewListElem.push(...list2);
-  return newList;
+  return concat(newList, ...rest);
 }
 
 export function nestedToList(obj) {
-  return addListFunctions(listify(obj));
+  return (listify(obj));
 }
 
 export function reverse(list) {
@@ -25,7 +47,7 @@ export function reverse(list) {
     newList = [curList[0], newList];
     curList = curList[1];
   }
-  return newList;
+  return (newList);
 }
 
 export function toArray(list) {
@@ -40,9 +62,9 @@ export function toArray(list) {
 
 export function toList(obj) {
   if (!Array.isArray(obj)) {
-    return addListFunctions([obj, []]);
+    return ([obj, []]);
   }
-  return addListFunctions(listify(obj, 1));
+  return (listify(obj, 1));
 }
 
 function listify(obj, depth = -1) {
@@ -51,7 +73,7 @@ function listify(obj, depth = -1) {
     return obj
       .map(obj => listify(obj, depth - 1))
       .reverse()
-      .reduce((list, elem) => [elem, list], []);
+      .reduce((list, elem) => addListIterator([elem, list]), []);
   } else if (obj instanceof Map) {
     const newMap = new Map();
     obj.forEach((v, k) => {
@@ -73,21 +95,14 @@ function listify(obj, depth = -1) {
   }
 }
 
-function addListFunctions(list) {
-  list.concat = function(otherList) {
-    return addListFunctions(concat(this, otherList));
-  };
-  list.add = function(elem) {
-    return addListFunctions([elem, this]);
-  };
-  list.removeFirst = function() {
-    return addListFunctions(this[1]);
-  };
-  list.reverse = function() {
-    return addListFunctions(reverse(this));
-  };
-  list.toArray = function() {
-    return toArray(this);
-  };
+function addListIterator(list) {
+  list[Symbol.iterator] = function*() {
+    let arr = this;
+    while(arr && arr.length) {
+      yield arr[0];
+      arr = arr[1];
+    }
+  }
   return list;
 }
+

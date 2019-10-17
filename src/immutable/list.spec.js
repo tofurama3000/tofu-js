@@ -34,16 +34,35 @@ describe('Immutable list', () => {
     expect(List.toArray(list)).toEqual(array);
   });
 
-  it('has correct list functions', () => {
+  it('has an iterator', () => {
     const list1 = List.toList([1, 2, 3, 4]);
-    const list2 = List.toList([4, 5, 6]);
-    assertEqualLists(list1.concat(list2), List.concat(list1, list2));
-    assertEqualLists(list2.reverse(), [6, [5, [4, []]]]);
-    assertEqualLists(list1.add(10), [10, list1]);
-    assertEqualLists(list1.removeFirst(), list1[1]);
-    assertEqualLists(list1.removeFirst().add(1), list1);
-    expect(list1.toArray()).toEqual([1, 2, 3, 4]);
+    let nextVal = 1;
+    for(const val of list1) {
+      expect(val).toBe(nextVal++);
+    }
+    expect(nextVal).toBe(5);
+
+    nextVal = 2;
+    for(const val of list1[1]) {
+      expect(val).toBe(nextVal++);
+    }
   });
+
+  it('can add an element', () => {
+    const list = List.toList([1, 2, 3, 4]);
+    assertEqualLists(List.add(list, 0), [0, list]);
+  });
+
+  it('can remove elements', () => {
+    const list = List.toList([1, 2, 3, 4, 5]);
+    assertEqualLists(List.drop(list, 3), [4, [5, []]]);
+    assertEqualLists(List.drop(list, 2), [3, [4, [5, []]]]);
+  });
+
+  it('can drop the first element', () => {
+    const list = List.toList([1, 2, 3, 4, 5]);
+    assertEqualLists(List.dropFirst(list), list[1]);
+  })
 });
 
 function assertEqualLists(l1, l2) {
