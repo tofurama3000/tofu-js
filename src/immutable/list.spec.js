@@ -34,6 +34,11 @@ describe('Immutable list', () => {
     expect(List.toArray(list)).toEqual(array);
   });
 
+  it('has empty being detected', () => {
+    expect(List.isEmpty([])).toBe(true);
+    expect(List.isEmpty([1, []])).toBe(false);
+  });
+
   it('has an iterator', () => {
     const list1 = List.toList([1, 2, 3, 4]);
     let nextVal = 1;

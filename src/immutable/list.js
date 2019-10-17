@@ -4,6 +4,10 @@ export function count(list) {
   return i;
 }
 
+export function isEmpty(list) {
+  return !list.length;
+}
+
 export function splitOn(list, fn) {
   let previous = [];
   let curList = list;
