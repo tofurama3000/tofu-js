@@ -1,4 +1,4 @@
-import * as List from './list'
+import * as List from './list';
 
 describe('Immutable list', () => {
   it('can convert arrays to lists', () => {
@@ -9,8 +9,8 @@ describe('Immutable list', () => {
   });
 
   it('can nested convert arrays to lists', () => {
-    const arr = [1, [2, 3], {a: [4, 5]}];
-    const list = [1, [[2, [3, []]], [{a: [4, [5, []]]}, []]]];
+    const arr = [1, [2, 3], { a: [4, 5] }];
+    const list = [1, [[2, [3, []]], [{ a: [4, [5, []]] }, []]]];
 
     assertEqualLists(List.nestedToList(arr), list);
   });
@@ -37,13 +37,13 @@ describe('Immutable list', () => {
   it('has an iterator', () => {
     const list1 = List.toList([1, 2, 3, 4]);
     let nextVal = 1;
-    for(const val of list1) {
+    for (const val of list1) {
       expect(val).toBe(nextVal++);
     }
     expect(nextVal).toBe(5);
 
     nextVal = 2;
-    for(const val of list1[1]) {
+    for (const val of list1[1]) {
       expect(val).toBe(nextVal++);
     }
   });
@@ -65,18 +65,17 @@ describe('Immutable list', () => {
   });
 
   it('can count the list length', () => {
-    expect(List.count(List.toList([1,2,3,4,5]))).toBe(5);
-    expect(List.count(List.toList([1,2,3]))).toBe(3);
+    expect(List.count(List.toList([1, 2, 3, 4, 5]))).toBe(5);
+    expect(List.count(List.toList([1, 2, 3]))).toBe(3);
   });
 
   it('can split the list', () => {
     const list = List.toList([1, 2, 3, 4, 5, 6]);
-    assertEqualLists(List.split(list, 3), [[1,[2,[3,[]]]], [4, [5, [6, []]]]]);
+    assertEqualLists(List.split(list, 3), [[1, [2, [3, []]]], [4, [5, [6, []]]]]);
     assertEqualLists(List.splitOn(list, x => x > 4), [[1, [2, [3, [4, []]]]], [5, [6, []]]]);
-  })
+  });
 });
 
 function assertEqualLists(l1, l2) {
   expect(JSON.stringify(l1)).toBe(JSON.stringify(l2));
 }
-

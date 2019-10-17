@@ -1,39 +1,38 @@
-
 export function count(list) {
   let i = 0;
-  for(const v of list) ++i;
+  for (const v of list) ++i;
   return i;
 }
 
 export function splitOn(list, fn) {
   let previous = [];
   let curList = list;
-  for(;curList && curList.length && !fn(curList[0]); curList = curList[1]) {
+  for (; curList && curList.length && !fn(curList[0]); curList = curList[1]) {
     previous.push(curList[0]);
   }
-  return [toList(previous), (curList || [])];
+  return [toList(previous), curList || []];
 }
 
 export function split(list, index = 1) {
   let curList = list;
   let previous = [];
-  for(let i = 0; i < index && curList && curList.length; ++i) {
+  for (let i = 0; i < index && curList && curList.length; ++i) {
     previous.push(curList[0]);
     curList = curList[1];
   }
-  return [toList(previous), (curList || [])];
+  return [toList(previous), curList || []];
 }
 
 export function add(list, elem) {
-  return ([elem, list]);
+  return [elem, list];
 }
 
 export function drop(list, count = 1) {
   let curList = list;
-  for(let i = 0; i < count && curList && curList.length; ++i) {
+  for (let i = 0; i < count && curList && curList.length; ++i) {
     curList = curList[1];
   }
-  return (curList || []);
+  return curList || [];
 }
 
 export function dropFirst(list) {
@@ -44,8 +43,7 @@ export function concat(list1, ...lists) {
   const [list2, ...rest] = lists;
   if (!list2 || !list2.length) {
     return rest.length ? concat(list1, ...rest) : list1;
-  }
-  else if (!list1.length) {
+  } else if (!list1.length) {
     return rest.length ? concat(list2, ...rest) : list2;
   }
   const newList = [];
@@ -62,7 +60,7 @@ export function concat(list1, ...lists) {
 }
 
 export function nestedToList(obj) {
-  return (listify(obj));
+  return listify(obj);
 }
 
 export function reverse(list) {
@@ -72,7 +70,7 @@ export function reverse(list) {
     newList = [curList[0], newList];
     curList = curList[1];
   }
-  return (newList);
+  return newList;
 }
 
 export function toArray(list) {
@@ -87,9 +85,9 @@ export function toArray(list) {
 
 export function toList(obj) {
   if (!Array.isArray(obj)) {
-    return ([obj, []]);
+    return [obj, []];
   }
-  return (listify(obj, 1));
+  return listify(obj, 1);
 }
 
 function listify(obj, depth = -1) {
@@ -123,11 +121,10 @@ function listify(obj, depth = -1) {
 function addListIterator(list) {
   list[Symbol.iterator] = function*() {
     let arr = this;
-    while(arr && arr.length) {
+    while (arr && arr.length) {
       yield arr[0];
       arr = arr[1];
     }
-  }
+  };
   return list;
 }
-
