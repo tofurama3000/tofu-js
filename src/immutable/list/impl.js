@@ -16,7 +16,7 @@ export function toArray(list) {
 
 export function toList(obj) {
   if (!Array.isArray(obj)) {
-    return [obj, []];
+    return listify([obj, []]);
   }
   return listify(obj, 1);
 }
@@ -27,7 +27,7 @@ function listify(obj, depth = -1) {
     return obj
       .map(obj => listify(obj, depth - 1))
       .reverse()
-      .reduce((list, elem) => addListFunctions([elem, list]), []);
+      .reduce((list, elem) => addListFunctions([elem, list]), addListFunctions([]));
   } else if (obj instanceof Map) {
     const newMap = new Map();
     obj.forEach((v, k) => {

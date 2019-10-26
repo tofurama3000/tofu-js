@@ -13,6 +13,8 @@ export * from './join';
 export * from './limit';
 export * from './map';
 export * from './reduce';
+export * from './removeFalsey';
+export * from './removeTruthy';
 export * from './scan';
 export * from './skip';
 export * from './reverse';

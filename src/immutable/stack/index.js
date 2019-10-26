@@ -1,3 +1,5 @@
+const isStackSym = Symbol('isStack');
+
 export function Stack() {
   return addStackFunctions([]);
 }
@@ -22,7 +24,12 @@ export function isEmpty(stack) {
   return !stack.length;
 }
 
+export function isStack(obj) {
+  return typeof obj === 'object' && !!obj && !!obj[isStackSym];
+}
+
 function addStackFunctions(stack) {
+  stack[isStackSym] = true;
   stack.push = (...items) => push(stack, ...items);
   stack.pop = () => pop(stack);
   stack.peek = () => peek(stack);

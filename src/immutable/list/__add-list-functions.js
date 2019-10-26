@@ -8,6 +8,8 @@ import { drop, dropFirst } from './drop';
 import { reverse } from './reverse';
 import { concat } from './concat';
 import { reduce } from './reduce';
+import { equals } from './equals';
+import { isListSym } from './__list-sym';
 
 export function addListFunctions(list) {
   list.__proto__ = Object;
@@ -19,6 +21,8 @@ export function addListFunctions(list) {
     }
   };
 
+  list[isListSym] = true;
+
   bindFuncs(
     list,
     add,
@@ -26,6 +30,7 @@ export function addListFunctions(list) {
     count,
     drop,
     dropFirst,
+    equals,
     isEmpty,
     map,
     reduce,
