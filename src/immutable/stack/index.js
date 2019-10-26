@@ -1,11 +1,10 @@
-
 export function Stack() {
   return addStackFunctions([]);
 }
 
 export function push(stack, ...items) {
   let curStack = stack;
-  for(const item of items) {
+  for (const item of items) {
     curStack = addStackFunctions([item, curStack]);
   }
   return curStack;
@@ -30,4 +29,3 @@ function addStackFunctions(stack) {
   stack.isEmpty = () => isEmpty(stack);
   return stack;
 }
-
