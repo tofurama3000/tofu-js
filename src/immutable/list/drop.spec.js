@@ -1,6 +1,6 @@
-import * as List from './impl'
-import {drop, dropFirst} from './drop'
-import {assertEqualLists} from './__test-utils'
+import * as List from './impl';
+import { drop, dropFirst } from './drop';
+import { assertEqualLists } from './__test-utils';
 
 describe('Immutable list drop', () => {
   it('can drop the first element', () => {
@@ -13,4 +13,4 @@ describe('Immutable list drop', () => {
     assertEqualLists(drop(list, 3), [4, [5, []]]);
     assertEqualLists(drop(list, 2), [3, [4, [5, []]]]);
   });
-})
+});

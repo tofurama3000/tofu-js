@@ -1,4 +1,4 @@
-import {toList} from './impl'
+import { toList } from './impl';
 
 export function splitOn(list, fn) {
   let previous = [];

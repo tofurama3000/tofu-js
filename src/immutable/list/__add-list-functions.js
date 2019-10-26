@@ -1,13 +1,13 @@
-import {map} from './map';
-import {count} from './count';
-import {isEmpty} from './isEmpty';
-import {split} from './split';
-import {splitOn} from './splitOn'
-import {add} from './add';
-import {drop, dropFirst} from './drop';
-import {reverse} from './reverse'
-import {concat} from './concat'
-import {reduce} from './reduce';
+import { map } from './map';
+import { count } from './count';
+import { isEmpty } from './isEmpty';
+import { split } from './split';
+import { splitOn } from './splitOn';
+import { add } from './add';
+import { drop, dropFirst } from './drop';
+import { reverse } from './reverse';
+import { concat } from './concat';
+import { reduce } from './reduce';
 
 export function addListFunctions(list) {
   list.__proto__ = Object;
@@ -19,7 +19,20 @@ export function addListFunctions(list) {
     }
   };
 
-  bindFuncs(list, add, concat, count, drop, dropFirst, isEmpty, map, reduce, reverse, split, splitOn);
+  bindFuncs(
+    list,
+    add,
+    concat,
+    count,
+    drop,
+    dropFirst,
+    isEmpty,
+    map,
+    reduce,
+    reverse,
+    split,
+    splitOn
+  );
 
   return list;
 }

@@ -1,4 +1,4 @@
-import {addListFunctions} from './__add-list-functions'
+import { addListFunctions } from './__add-list-functions';
 
 export function reverse(list) {
   let newList = addListFunctions([]);

@@ -1,4 +1,4 @@
-import {addListFunctions} from './__add-list-functions'
+import { addListFunctions } from './__add-list-functions';
 
 export function nestedToList(obj) {
   return listify(obj);
@@ -48,4 +48,3 @@ function listify(obj, depth = -1) {
     return obj;
   }
 }
-

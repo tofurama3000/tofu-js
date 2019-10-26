@@ -1,4 +1,4 @@
-import { addListFunctions } from "./__add-list-functions";
+import { addListFunctions } from './__add-list-functions';
 
 export function drop(list, count = 1) {
   let curList = list;
@@ -11,5 +11,3 @@ export function drop(list, count = 1) {
 export function dropFirst(list) {
   return drop(list);
 }
-
-

@@ -1,4 +1,4 @@
-import {toList} from './impl'
+import { toList } from './impl';
 
 export function split(list, index = 1) {
   let curList = list;

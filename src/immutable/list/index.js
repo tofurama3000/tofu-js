@@ -1,2 +1,2 @@
-export * from './impl'
-export * from './map'
+export * from './impl';
+export * from './map';

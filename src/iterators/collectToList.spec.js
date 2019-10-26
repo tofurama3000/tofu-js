@@ -1,10 +1,10 @@
 import { collectToList } from './collectToList';
-import {assertEqualLists} from '../immutable/list/__test-utils'
+import { assertEqualLists } from '../immutable/list/__test-utils';
 
 describe('collectToList', () => {
   it('Collects iterators to a list with no limit', () => {
     const arr = [1, 2, 3, 4, 5];
-    assertEqualLists(collectToList(arr), [1, [2, [3, [4, [5, []]]]]])
+    assertEqualLists(collectToList(arr), [1, [2, [3, [4, [5, []]]]]]);
     assertEqualLists(
       collectToList(
         (function*() {
@@ -27,7 +27,7 @@ describe('collectToList', () => {
           yield 3;
         })(),
         2
-      )
-    [1, [2, []]]);
+      )[(1, [2, []])]
+    );
   });
 });

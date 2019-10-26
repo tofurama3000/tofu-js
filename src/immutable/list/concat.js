@@ -1,4 +1,4 @@
-import {addListFunctions} from './__add-list-functions'
+import { addListFunctions } from './__add-list-functions';
 
 export function concat(list1, ...lists) {
   const [list2, ...rest] = lists;
@@ -15,9 +15,9 @@ export function concat(list1, ...lists) {
     if (curList[1].length) {
       curNewListElem.push([]);
     } else {
-      curNewListElem.push(list2)
+      curNewListElem.push(list2);
     }
-    addListFunctions(curNewListElem)
+    addListFunctions(curNewListElem);
     curNewListElem = curNewListElem[1];
     curList = curList[1];
   }

@@ -1,5 +1,5 @@
 import * as List from './impl';
-import {assertEqualLists} from './__test-utils'
+import { assertEqualLists } from './__test-utils';
 
 describe('Immutable list implementation', () => {
   it('can convert arrays to lists', () => {
