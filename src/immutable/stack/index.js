@@ -27,5 +27,6 @@ function addStackFunctions(stack) {
   stack.pop = () => pop(stack);
   stack.peek = () => peek(stack);
   stack.isEmpty = () => isEmpty(stack);
+  stack.__proto__ = Object;
   return stack;
 }
