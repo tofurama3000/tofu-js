@@ -1,3 +1,3 @@
-import { findOr } from "./findOr";
+import { findOr } from './findOr';
 
-export const findOrNull = findOr(null)
+export const findOrNull = findOr(null);

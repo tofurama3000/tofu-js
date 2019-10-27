@@ -1,3 +1,3 @@
-import { head } from "./head";
+import { head } from './head';
 
 export const first = head;
