@@ -15,6 +15,7 @@ export * from './flatMap';
 export * from './flatten';
 export * from './fromPairs';
 export * from './head';
+export * from './intersect';
 export * from './join';
 export * from './limit';
 export * from './map';

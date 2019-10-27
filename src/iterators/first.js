@@ -1,3 +1,8 @@
-import { take } from './take';
+import { toIterableOrEmpty } from "./toIterableOrEmpty";
 
-export const first = take(1);
+export const first = function(iterable) {
+  for(const val of toIterableOrEmpty(iterable)) {
+    return val;
+  }
+  return null;
+};

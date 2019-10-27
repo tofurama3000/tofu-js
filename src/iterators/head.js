@@ -1,3 +1,3 @@
-import { first } from './first';
+import { take } from './take';
 
-export const head = first;
+export const head = take(1);
