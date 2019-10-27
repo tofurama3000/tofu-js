@@ -1,8 +1,3 @@
-import { toIterableOrEmpty } from "./toIterableOrEmpty";
+import { head } from "./head";
 
-export const first = function(iterable) {
-  for(const val of toIterableOrEmpty(iterable)) {
-    return val;
-  }
-  return null;
-};
+export const first = head;
