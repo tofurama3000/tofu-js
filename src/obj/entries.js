@@ -1,9 +1,18 @@
+/**
+ * @module obj:entries
+ * @ignore
+ */
+
 import { collectToArray } from '../iterators/collectToArray';
-import { isFunction } from '../is/isFunction';
 import { isIterable } from '../is/isIterable';
 import { isObject } from '../is/isObject';
 import { map } from '../iterators/map';
 
+/**
+ * Grabs entries for an object
+ * @kind function
+ * @param {object | Map | Set | Array | Iterable} param 
+ */
 export const entries = param => {
   if (param instanceof Map) {
     return collectToArray(param.entries());
