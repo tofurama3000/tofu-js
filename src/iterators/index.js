@@ -1,3 +1,4 @@
+export * from './all';
 export * from './chunk';
 export * from './collectToArray';
 export * from './collectToList';
@@ -29,6 +30,7 @@ export * from './removeFalsey';
 export * from './removeTruthy';
 export * from './scan';
 export * from './skip';
+export * from './some';
 export * from './reverse';
 export * from './take';
 export * from './takeWhile';
