@@ -2,6 +2,7 @@ export * from './chunk';
 export * from './collectToArray';
 export * from './collectToList';
 export * from './collectToSet';
+export * from './contains';
 export * from './difference';
 export * from './fill';
 export * from './fillAll';
