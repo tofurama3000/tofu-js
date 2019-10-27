@@ -1,8 +1,9 @@
 import { curry } from '../fp';
 import { collectToSet } from './collectToSet';
+import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 export const union = curry(function*(iterable1, iterable2, ...iterables) {
-  const sets = [iterable1, iterable2, ...iterables].map(e => collectToSet(e));
+  const sets = [iterable1, iterable2, ...iterables].map(e => collectToSet(toIterableOrEmpty(e)));
   for (let i = 0; i < sets.length; ++i) {
     const set = sets[i];
     for (const val of set.values()) {
