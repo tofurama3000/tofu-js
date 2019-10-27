@@ -1,2 +1,2 @@
-export * from './list';
-export * from './stack';
+export * from './list/index';
+export * from './stack/index';

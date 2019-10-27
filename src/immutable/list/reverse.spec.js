@@ -1,4 +1,4 @@
-import { reverse } from './reverse';
+import { reverse } from './index';
 import { assertEqualLists } from './__test-utils';
 
 describe('Immutable List reverse', () => {

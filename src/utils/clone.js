@@ -1,6 +1,11 @@
-import { isArray, isObject, isBuffer, isSet, isMap } from '../is/index';
+import { isArray } from '../is/isArray';
+import { isBuffer} from '../is/isBuffer'
+import {isSet} from '../is/isSet'
+import {isMap} from '../is/isMap'
+import {isObject} from '../is/isObject'
+
 import { map } from '../arrays/index';
-import { reduce } from '../iterators/index';
+import { reduce } from '../iterators/reduce';
 
 export function cloneShallow(obj) {
   if (isArray(obj)) return obj.slice(0);

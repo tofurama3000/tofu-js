@@ -1,7 +1,7 @@
-import { fp } from '../index';
-import { cloneDeep } from '../utils';
+import { curry } from '../fp/index';
+import { cloneDeep } from '../utils/clone';
 
-export const copyInto = fp.curry((source, target) => {
+export const copyInto = curry((source, target) => {
   for (const prop in source) {
     if (source.hasOwnProperty(prop)) {
       target[prop] = source[prop];
@@ -10,7 +10,7 @@ export const copyInto = fp.curry((source, target) => {
   return target;
 });
 
-export const copyIntoDeep = fp.curry((source, target) => {
+export const copyIntoDeep = curry((source, target) => {
   for (const prop in source) {
     if (source.hasOwnProperty(prop)) {
       target[prop] = cloneDeep(source[prop]);

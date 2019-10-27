@@ -1,5 +1,5 @@
 import { and, or, xor, negate, negateAll } from './basic';
-import { spread } from '../fp';
+import { spread } from '../fp/spread';
 
 describe('Basic logic', () => {
   it('does and', () => {

@@ -9,8 +9,9 @@ import {
   isUndefined
 } from '../is/index';
 import { zip } from '../arrays/index';
-import { map, reduce } from '../iterators/index';
-import { pipe } from '../fp/index';
+import { map } from '../iterators/map';
+import {reduce} from '../iterators/reduce'
+import { pipe } from '../fp/pipe';
 
 export function isEqual(left, right) {
   if (isNull(left) && isNull(right)) return true;

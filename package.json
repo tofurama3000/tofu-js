@@ -1,20 +1,25 @@
 {
   "name": "tofu-js",
   "version": "0.0.1",
-  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "tofurama3000",
   "license": "MIT",
   "private": false,
+  
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
   "devDependencies": {
+    "@babel/preset-env": "^7.6.3",
     "jest": "^25.0.0",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "rollup": "^1.25.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   },
   "scripts": {
     "test": "jest --coverage",
-    "build": "parcel build ./src/index.js",
-    "watch": "parcel watch ./src/index.js",
+    "build": "rollup -c",
     "format": "prettier --write \"src/**/*.js\""
   },
   "jest": {

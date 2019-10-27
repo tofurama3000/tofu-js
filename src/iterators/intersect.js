@@ -1,4 +1,4 @@
-import { curry } from '../fp';
+import { curry } from '../fp/curry';
 import { collectToSet } from './collectToSet';
 import { toIterableOrEmpty } from './toIterableOrEmpty';
 

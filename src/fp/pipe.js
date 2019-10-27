@@ -1,4 +1,4 @@
-import { isFunction } from '../is';
+import { isFunction } from '../is/isFunction';
 
 export const pipe = (paramOrFunc, ...functions) => {
   if (isFunction(paramOrFunc)) {

@@ -1,1 +1,0 @@
-export { dropFirst } from './drop';

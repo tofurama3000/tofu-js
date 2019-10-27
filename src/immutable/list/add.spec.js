@@ -1,5 +1,5 @@
-import * as List from './impl';
-import { add } from './add';
+import * as List from './index';
+import { add } from './index';
 import { assertEqualLists } from './__test-utils';
 
 describe('Immutable List add', () => {

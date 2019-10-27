@@ -1,4 +1,4 @@
-import { curry } from '../fp';
+import { curry } from '../fp/curry';
 import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 export const fill = curry(function*(start, end, value, iterable) {

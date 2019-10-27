@@ -1,4 +1,4 @@
-import { toList } from './impl';
+import { toList } from './index';
 import { equals } from './equals';
 
 describe('Immutable List equals', () => {

@@ -1,5 +1,5 @@
-import * as List from './impl';
-import { concat } from './concat';
+import * as List from './index';
+import { concat } from './index';
 import { assertEqualLists } from './__test-utils';
 
 describe('Immutable List concat', () => {

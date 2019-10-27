@@ -1,5 +1,5 @@
 import { toIterableOrEmpty } from './toIterableOrEmpty';
-import { curry } from '../fp';
+import { curry } from '../fp/curry';
 
 export const take = curry(function*(limit, iterable) {
   let i = 0;

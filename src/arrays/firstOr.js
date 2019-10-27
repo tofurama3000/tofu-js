@@ -1,5 +1,5 @@
 import { toArrayOrEmpty } from './toArrayOrEmpty';
-import { curry } from '../fp';
+import { curry } from '../fp/curry';
 
 export const firstOr = curry((defaultValue, array) => {
   const arr = toArrayOrEmpty(array);

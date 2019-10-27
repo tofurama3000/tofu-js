@@ -1,5 +1,5 @@
-import * as List from './impl';
-import { drop, dropFirst } from './drop';
+import * as List from './index';
+import { drop, dropFirst } from './index';
 import { assertEqualLists } from './__test-utils';
 
 describe('Immutable list drop', () => {

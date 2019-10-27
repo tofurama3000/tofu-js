@@ -1,4 +1,4 @@
-import { curry } from '../fp';
+import { curry } from '../fp/curry';
 import { fill } from './fill';
 
 export const fillStart = curry(function(end, value, iterable) {

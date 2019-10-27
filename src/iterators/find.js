@@ -1,4 +1,4 @@
-import { curry } from '../fp';
+import { curry } from '../fp/curry';
 import { toIterableOrEmpty } from './toIterableOrEmpty';
 import { first } from './first';
 import { filter } from './filter';

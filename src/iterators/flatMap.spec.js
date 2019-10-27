@@ -1,6 +1,6 @@
 import { collectToArray } from './collectToArray';
 import { flatMap } from './flatMap';
-import { lazyRange } from '../utils';
+import { lazyRange } from '../utils/lazyRange';
 
 describe('flatMap', () => {
   it('Can flatten iterables', () => {

@@ -1,4 +1,4 @@
-import * as List from './impl';
+import * as List from './index';
 import { assertEqualLists } from './__test-utils';
 
 describe('Immutable list implementation', () => {

@@ -1,5 +1,5 @@
-import * as List from './impl';
-import { splitOn } from './splitOn';
+import * as List from './index';
+import { splitOn } from './index';
 import { assertEqualLists } from './__test-utils';
 
 describe('Immutable List splitOn', () => {

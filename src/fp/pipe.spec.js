@@ -1,5 +1,5 @@
 import { pipe } from './pipe';
-import { isFunction } from '../is';
+import { isFunction } from '../is/isFunction';
 
 describe('pipe', () => {
   it('will return a function with only function args', () => {

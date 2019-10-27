@@ -1,4 +1,4 @@
-import { curry } from '../fp';
+import { curry } from '../fp/curry';
 import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 export const filter = curry(function*(func, iterable) {

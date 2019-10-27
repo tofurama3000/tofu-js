@@ -1,5 +1,8 @@
-import { isArray, isFunction, isIterable, isObject } from '../is';
-import { collectToArray } from '../iterators';
+import { collectToArray } from '../iterators/collectToArray';
+import { isArray } from '../is/isArray';
+import { isFunction} from '../is/isFunction'
+import {isIterable} from '../is/isIterable'
+import {isObject} from '../is/isObject'
 
 export const entries = param => {
   if (param instanceof Map) {

@@ -1,4 +1,4 @@
-import { isNil } from '../is';
+import { isNil } from '../is/isNil';
 
 export const range = (start = 0, end, step = 1) => {
   if (isNil(end)) return range(0, start, step);

@@ -1,4 +1,4 @@
-import { collectToArray } from '../iterators';
+import { collectToArray } from '../iterators/collectToArray';
 import { lazyRange } from './lazyRange';
 
 describe('lazyRange', () => {

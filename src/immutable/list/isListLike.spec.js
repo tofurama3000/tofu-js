@@ -1,5 +1,5 @@
 import { isListLike } from './isListLike';
-import { toList } from './impl';
+import { toList } from './index';
 
 describe('Immutable List isListLike', () => {
   it('can detect lists', () => {

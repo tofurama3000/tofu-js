@@ -1,4 +1,4 @@
-import { isFunction } from '../is';
+import { isFunction } from '../is/isFunction';
 import { reverseCurry } from './index';
 
 describe('reverseCurry', () => {

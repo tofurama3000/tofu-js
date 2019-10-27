@@ -1,4 +1,4 @@
-import { curry, Curried2 } from '../fp';
+import { curry } from '../fp/curry';
 
 export const zip = curry((arrLeft, arrRight, ...moreArrays) => {
   const arrays = [arrLeft, arrRight, ...moreArrays];

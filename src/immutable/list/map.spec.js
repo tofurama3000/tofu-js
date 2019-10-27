@@ -1,4 +1,4 @@
-import { map } from './map';
+import { map } from './index';
 import { assertEqualLists } from './__test-utils';
 
 describe('Immutable list map', () => {

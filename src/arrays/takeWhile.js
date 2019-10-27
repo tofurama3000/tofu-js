@@ -1,5 +1,4 @@
-import { curry } from '../fp';
-import { isIterable } from '../is';
+import { curry } from '../fp/curry';
 import { toArrayOrEmpty } from './toArrayOrEmpty';
 
 export const takeWhile = curry((whileFunc, array) => {

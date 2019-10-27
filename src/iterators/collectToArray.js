@@ -1,4 +1,4 @@
-import { isInfinite } from '../is';
+import { isInfinite } from '../is/isInfinite';
 import { limit } from './limit';
 import { toIterableOrEmpty } from './toIterableOrEmpty';
 

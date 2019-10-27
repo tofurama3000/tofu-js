@@ -1,5 +1,5 @@
-import { curry } from '../fp';
-import { isIterable } from '../is';
+import { curry } from '../fp/curry';
+import { isIterable } from '../is/isIterable';
 import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 export const flatMap = curry(function*(func, iterable) {

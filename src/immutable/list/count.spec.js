@@ -1,5 +1,5 @@
 import { count } from './count';
-import * as List from './impl';
+import * as List from './index';
 
 describe('Immutable list count', () => {
   it('can count the list length', () => {

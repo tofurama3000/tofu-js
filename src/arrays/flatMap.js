@@ -1,4 +1,5 @@
-import { curry, pipe } from '../fp';
+import { curry } from '../fp/curry';
+import {pipe} from '../fp/pipe';
 import { toArrayOrEmpty } from './toArrayOrEmpty';
 import { map } from './map';
 import { flatten } from './flatten';
