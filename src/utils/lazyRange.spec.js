@@ -14,6 +14,7 @@ describe('lazyRange', () => {
     expect(collectToArray(lazyRange(1, 6, 2))).toEqual([1, 3, 5]);
     expect(collectToArray(lazyRange(1, 7, 2))).toEqual([1, 3, 5]);
     expect(collectToArray(lazyRange(1, 7, -2))).toEqual([1, 3, 5]);
+    expect(collectToArray(lazyRange(1, 3, 0))).toEqual([1, 2]);
   });
 
   it('generates can step in the negative direction', () => {

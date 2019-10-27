@@ -1,3 +1,1 @@
-export const isBuffer = obj => {
-  return Buffer ? Buffer.isBuffer(obj) : false;
-};
+export const isBuffer = obj => Buffer.isBuffer(obj);

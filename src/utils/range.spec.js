@@ -1,6 +1,9 @@
 import { range } from './index';
 
 describe('range', () => {
+  it('generates empty array with no inputs', () => {
+    expect(range()).toEqual([]);
+  });
   it('generates with just one input', () => {
     expect(range(5)).toEqual([0, 1, 2, 3, 4]);
   });
@@ -13,6 +16,7 @@ describe('range', () => {
     expect(range(1, 6, 2)).toEqual([1, 3, 5]);
     expect(range(1, 7, 2)).toEqual([1, 3, 5]);
     expect(range(1, 7, -2)).toEqual([1, 3, 5]);
+    expect(range(1, 3, 0)).toEqual([1, 2]);
   });
 
   it('generates can step in the negative direction', () => {

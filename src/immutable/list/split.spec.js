@@ -6,5 +6,8 @@ describe('Immutable list split', () => {
   it('can split the list', () => {
     const list = List.toList([1, 2, 3, 4, 5, 6]);
     assertEqualLists(split(list, 3), [[1, [2, [3, []]]], [4, [5, [6, []]]]]);
+    assertEqualLists(split(list), [[1, []], [2, [3, [4, [5, [6, []]]]]]]);
+    assertEqualLists(split([]), [[], []]);
+    assertEqualLists(split(null), [[], []]);
   });
 });

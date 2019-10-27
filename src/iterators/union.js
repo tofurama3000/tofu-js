@@ -9,9 +9,7 @@ export const union = curry(function*(iterable1, iterable2, ...iterables) {
     for (const val of set.values()) {
       let shouldYield = true;
       for (let j = 0; j < i; ++j) {
-        if (i === j) {
-          continue;
-        } else if (sets[j].has(val)) {
+        if (sets[j].has(val)) {
           shouldYield = false;
           break;
         }

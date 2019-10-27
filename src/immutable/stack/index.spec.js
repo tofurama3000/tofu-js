@@ -3,6 +3,8 @@ import * as Stack from './index';
 describe('Immutable Stack', () => {
   it('can be created', () => {
     expect(Stack.Stack()).toBeTruthy();
+    expect(Stack.isStack(Stack.Stack())).toBe(true);
+    expect(Stack.isStack([])).toBe(false);
   });
 
   it('can have items pushed', () => {
@@ -14,6 +16,16 @@ describe('Immutable Stack', () => {
   it('can have items popped', () => {
     const stack = Stack.Stack().push(1, 2, 3);
     expect(JSON.stringify(stack.pop())).toBe('[2,[1,[]]]');
+    expect(
+      JSON.stringify(
+        stack
+          .pop()
+          .pop()
+          .pop()
+          .pop()
+          .pop()
+      )
+    ).toBe('[]');
   });
 
   it('can have items peeked', () => {
@@ -25,6 +37,18 @@ describe('Immutable Stack', () => {
         .pop()
         .peek()
     ).toBe(3);
+    expect(
+      stack
+        .pop()
+        .pop()
+        .pop()
+        .pop()
+        .pop()
+        .pop()
+        .pop()
+        .pop()
+        .peek()
+    ).toBeUndefined();
   });
 
   it('can be detected to be empty', () => {

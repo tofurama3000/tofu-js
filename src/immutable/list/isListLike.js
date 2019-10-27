@@ -9,7 +9,7 @@ export function isListLike(obj) {
   }
   let curList = obj;
   while (curList && curList.length === 2) {
-    if (!Array.isArray(curList[1]) && !isList(curList[1])) {
+    if (!Array.isArray(curList[1])) {
       return false;
     }
     curList = curList[1];

@@ -8,7 +8,7 @@ export function add(list, elem) {
   return __addListFunctions([elem, list]);
 }
 
-export const collectToList = (iterable) => {
+export const collectToList = iterable => {
   const list = [];
   let curList = list;
   for (const elem of iterable) {

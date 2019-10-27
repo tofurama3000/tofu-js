@@ -1,5 +1,5 @@
-import {isInfinite} from '../is/isInfinite'
-import {isNil} from '../is/isNil'
+import { isInfinite } from '../is/isInfinite';
+import { isNil } from '../is/isNil';
 
 export const lazyRange = (start = Infinity, end, step = 1) => {
   if (isNil(end)) return lazyRange(0, start, step);

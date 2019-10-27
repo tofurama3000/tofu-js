@@ -17,4 +17,20 @@ describe('Immutable List concat', () => {
     const concatenated = [1, [2, [3, list2]]];
     assertEqualLists(concat(list1, list2), concatenated);
   });
+
+  it('can concatenate many lists', () => {
+    const list1 = [1, [2, [3, []]]];
+    const list2 = [4, [5, [6, []]]];
+    const concatenated = [1, [2, [3, [4, [5, list2]]]]];
+    assertEqualLists(concat(list1, [4, [5, []]], list2), concatenated);
+    assertEqualLists(concat(list1, [], [4, []], [5, []], list2), concatenated);
+    assertEqualLists(concat([], list1, [], [4, []], [5, []], list2), concatenated);
+  });
+
+  it('can concatenate a empty lists', () => {
+    assertEqualLists(concat([]), []);
+    assertEqualLists(concat([], []), []);
+    assertEqualLists(concat([], [5, []]), [5, []]);
+    assertEqualLists(concat([], [], []), []);
+  });
 });

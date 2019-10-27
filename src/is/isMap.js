@@ -1,1 +1,1 @@
-export const isMap = obj => (Map ? obj instanceof Map : false);
+export const isMap = obj => obj instanceof Map;

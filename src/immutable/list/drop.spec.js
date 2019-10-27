@@ -12,5 +12,7 @@ describe('Immutable list drop', () => {
     const list = List.toList([1, 2, 3, 4, 5]);
     assertEqualLists(drop(list, 3), [4, [5, []]]);
     assertEqualLists(drop(list, 2), [3, [4, [5, []]]]);
+    assertEqualLists(drop([]), []);
+    assertEqualLists(drop(null), []);
   });
 });

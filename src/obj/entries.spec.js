@@ -1,4 +1,5 @@
 import { entries } from './entries';
+import { toList } from '../immutable/list';
 
 describe('entries', () => {
   it('works on obj', () => {
@@ -17,9 +18,10 @@ describe('entries', () => {
     expect(entries(new Set([1, 2, 4, 4]))).toEqual([[1, 1], [2, 2], [4, 4]]);
   });
 
-  it('works on arrays', () => {
+  it('works on iterables', () => {
     expect(entries([])).toEqual([]);
     expect(entries([1, 2])).toEqual([[0, 1], [1, 2]]);
+    expect(entries(toList([1, 2, 3]))).toEqual([[0, 1], [1, 2], [2, 3]]);
   });
 
   it('does not work on other things', () => {

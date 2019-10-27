@@ -39,4 +39,9 @@ describe('takeWhilePullPush', () => {
     };
     expect(collectToArray(takeWhilePullPush(gen(), [1, 2, 3, 4, 5]))).toEqual([1, 2]);
   });
+
+  it('will work with an empty generator', () => {
+    const gen = function*() {};
+    expect(collectToArray(takeWhilePullPush(gen(), [1, 2, 3, 4, 5]))).toEqual([]);
+  });
 });

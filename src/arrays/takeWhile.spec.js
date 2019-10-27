@@ -11,5 +11,7 @@ describe('takeWhile', () => {
     })();
 
     expect(takeWhile(fn, [1, 2, 3, 4, 5])).toEqual([1, 2, 3]);
+    expect(takeWhile(fn, [])).toEqual([]);
+    expect(takeWhile(_ => true, [1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
   });
 });
