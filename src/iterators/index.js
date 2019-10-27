@@ -28,4 +28,5 @@ export * from './take';
 export * from './takeWhile';
 export * from './tap';
 export * from './toIterableOrEmpty';
+export * from './union';
 export * from './zip';
