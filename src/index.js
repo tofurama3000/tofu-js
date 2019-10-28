@@ -7,8 +7,8 @@ export const fp = Fp;
 import * as Is from './is/index';
 export const is = Is;
 
-import * as Iterators from './iterators/index';
-export const iterators = Iterators;
+import * as Iterables from './iterables/index';
+export const iterables = Iterables;
 
 import * as Logic from './logic/index';
 export const logic = Logic;

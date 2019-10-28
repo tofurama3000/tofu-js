@@ -3,10 +3,10 @@
  * @ignore
  */
 
-import { collectToArray } from '../iterators/collectToArray';
+import { collectToArray } from '../iterables/collectToArray';
 import { isIterable } from '../is/isIterable';
 import { isObject } from '../is/isObject';
-import { map } from '../iterators/map';
+import { map } from '../iterables/map';
 
 /**
  * Grabs entries for an object
