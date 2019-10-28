@@ -1,5 +1,6 @@
 /**
  * @module iterables:first
+ * @ignore
  */
 import { head } from './head';
 

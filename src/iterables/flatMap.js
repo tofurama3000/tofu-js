@@ -1,5 +1,6 @@
 /**
  * @module iterables:flatMap
+ * @ignore
  */
 import { curry } from '../fp/curry';
 import { isIterable } from '../is/isIterable';

@@ -1,6 +1,5 @@
 /**
  * @module iterables
- * Functions for working with and manipulating iterables
  */
 
 export * from './all';

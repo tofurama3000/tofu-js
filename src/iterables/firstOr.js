@@ -1,5 +1,6 @@
 /**
  * @module iterables:firstOr
+ * @ignore
  */
 import { curry } from '../fp/curry';
 

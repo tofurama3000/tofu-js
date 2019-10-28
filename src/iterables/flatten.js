@@ -1,5 +1,6 @@
 /**
  * @module iterables:flatten
+ * @ignore
  */
 import { curry } from '../fp/curry';
 import { isIterable } from '../is/isIterable';

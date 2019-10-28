@@ -1,5 +1,6 @@
 /**
  * @module iterables:groupBy
+ * @ignore
  */
 import { curry } from '../fp/curry';
 import { toIterableOrEmpty } from './toIterableOrEmpty';

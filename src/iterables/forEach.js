@@ -1,5 +1,6 @@
 /**
  * @module iterables:forEach
+ * @ignore
  */
 import { curry } from '../fp/curry';
 import { toIterableOrEmpty } from './toIterableOrEmpty';

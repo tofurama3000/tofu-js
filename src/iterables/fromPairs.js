@@ -1,5 +1,6 @@
 /**
  * @module iterables:fromPairs
+ * @ignore
  */
 import { toIterableOrEmpty } from './toIterableOrEmpty';
 

@@ -1,5 +1,6 @@
 /**
  * @module iterables:firstOrNull
+ * @ignore
  */
 import { firstOr } from './firstOr';
 
