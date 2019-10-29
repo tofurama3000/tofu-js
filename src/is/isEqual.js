@@ -1,3 +1,7 @@
+/**
+ * @module is:isEqual
+ * @ignore
+ */
 import {
   isArray,
   isBuffer,
@@ -16,6 +20,16 @@ import { pipe } from '../fp/pipe';
 import { isList } from '../immutable/list/isList';
 import { isListLike } from '../immutable/list/isListLike';
 
+/**
+ * Performs value equality on the parameters to test for equality
+ * 
+ * Note: This is slow since it does traverse all elements in a collection
+ * 
+ * @kind function
+ * @param {any} left The first object to test
+ * @param {any} right The second object to test* 
+ * @returns {boolean} Whether or not they are equal
+ */
 export function isEqual(left, right) {
   if (isNull(left) && isNull(right)) return true;
   if (isUndefined(left) && isUndefined(right)) return true;

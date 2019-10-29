@@ -1,3 +1,7 @@
+/**
+ * @module is
+ */
+
 export * from './isArray';
 export * from './isBuffer';
 export * from './isEqual';

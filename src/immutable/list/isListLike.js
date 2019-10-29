@@ -1,5 +1,14 @@
+/**
+ * @module immutable:List:isListLike
+ * @ignore
+ */
 import { isList } from './isList';
 
+/**
+ * Returns whether or not an object can be operated on similar to an immutable list
+ * @param {any} obj Object to check
+ * @returns {boolean} Whether or not it is list-like
+ */
 export function isListLike(obj) {
   if (isList(obj)) {
     return true;
