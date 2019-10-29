@@ -153,19 +153,19 @@ Functions for working with arrays
 ### chunk
 
 
-&#x60;function [auto-curried]: (size: number, array: any[]) &#x3D;&gt; any[][]&#x60;
+`function [auto-curried]: (size: number, array: any[]) => any[][]`
 
 Chunks an array into arrays of a maximum size
 
 Params: 
 
-	**size: number** Maximum chunk size
+ - **size: number** Maximum chunk size
 
-	**array: any[]** Array to chunk
+ - **array: any[]** Array to chunk
 
 Returns: 
 
-	**any[][]** The chunked array
+ - **any[][]** The chunked array
 
 [Back to Top](#table-of-contents)
 
@@ -173,19 +173,19 @@ Returns:
 ### filter
 
 
-&#x60;function [auto-curried]: (func: Predicate, array: any[]) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (func: Predicate, array: any[]) => any[]`
 
 Filters out the elements of an array where the predicate returns false
 
 Params: 
 
-	**func: Predicate** Function to filter by
+ - **func: Predicate** Function to filter by
 
-	**array: any[]** Array to filter
+ - **array: any[]** Array to filter
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -193,17 +193,17 @@ Returns:
 ### first
 
 
-&#x60;function: (array: any[]) &#x3D;&gt; any | null&#x60;
+`function: (array: any[]) => any | null`
 
 Returns the first element of an array or null if the array is empty
 
 Params: 
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any | null** The first array element
+ - **any | null** The first array element
 
 [Back to Top](#table-of-contents)
 
@@ -211,19 +211,19 @@ Returns:
 ### firstOr
 
 
-&#x60;function: (defaultValue: any, array: any[]) &#x3D;&gt; any&#x60;
+`function: (defaultValue: any, array: any[]) => any`
 
 Returns the first element of an array or a default value if the array is empty
 
 Params: 
 
-	**defaultValue: any** The value to return if the array is empty
+ - **defaultValue: any** The value to return if the array is empty
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any** The first array element or default value
+ - **any** The first array element or default value
 
 [Back to Top](#table-of-contents)
 
@@ -231,17 +231,17 @@ Returns:
 ### firstOrNull
 
 
-&#x60;function: (array: any[]) &#x3D;&gt; any | null&#x60;
+`function: (array: any[]) => any | null`
 
 Returns the first element of an array or null if the array is empty
 
 Params: 
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any | null** The first array element
+ - **any | null** The first array element
 
 [Back to Top](#table-of-contents)
 
@@ -249,19 +249,19 @@ Returns:
 ### flatMap
 
 
-&#x60;function [auto-curried]: (func: function, array: any[]) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (func: function, array: any[]) => any[]`
 
 Calls map and then flatten on the array
 
 Params: 
 
-	**func: function** Function to call map with
+ - **func: function** Function to call map with
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -269,17 +269,17 @@ Returns:
 ### flatten
 
 
-&#x60;function: (array: any[]) &#x3D;&gt; any[]&#x60;
+`function: (array: any[]) => any[]`
 
 Flattens one layer of nested arrays in an array
 
 Params: 
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -287,17 +287,17 @@ Returns:
 ### fromPairs
 
 
-&#x60;function: (array: any[]) &#x3D;&gt; Object&#x60;
+`function: (array: any[]) => Object`
 
-Converts an array of key&#x2F;value pairs into an object
+Converts an array of key/value pairs into an object
 
 Params: 
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**Object** The resulting object
+ - **Object** The resulting object
 
 [Back to Top](#table-of-contents)
 
@@ -305,19 +305,19 @@ Returns:
 ### join
 
 
-&#x60;function [auto-curried]: (separator: string, array: any[]) &#x3D;&gt; string&#x60;
+`function [auto-curried]: (separator: string, array: any[]) => string`
 
 Joins elements of an array with a string
 
 Params: 
 
-	**separator: string** String to join elements with
+ - **separator: string** String to join elements with
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**string** The resulting string
+ - **string** The resulting string
 
 [Back to Top](#table-of-contents)
 
@@ -325,19 +325,19 @@ Returns:
 ### limit
 
 
-&#x60;function [auto-curried]: (max: number, array: any[]) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (max: number, array: any[]) => any[]`
 
 Limits the number of elements in an array
 
 Params: 
 
-	**max: number** Maximum number of elements in the array
+ - **max: number** Maximum number of elements in the array
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -345,19 +345,19 @@ Returns:
 ### map
 
 
-&#x60;function [auto-curried]: (func: function, array: any[]) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (func: function, array: any[]) => any[]`
 
 Call a function for each element of the array and return the results in a new array
 
 Params: 
 
-	**func: function** The function to call on each element
+ - **func: function** The function to call on each element
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -365,21 +365,21 @@ Returns:
 ### reduce
 
 
-&#x60;function [auto-curried]: (func: function, start: any, array: any[]) &#x3D;&gt; any&#x60;
+`function [auto-curried]: (func: function, start: any, array: any[]) => any`
 
 Accumulates the elements in the array using a function
 
 Params: 
 
-	**func: function** Function to accumulate the values with
+ - **func: function** Function to accumulate the values with
 
-	**start: any** The starting accumulation value
+ - **start: any** The starting accumulation value
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any** The resulting accumulation
+ - **any** The resulting accumulation
 
 [Back to Top](#table-of-contents)
 
@@ -387,21 +387,21 @@ Returns:
 ### scan
 
 
-&#x60;function [auto-curried]: (func: function, start: any, array: any[]) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (func: function, start: any, array: any[]) => any[]`
 
 Accumulates the elements in the array using a function and returns an array with each intermediate accumulation
 
 Params: 
 
-	**func: function** Function to accumulate the values with
+ - **func: function** Function to accumulate the values with
 
-	**start: any** The starting accumulation value
+ - **start: any** The starting accumulation value
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any[]** The resulting intermediate accumulation values
+ - **any[]** The resulting intermediate accumulation values
 
 [Back to Top](#table-of-contents)
 
@@ -409,19 +409,19 @@ Returns:
 ### skip
 
 
-&#x60;function [auto-curried]: (n: number, array: any[]) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (n: number, array: any[]) => any[]`
 
 Skips the first n items of the array
 
 Params: 
 
-	**n: number** Number of elements to skip
+ - **n: number** Number of elements to skip
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -429,19 +429,19 @@ Returns:
 ### takeWhile
 
 
-&#x60;function [auto-curried]: (whileFunc: Predicate, array: any[]) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (whileFunc: Predicate, array: any[]) => any[]`
 
 Takes elements from the array so long as the predicate returns true for each element
 
 Params: 
 
-	**whileFunc: Predicate** Predicate to determine when to stop taking elements
+ - **whileFunc: Predicate** Predicate to determine when to stop taking elements
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -449,19 +449,19 @@ Returns:
 ### tap
 
 
-&#x60;function [auto-curried]: (func: function, array: any[]) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (func: function, array: any[]) => any[]`
 
 Calls a function for each element in the array and returns the array
 
 Params: 
 
-	**func: function** Function to call on the array
+ - **func: function** Function to call on the array
 
-	**array: any[]** Array to operate on
+ - **array: any[]** Array to operate on
 
 Returns: 
 
-	**any[]** The original array
+ - **any[]** The original array
 
 [Back to Top](#table-of-contents)
 
@@ -469,17 +469,17 @@ Returns:
 ### toArrayOrEmpty
 
 
-&#x60;function [auto-curried]: (obj: any) &#x3D;&gt; any[]&#x60;
+`function [auto-curried]: (obj: any) => any[]`
 
 If the element is an array, it returns the array; otherwise it returns an empty array
 
 Params: 
 
-	**obj: any** Object to check
+ - **obj: any** Object to check
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -487,24 +487,24 @@ Returns:
 ### zip
 
 
-&#x60;function [auto-curried]: (arrLeft: any[], arrRight: any[], moreArrays: ...any[]) &#x3D;&gt; any[][]&#x60;
+`function [auto-curried]: (arrLeft: any[], arrRight: any[], moreArrays: ...any[]) => any[][]`
 
 Takes two or more arrays and groups elements by index from each array
 
 E.g.
-&#x60;zip([1, 2, 3], [4, 5, 6]) &#x3D;&gt; [[1, 4], [2, 5], [3, 6]]&#x60;
+`zip([1, 2, 3], [4, 5, 6]) => [[1, 4], [2, 5], [3, 6]]`
 
 Params: 
 
-	**arrLeft: any[]** The first array to zip
+ - **arrLeft: any[]** The first array to zip
 
-	**arrRight: any[]** The second array to zip
+ - **arrRight: any[]** The second array to zip
 
-	**moreArrays: ...any[]** Other arrays to zip
+ - **moreArrays: ...any[]** Other arrays to zip
 
 Returns: 
 
-	**any[][]** The resulting array
+ - **any[][]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -526,11 +526,11 @@ Auto-curries a function
 
 Params: 
 
-	**func: function** Function to auto-curry
+ - **func: function** Function to auto-curry
 
 Returns: 
 
-	**function** undefined
+ - **function** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -548,13 +548,13 @@ through the provided functions
 
 Params: 
 
-	**paramOrFunc: function | any** Either the input to pipe or a function to pipe through
+ - **paramOrFunc: function | any** Either the input to pipe or a function to pipe through
 
-	**functions: ...any** Functions to pipe through
+ - **functions: ...any** Functions to pipe through
 
 Returns: 
 
-	**function | any** undefined
+ - **function | any** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -569,11 +569,11 @@ This returns a function that takes a parameter to pass to the predicates
 
 Params: 
 
-	**predicates: ...Predicate** Predicates to and
+ - **predicates: ...Predicate** Predicates to and
 
 Returns: 
 
-	**Predicate** undefined
+ - **Predicate** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -588,11 +588,11 @@ This returns a function that takes a parameter to pass to the predicates
 
 Params: 
 
-	**predicates: ...Predicate** Predicates to and
+ - **predicates: ...Predicate** Predicates to and
 
 Returns: 
 
-	**Predicate** undefined
+ - **Predicate** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -609,11 +609,11 @@ Will return true if only one predicate returns true, false otherwise
 
 Params: 
 
-	**predicates: ...Predicate** Predicates to and
+ - **predicates: ...Predicate** Predicates to and
 
 Returns: 
 
-	**Predicate** undefined
+ - **Predicate** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -628,11 +628,11 @@ This returns a function that takes a parameter to pass to the predicates
 
 Params: 
 
-	**predicates: ...Predicate** Predicate to negate
+ - **predicates: ...Predicate** Predicate to negate
 
 Returns: 
 
-	**Predicate** undefined
+ - **Predicate** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -647,11 +647,11 @@ Converts a function into a predicate
 
 Params: 
 
-	**func: function** Function to transform
+ - **func: function** Function to transform
 
 Returns: 
 
-	**Predicate** undefined
+ - **Predicate** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -665,11 +665,11 @@ Converts a boolean into a predicate that always returns the same value
 
 Params: 
 
-	**b: boolean** Boolean to return
+ - **b: boolean** Boolean to return
 
 Returns: 
 
-	**Predicate** undefined
+ - **Predicate** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -677,17 +677,17 @@ Returns:
 ### reverseArgs
 
 
-&#x60;function: (func: function) &#x3D;&gt; function&#x60;
+`function: (func: function) => function`
 
 Reverses the order arguments are passed to a function
 
 Params: 
 
-	**func: function** Function to reverse argument order for
+ - **func: function** Function to reverse argument order for
 
 Returns: 
 
-	**function** Function that will reverse the arguments
+ - **function** Function that will reverse the arguments
 
 [Back to Top](#table-of-contents)
 
@@ -701,11 +701,11 @@ Reverses the order of arguments and auto-curries a function
 
 Params: 
 
-	**func: function** Function to reverse the arguments for and auto-curry
+ - **func: function** Function to reverse the arguments for and auto-curry
 
 Returns: 
 
-	**function** undefined
+ - **function** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -713,19 +713,19 @@ Returns:
 ### spread
 
 
-&#x60;function [auto-curried]: (func: function, args: any[]) &#x3D;&gt; any&#x60;
+`function [auto-curried]: (func: function, args: any[]) => any`
 
 Takes a function and an array of arguments and spreads the array into function arguments
 
 Params: 
 
-	**func: function** Function to auto-curry
+ - **func: function** Function to auto-curry
 
-	**args: any[]** Arguments to pass to func
+ - **args: any[]** Arguments to pass to func
 
 Returns: 
 
-	**any** Result of calling func(...args)
+ - **any** Result of calling func(...args)
 
 [Back to Top](#table-of-contents)
 
@@ -751,17 +751,17 @@ An immutable list
 #### count
 
 
-&#x60;function: (list: List) &#x3D;&gt; number&#x60;
+`function: (list: List) => number`
 
 Counts the number of elements in a list
 
 Params: 
 
-	**list: List** List to operate on
+ - **list: List** List to operate on
 
 Returns: 
 
-	**number** The list size
+ - **number** The list size
 
 [Back to Top](#table-of-contents)
 
@@ -769,7 +769,7 @@ Returns:
 #### equals
 
 
-&#x60;function: (list1: List, list2: List) &#x3D;&gt; ooolean&#x60;
+`function: (list1: List, list2: List) => ooolean`
 
 Returns whether or not two lists are equal
 
@@ -777,13 +777,13 @@ Lists are considered equal if they have identical elements
 
 Params: 
 
-	**list1: List** The first list to check
+ - **list1: List** The first list to check
 
-	**list2: List** The second list to check
+ - **list2: List** The second list to check
 
 Returns: 
 
-	**ooolean** Whether or not they are equal
+ - **ooolean** Whether or not they are equal
 
 [Back to Top](#table-of-contents)
 
@@ -791,19 +791,19 @@ Returns:
 #### add
 
 
-&#x60;function: (list: List, elem: any) &#x3D;&gt; List&#x60;
+`function: (list: List, elem: any) => List`
 
 Adds an element to the front of an immutable list
 
 Params: 
 
-	**list: List** List to add the element to
+ - **list: List** List to add the element to
 
-	**elem: any** The element to add
+ - **elem: any** The element to add
 
 Returns: 
 
-	**List** A list with the element added
+ - **List** A list with the element added
 
 [Back to Top](#table-of-contents)
 
@@ -811,19 +811,19 @@ Returns:
 #### concat
 
 
-&#x60;function: (list1: List, lists: ...List) &#x3D;&gt; List&#x60;
+`function: (list1: List, lists: ...List) => List`
 
 Concatenates immutable lists
 
 Params: 
 
-	**list1: List** A list to concatenate
+ - **list1: List** A list to concatenate
 
-	**lists: ...List** Other lists to concatenate
+ - **lists: ...List** Other lists to concatenate
 
 Returns: 
 
-	**List** A list that is the result of concatenating previous lists
+ - **List** A list that is the result of concatenating previous lists
 
 [Back to Top](#table-of-contents)
 
@@ -831,19 +831,19 @@ Returns:
 #### drop
 
 
-&#x60;function: (list: List, n: number) &#x3D;&gt; List&#x60;
+`function: (list: List, n: number) => List`
 
 Drops n elements from the start of a list
 
 Params: 
 
-	**list: List** List to operate on
+ - **list: List** List to operate on
 
-	**n: number** The number of elements to drop
+ - **n: number** The number of elements to drop
 
 Returns: 
 
-	**List** A list with that many elements dropped
+ - **List** A list with that many elements dropped
 
 [Back to Top](#table-of-contents)
 
@@ -851,17 +851,17 @@ Returns:
 #### dropFirst
 
 
-&#x60;function: (list: List) &#x3D;&gt; List&#x60;
+`function: (list: List) => List`
 
 Drops the first element from the start of a list
 
 Params: 
 
-	**list: List** List to operate on
+ - **list: List** List to operate on
 
 Returns: 
 
-	**List** A list with the first element dropped
+ - **List** A list with the first element dropped
 
 [Back to Top](#table-of-contents)
 
@@ -869,19 +869,19 @@ Returns:
 #### map
 
 
-&#x60;function: (list: List, func: function) &#x3D;&gt; List&#x60;
+`function: (list: List, func: function) => List`
 
 Calls func on every element in a list and returns the results as a list
 
 Params: 
 
-	**list: List** List to operate on
+ - **list: List** List to operate on
 
-	**func: function** The function to call
+ - **func: function** The function to call
 
 Returns: 
 
-	**List** The resulting list
+ - **List** The resulting list
 
 [Back to Top](#table-of-contents)
 
@@ -889,17 +889,17 @@ Returns:
 #### nestedToList
 
 
-&#x60;function: (obj: any) &#x3D;&gt; List&#x60;
+`function: (obj: any) => List`
 
 Converts all nested arrays in an object into lists
 
 Params: 
 
-	**obj: any** Object to covert
+ - **obj: any** Object to covert
 
 Returns: 
 
-	**List** The resulting list
+ - **List** The resulting list
 
 [Back to Top](#table-of-contents)
 
@@ -907,17 +907,17 @@ Returns:
 #### reverse
 
 
-&#x60;function: (list: List) &#x3D;&gt; List&#x60;
+`function: (list: List) => List`
 
 Reverses a list
 
 Params: 
 
-	**list: List** List to operate on
+ - **list: List** List to operate on
 
 Returns: 
 
-	**List** The reversed list
+ - **List** The reversed list
 
 [Back to Top](#table-of-contents)
 
@@ -925,19 +925,19 @@ Returns:
 #### split
 
 
-&#x60;function: (list: List, index: number) &#x3D;&gt; List[]&#x60;
+`function: (list: List, index: number) => List[]`
 
 Splits a list at an index where all elements at that index and after are put into a separate list
 
 Params: 
 
-	**list: List** List to operate on
+ - **list: List** List to operate on
 
-	**index: number** (Optional, default 1) The index to split the list at
+ - **index: number** (Optional, default 1) The index to split the list at
 
 Returns: 
 
-	**List[]** A pair of lists representing the split
+ - **List[]** A pair of lists representing the split
 
 [Back to Top](#table-of-contents)
 
@@ -945,19 +945,19 @@ Returns:
 #### splitOn
 
 
-&#x60;function: (list: List, predicate: Predicate) &#x3D;&gt; List[]&#x60;
+`function: (list: List, predicate: Predicate) => List[]`
 
 Splits a list at the first element to return true from a predicate
 
 Params: 
 
-	**list: List** List to operate on
+ - **list: List** List to operate on
 
-	**predicate: Predicate** The predicate to use
+ - **predicate: Predicate** The predicate to use
 
 Returns: 
 
-	**List[]** The resulting list pair
+ - **List[]** The resulting list pair
 
 [Back to Top](#table-of-contents)
 
@@ -965,17 +965,17 @@ Returns:
 #### toArray
 
 
-&#x60;function: (list: List) &#x3D;&gt; any[]&#x60;
+`function: (list: List) => any[]`
 
 Converts a list to an array
 
 Params: 
 
-	**list: List** List to operate on
+ - **list: List** List to operate on
 
 Returns: 
 
-	**any[]** The resulting array
+ - **any[]** The resulting array
 
 [Back to Top](#table-of-contents)
 
@@ -983,7 +983,7 @@ Returns:
 #### toList
 
 
-&#x60;function: (obj: any[] | any) &#x3D;&gt; List&#x60;
+`function: (obj: any[] | any) => List`
 
 Converts an array to a list or wraps an object in a list
 
@@ -991,11 +991,11 @@ This does not affect any nested arrays
 
 Params: 
 
-	**obj: any[] | any** The object to turn into a list
+ - **obj: any[] | any** The object to turn into a list
 
 Returns: 
 
-	**List** The resulting list
+ - **List** The resulting list
 
 [Back to Top](#table-of-contents)
 
@@ -1003,17 +1003,17 @@ Returns:
 #### isEmpty
 
 
-&#x60;function: (list: List) &#x3D;&gt; boolean&#x60;
+`function: (list: List) => boolean`
 
 Returns whether or not a list is empty
 
 Params: 
 
-	**list: List** List to check
+ - **list: List** List to check
 
 Returns: 
 
-	**boolean** Whether or not it is empty
+ - **boolean** Whether or not it is empty
 
 [Back to Top](#table-of-contents)
 
@@ -1021,17 +1021,17 @@ Returns:
 #### isList
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not an object is an immutable list
 
 Params: 
 
-	**obj: any** The object to check
+ - **obj: any** The object to check
 
 Returns: 
 
-	**boolean** Whether it is an immutable list
+ - **boolean** Whether it is an immutable list
 
 [Back to Top](#table-of-contents)
 
@@ -1039,17 +1039,17 @@ Returns:
 #### isListLike
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not an object can be operated on similar to an immutable list
 
 Params: 
 
-	**obj: any** Object to check
+ - **obj: any** Object to check
 
 Returns: 
 
-	**boolean** Whether or not it is list-like
+ - **boolean** Whether or not it is list-like
 
 [Back to Top](#table-of-contents)
 
@@ -1057,21 +1057,21 @@ Returns:
 #### reduce
 
 
-&#x60;function: (list: List, func: function, initialValue: any) &#x3D;&gt; any&#x60;
+`function: (list: List, func: function, initialValue: any) => any`
 
 Accumulate the values of a list using a function
 
 Params: 
 
-	**list: List** List to accumulate
+ - **list: List** List to accumulate
 
-	**func: function** Function to accumulate with
+ - **func: function** Function to accumulate with
 
-	**initialValue: any** The initial value for accumulation
+ - **initialValue: any** The initial value for accumulation
 
 Returns: 
 
-	**any** The result of the list
+ - **any** The result of the list
 
 [Back to Top](#table-of-contents)
 
@@ -1089,13 +1089,13 @@ An immutable stack
 #### Stack
 
 
-&#x60;function: () &#x3D;&gt; Stack&#x60;
+`function: () => Stack`
 
 Creates an immutable Stack
 
 Returns: 
 
-	**Stack** a stack
+ - **Stack** a stack
 
 [Back to Top](#table-of-contents)
 
@@ -1103,7 +1103,7 @@ Returns:
 #### push
 
 
-&#x60;function: (stack: Stack, items: ...any) &#x3D;&gt; Stack&#x60;
+`function: (stack: Stack, items: ...any) => Stack`
 
 Pushes items onto the stack 
 
@@ -1111,13 +1111,13 @@ Note: They will be popped off in reverse order
 
 Params: 
 
-	**stack: Stack** Stack to push to
+ - **stack: Stack** Stack to push to
 
-	**items: ...any** Items to push
+ - **items: ...any** Items to push
 
 Returns: 
 
-	**Stack** A new stack with the items pushed
+ - **Stack** A new stack with the items pushed
 
 [Back to Top](#table-of-contents)
 
@@ -1125,17 +1125,17 @@ Returns:
 #### pop
 
 
-&#x60;function: (stack: Stack) &#x3D;&gt; Stack&#x60;
+`function: (stack: Stack) => Stack`
 
 Pops the top item from the stack
 
 Params: 
 
-	**stack: Stack** Stack to pop from
+ - **stack: Stack** Stack to pop from
 
 Returns: 
 
-	**Stack** A new stack with the top popped
+ - **Stack** A new stack with the top popped
 
 [Back to Top](#table-of-contents)
 
@@ -1143,17 +1143,17 @@ Returns:
 #### peek
 
 
-&#x60;function: (stack: Stack) &#x3D;&gt; any&#x60;
+`function: (stack: Stack) => any`
 
 Peeks at the first item on the stack
 
 Params: 
 
-	**stack: Stack** Stack to peek into
+ - **stack: Stack** Stack to peek into
 
 Returns: 
 
-	**any** The first item on the stack or undefined if it is empty
+ - **any** The first item on the stack or undefined if it is empty
 
 [Back to Top](#table-of-contents)
 
@@ -1161,17 +1161,17 @@ Returns:
 #### isEmpty
 
 
-&#x60;function: (stack: Stack) &#x3D;&gt; boolean&#x60;
+`function: (stack: Stack) => boolean`
 
-Checks a stack to see if it&#39;s empty
+Checks a stack to see if it's empty
 
 Params: 
 
-	**stack: Stack** Stack to check
+ - **stack: Stack** Stack to check
 
 Returns: 
 
-	**boolean** Whether or not the stack is empty
+ - **boolean** Whether or not the stack is empty
 
 [Back to Top](#table-of-contents)
 
@@ -1179,17 +1179,17 @@ Returns:
 #### isStack
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Checks a stack to see if an object is an immutable stack
 
 Params: 
 
-	**obj: any** The object to check
+ - **obj: any** The object to check
 
 Returns: 
 
-	**boolean** Whether or not it is an immutable stack
+ - **boolean** Whether or not it is an immutable stack
 
 [Back to Top](#table-of-contents)
 
@@ -1205,17 +1205,17 @@ Functions for detecting types and properties
 ### isArray
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is an array
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is an array
+ - **boolean** Whether or not it is an array
 
 [Back to Top](#table-of-contents)
 
@@ -1223,17 +1223,17 @@ Returns:
 ### isBuffer
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is a Buffer
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is a buffer
+ - **boolean** Whether or not it is a buffer
 
 [Back to Top](#table-of-contents)
 
@@ -1241,7 +1241,7 @@ Returns:
 ### isEqual
 
 
-&#x60;function: (left: any, right: any) &#x3D;&gt; boolean&#x60;
+`function: (left: any, right: any) => boolean`
 
 Performs value equality on the parameters to test for equality
 
@@ -1249,13 +1249,13 @@ Note: This is slow since it does traverse all elements in a collection
 
 Params: 
 
-	**left: any** The first object to test
+ - **left: any** The first object to test
 
-	**right: any** The second object to test*
+ - **right: any** The second object to test*
 
 Returns: 
 
-	**boolean** Whether or not they are equal
+ - **boolean** Whether or not they are equal
 
 [Back to Top](#table-of-contents)
 
@@ -1263,17 +1263,17 @@ Returns:
 ### isFloat
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Alias for isNumber
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is a floating point number
+ - **boolean** Whether or not it is a floating point number
 
 [Back to Top](#table-of-contents)
 
@@ -1281,17 +1281,17 @@ Returns:
 ### isFunction
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is a function
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is a function
+ - **boolean** Whether or not it is a function
 
 [Back to Top](#table-of-contents)
 
@@ -1299,17 +1299,17 @@ Returns:
 ### isInfinite
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is an infinite number
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is infinite
+ - **boolean** Whether or not it is infinite
 
 [Back to Top](#table-of-contents)
 
@@ -1317,17 +1317,17 @@ Returns:
 ### isInteger
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is an integer
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is an integer
+ - **boolean** Whether or not it is an integer
 
 [Back to Top](#table-of-contents)
 
@@ -1335,17 +1335,17 @@ Returns:
 ### isIterable
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is an iterable
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is an iterable
+ - **boolean** Whether or not it is an iterable
 
 [Back to Top](#table-of-contents)
 
@@ -1353,17 +1353,17 @@ Returns:
 ### isMap
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is a Map
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is a Map
+ - **boolean** Whether or not it is a Map
 
 [Back to Top](#table-of-contents)
 
@@ -1371,17 +1371,17 @@ Returns:
 ### isNil
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is either null or undefined
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is either null or undefined
+ - **boolean** Whether or not it is either null or undefined
 
 [Back to Top](#table-of-contents)
 
@@ -1389,17 +1389,17 @@ Returns:
 ### isNull
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is null
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is null
+ - **boolean** Whether or not it is null
 
 [Back to Top](#table-of-contents)
 
@@ -1407,17 +1407,17 @@ Returns:
 ### isNumber
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is a number
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is a number
+ - **boolean** Whether or not it is a number
 
 [Back to Top](#table-of-contents)
 
@@ -1425,17 +1425,17 @@ Returns:
 ### isObject
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is an Object
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is an Object
+ - **boolean** Whether or not it is an Object
 
 [Back to Top](#table-of-contents)
 
@@ -1443,17 +1443,17 @@ Returns:
 ### isSet
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is a Set
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is a Set
+ - **boolean** Whether or not it is a Set
 
 [Back to Top](#table-of-contents)
 
@@ -1461,17 +1461,17 @@ Returns:
 ### isString
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is a string
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is a string
+ - **boolean** Whether or not it is a string
 
 [Back to Top](#table-of-contents)
 
@@ -1479,17 +1479,17 @@ Returns:
 ### isUndefined
 
 
-&#x60;function: (obj: any) &#x3D;&gt; boolean&#x60;
+`function: (obj: any) => boolean`
 
 Returns whether or not something is undefined
 
 Params: 
 
-	**obj: any** the object to test
+ - **obj: any** the object to test
 
 Returns: 
 
-	**boolean** Whether or not it is undefined
+ - **boolean** Whether or not it is undefined
 
 [Back to Top](#table-of-contents)
 
@@ -1505,20 +1505,20 @@ Functions for working with iterables
 ### all
 
 
-&#x60;function [auto-curried]: (predicate: Predicate, iterable: Iterable&lt;any&gt;) &#x3D;&gt; boolean&#x60;
+`function [auto-curried]: (predicate: Predicate, iterable: Iterable<any>) => boolean`
 
 Applies a predicate to all elements of an iterable and ensures they all return true
 Will return false as soon as the predicate returns false for any element
 
 Params: 
 
-	**predicate: Predicate** The predicate to execute for each element
+ - **predicate: Predicate** The predicate to execute for each element
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**boolean** returns true if the predicate returns true for all elements of the iterable
+ - **boolean** returns true if the predicate returns true for all elements of the iterable
 
 [Back to Top](#table-of-contents)
 
@@ -1526,7 +1526,7 @@ Returns:
 ### chunk
 
 
-&#x60;function* [auto-curried]: (size: number, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any[]&gt;&#x60;
+`function* [auto-curried]: (size: number, iterable: Iterable<any>) => Iterable<any[]>`
 
 Chuncks an iterable into groups of a specific size.
 This is itself an iterable and will return each chunk lazily as needed
@@ -1535,13 +1535,13 @@ If the chunk size does not divide fully into the iterable size, the last chunk r
 
 Params: 
 
-	**size: number** The maximum size for all chunks
+ - **size: number** The maximum size for all chunks
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any[]&gt;** returns an iterable of arrays of chunked elements
+ - **Iterable<any[]>** returns an iterable of arrays of chunked elements
 
 [Back to Top](#table-of-contents)
 
@@ -1549,7 +1549,7 @@ Returns:
 ### collectToArray
 
 
-&#x60;function: (iterable: Iterable&lt;any&gt;, max: number) &#x3D;&gt; any[]&#x60;
+`function: (iterable: Iterable<any>, max: number) => any[]`
 
 Converts an iterable into an array
 
@@ -1557,13 +1557,13 @@ The maximum number of elements to iterate over can optionally be provided as wel
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
-	**max: number** (Optional, default Infinity) the maximum size of the resulting array
+ - **max: number** (Optional, default Infinity) the maximum size of the resulting array
 
 Returns: 
 
-	**any[]** returns the iterable as an array
+ - **any[]** returns the iterable as an array
 
 [Back to Top](#table-of-contents)
 
@@ -1571,7 +1571,7 @@ Returns:
 ### collectToList
 
 
-&#x60;function: (iterable: Iterable&lt;any&gt;, max: number) &#x3D;&gt; List&lt;any&gt;&#x60;
+`function: (iterable: Iterable<any>, max: number) => List<any>`
 
 Converts an iterable into an immutable List
 
@@ -1579,13 +1579,13 @@ The maximum number of elements to iterate over can optionally be provided as wel
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
-	**max: number** (Optional, default Infinity) the maximum size of the resulting array
+ - **max: number** (Optional, default Infinity) the maximum size of the resulting array
 
 Returns: 
 
-	**List&lt;any&gt;** returns the iterable as an immutable list
+ - **List<any>** returns the iterable as an immutable list
 
 [Back to Top](#table-of-contents)
 
@@ -1593,7 +1593,7 @@ Returns:
 ### collectToSet
 
 
-&#x60;function: (iterable: Iterable&lt;any&gt;, max: number) &#x3D;&gt; Set&lt;any&gt;&#x60;
+`function: (iterable: Iterable<any>, max: number) => Set<any>`
 
 Converts an iterable into a native Set
 
@@ -1601,13 +1601,13 @@ The maximum number of elements to iterate over can optionally be provided as wel
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
-	**max: number** (Optional, default Infinity) the maximum size of the resulting array
+ - **max: number** (Optional, default Infinity) the maximum size of the resulting array
 
 Returns: 
 
-	**Set&lt;any&gt;** returns the iterable as a Set
+ - **Set<any>** returns the iterable as a Set
 
 [Back to Top](#table-of-contents)
 
@@ -1615,21 +1615,21 @@ Returns:
 ### concat
 
 
-&#x60;function* [auto-curried]: (iterable1: Iterable&lt;any&gt;, iterable2: Iterable&lt;any&gt;, iterables: ...Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (iterable1: Iterable<any>, iterable2: Iterable<any>, iterables: ...Iterable<any>) => Iterable<any>`
 
 Concatenates the provided iterables
 
 Params: 
 
-	**iterable1: Iterable&lt;any&gt;** The first iterable
+ - **iterable1: Iterable<any>** The first iterable
 
-	**iterable2: Iterable&lt;any&gt;** The second iterable*
+ - **iterable2: Iterable<any>** The second iterable*
 
-	**iterables: ...Iterable&lt;any&gt;** Other iterables
+ - **iterables: ...Iterable<any>** Other iterables
 
 Returns: 
 
-	**Iterable&lt;any&gt;** the resulting concatenation of the provided iterables
+ - **Iterable<any>** the resulting concatenation of the provided iterables
 
 [Back to Top](#table-of-contents)
 
@@ -1637,19 +1637,19 @@ Returns:
 ### contains
 
 
-&#x60;function [auto-curried]: (value: any, iterable: Iterable&lt;any&gt;) &#x3D;&gt; boolean&#x60;
+`function [auto-curried]: (value: any, iterable: Iterable<any>) => boolean`
 
 Returns true if the value is identical to an element in the iterable
 
 Params: 
 
-	**value: any** The value to search for
+ - **value: any** The value to search for
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**boolean** whether or not the value was found
+ - **boolean** whether or not the value was found
 
 [Back to Top](#table-of-contents)
 
@@ -1657,19 +1657,19 @@ Returns:
 ### containsEquals
 
 
-&#x60;function [auto-curried]: (value: any, iterable: Iterable&lt;any&gt;) &#x3D;&gt; boolean&#x60;
+`function [auto-curried]: (value: any, iterable: Iterable<any>) => boolean`
 
 Returns true if the value is in the iterable by checking using isEqual
 
 Params: 
 
-	**value: any** The value to search for
+ - **value: any** The value to search for
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**boolean** whether or not the value was found
+ - **boolean** whether or not the value was found
 
 [Back to Top](#table-of-contents)
 
@@ -1677,7 +1677,7 @@ Returns:
 ### difference
 
 
-&#x60;function* [auto-curried]: (iterable1: Iterable&lt;any&gt;, iterable2: Iterable&lt;any&gt;, iterables: ...Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (iterable1: Iterable<any>, iterable2: Iterable<any>, iterables: ...Iterable<any>) => Iterable<any>`
 
 Returns the items in the first iterable that are not in the other iterables
 Can be thought of as performing the Set difference operator (A - B)
@@ -1686,15 +1686,15 @@ Note: It uses the Set has function to find the difference
 
 Params: 
 
-	**iterable1: Iterable&lt;any&gt;** The iterable that will provide values
+ - **iterable1: Iterable<any>** The iterable that will provide values
 
-	**iterable2: Iterable&lt;any&gt;** An iterable with values to remove from iterable1
+ - **iterable2: Iterable<any>** An iterable with values to remove from iterable1
 
-	**iterables: ...Iterable&lt;any&gt;** Other iterables with values to remove from iterable1
+ - **iterables: ...Iterable<any>** Other iterables with values to remove from iterable1
 
 Returns: 
 
-	**Iterable&lt;any&gt;** values from iterable1 not in the other iterables
+ - **Iterable<any>** values from iterable1 not in the other iterables
 
 [Back to Top](#table-of-contents)
 
@@ -1702,23 +1702,23 @@ Returns:
 ### fill
 
 
-&#x60;function* [auto-curried]: (start: number, end: number, value: value, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (start: number, end: number, value: value, iterable: Iterable<any>) => Iterable<any>`
 
 Fills an iterable between the start and end indexes with a value
 
 Params: 
 
-	**start: number** The starting index to begin filling values
+ - **start: number** The starting index to begin filling values
 
-	**end: number** The exclusive ending index to stop filling values
+ - **end: number** The exclusive ending index to stop filling values
 
-	**value: value** The value to fill the iterable with
+ - **value: value** The value to fill the iterable with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to fill
+ - **iterable: Iterable<any>** The iterable to fill
 
 Returns: 
 
-	**Iterable&lt;any&gt;** An iterable with some values filled
+ - **Iterable<any>** An iterable with some values filled
 
 [Back to Top](#table-of-contents)
 
@@ -1726,19 +1726,19 @@ Returns:
 ### fillAll
 
 
-&#x60;function* [auto-curried]: (value: value, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (value: value, iterable: Iterable<any>) => Iterable<any>`
 
 Fills all values of an iterable with a provided value
 
 Params: 
 
-	**value: value** The value to fill the iterable with
+ - **value: value** The value to fill the iterable with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to fill
+ - **iterable: Iterable<any>** The iterable to fill
 
 Returns: 
 
-	**Iterable&lt;any&gt;** An iterable with it&#39;s values filled
+ - **Iterable<any>** An iterable with it's values filled
 
 [Back to Top](#table-of-contents)
 
@@ -1746,21 +1746,21 @@ Returns:
 ### fillEnd
 
 
-&#x60;function* [auto-curried]: (start: number, value: value, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (start: number, value: value, iterable: Iterable<any>) => Iterable<any>`
 
 Replaces all values in an iterable with a specified value after a provided index
 
 Params: 
 
-	**start: number** The index to start replacing values
+ - **start: number** The index to start replacing values
 
-	**value: value** The value to fill the iterable with
+ - **value: value** The value to fill the iterable with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to fill
+ - **iterable: Iterable<any>** The iterable to fill
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -1768,21 +1768,21 @@ Returns:
 ### fillStart
 
 
-&#x60;function* [auto-curried]: (end: number, value: value, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (end: number, value: value, iterable: Iterable<any>) => Iterable<any>`
 
 Replaces all values in an iterable with a specified value before a provided index
 
 Params: 
 
-	**end: number** The exclusive ending index to stop filling values
+ - **end: number** The exclusive ending index to stop filling values
 
-	**value: value** The value to fill the iterable with
+ - **value: value** The value to fill the iterable with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to fill
+ - **iterable: Iterable<any>** The iterable to fill
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -1790,19 +1790,19 @@ Returns:
 ### filter
 
 
-&#x60;function* [auto-curried]: (predicate: Predicate, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (predicate: Predicate, iterable: Iterable<any>) => Iterable<any>`
 
 Filters values from an iterable where a predicate returns false
 
 Params: 
 
-	**predicate: Predicate** The predicate to test values with
+ - **predicate: Predicate** The predicate to test values with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to filter
+ - **iterable: Iterable<any>** The iterable to filter
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -1810,19 +1810,19 @@ Returns:
 ### find
 
 
-&#x60;function* [auto-curried]: (predicate: Predicate, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (predicate: Predicate, iterable: Iterable<any>) => Iterable<any>`
 
 Returns an iterable holding first element in an iterable for which a predicate returns true or an empty iterable if none is found
 
 Params: 
 
-	**predicate: Predicate** The predicate to test values with
+ - **predicate: Predicate** The predicate to test values with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to filter
+ - **iterable: Iterable<any>** The iterable to filter
 
 Returns: 
 
-	**Iterable&lt;any&gt;** An iterable of one element if a match is found or an empty iterable otherwise
+ - **Iterable<any>** An iterable of one element if a match is found or an empty iterable otherwise
 
 [Back to Top](#table-of-contents)
 
@@ -1830,21 +1830,21 @@ Returns:
 ### findOr
 
 
-&#x60;function [auto-curried]: (defaultValue: any, predicate: Predicate, iterable: Iterable&lt;any&gt;) &#x3D;&gt; any&#x60;
+`function [auto-curried]: (defaultValue: any, predicate: Predicate, iterable: Iterable<any>) => any`
 
 Returns the first element in an iterable that a predicate returns true for or a default value if none is found
 
 Params: 
 
-	**defaultValue: any** The value to return if no element is found
+ - **defaultValue: any** The value to return if no element is found
 
-	**predicate: Predicate** The predicate to test values with
+ - **predicate: Predicate** The predicate to test values with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to filter
+ - **iterable: Iterable<any>** The iterable to filter
 
 Returns: 
 
-	**any** The first element a predicate returned true for or defaultValue if none is found
+ - **any** The first element a predicate returned true for or defaultValue if none is found
 
 [Back to Top](#table-of-contents)
 
@@ -1852,19 +1852,19 @@ Returns:
 ### findOrNull
 
 
-&#x60;function [auto-curried]: (predicate: Predicate, iterable: Iterable&lt;any&gt;) &#x3D;&gt; any&#x60;
+`function [auto-curried]: (predicate: Predicate, iterable: Iterable<any>) => any`
 
 Returns the first element in an iterable that a predicate returns true for or null if none is found
 
 Params: 
 
-	**predicate: Predicate** The predicate to test values with
+ - **predicate: Predicate** The predicate to test values with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to filter
+ - **iterable: Iterable<any>** The iterable to filter
 
 Returns: 
 
-	**any** The first element a predicate returned true for or null if none is found
+ - **any** The first element a predicate returned true for or null if none is found
 
 [Back to Top](#table-of-contents)
 
@@ -1882,19 +1882,19 @@ Alias for head
 ### firstOr
 
 
-&#x60;function: (defaultValue: any, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function: (defaultValue: any, iterable: Iterable<any>) => Iterable<any>`
 
 Returns the first element of an iterable or a default value if the iterable is empty
 
 Params: 
 
-	**defaultValue: any** the vaue to return if the iterable is empty
+ - **defaultValue: any** the vaue to return if the iterable is empty
 
-	**iterable: Iterable&lt;any&gt;** The iterable to grab the first element of
+ - **iterable: Iterable<any>** The iterable to grab the first element of
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The first element of the iterable or defaultValue if it is empty
+ - **Iterable<any>** The first element of the iterable or defaultValue if it is empty
 
 [Back to Top](#table-of-contents)
 
@@ -1902,17 +1902,17 @@ Returns:
 ### firstOrNull
 
 
-&#x60;function: (iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function: (iterable: Iterable<any>) => Iterable<any>`
 
 Returns the first element of an iterable or a null if the iterable is empty
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to grab the first element of
+ - **iterable: Iterable<any>** The iterable to grab the first element of
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The first element of the iterable or null if it is empty
+ - **Iterable<any>** The first element of the iterable or null if it is empty
 
 [Back to Top](#table-of-contents)
 
@@ -1920,19 +1920,19 @@ Returns:
 ### flatMap
 
 
-&#x60;function* [auto-curried]: (func: function, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (func: function, iterable: Iterable<any>) => Iterable<any>`
 
 Performs map(func, iterable) followed by flatten(iterable) on an iterable
 
 Params: 
 
-	**func: function** A function to apply to each element of the iterable
+ - **func: function** A function to apply to each element of the iterable
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -1940,20 +1940,20 @@ Returns:
 ### flatten
 
 
-&#x60;function*: (iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function*: (iterable: Iterable<any>) => Iterable<any>`
 
 Takes an iterable of iterables and concatenates the inner iterables into one iterable
 
 E.g.
-[[1, 2, 3], [4, 5, 6]] &#x3D;&gt; [1, 2, 3, 4, 5, 6]
+[[1, 2, 3], [4, 5, 6]] => [1, 2, 3, 4, 5, 6]
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to flatten
+ - **iterable: Iterable<any>** The iterable to flatten
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -1961,19 +1961,19 @@ Returns:
 ### forEach
 
 
-&#x60;function: (func: function, iterable: Iterable&lt;any&gt;) &#x3D;&gt; void&#x60;
+`function: (func: function, iterable: Iterable<any>) => void`
 
 Calls a function on each element of an iterable
 
 Params: 
 
-	**func: function** The function to call for each element
+ - **func: function** The function to call for each element
 
-	**iterable: Iterable&lt;any&gt;** The iterable to flatten
+ - **iterable: Iterable<any>** The iterable to flatten
 
 Returns: 
 
-	**void** Does not return
+ - **void** Does not return
 
 [Back to Top](#table-of-contents)
 
@@ -1981,20 +1981,20 @@ Returns:
 ### fromPairs
 
 
-&#x60;function*: (pairs: Iterable&lt;any[]&gt;) &#x3D;&gt; Object&#x60;
+`function*: (pairs: Iterable<any[]>) => Object`
 
 Takes an iterable of key value pairs and returns an object formed from those key-value pairs
 
 E.g.
-[[&#39;a&#39;, 5], [&#39;b&#39;, 6]] &#x3D;&gt; [{a: 5, b: 6}]
+[['a', 5], ['b', 6]] => [{a: 5, b: 6}]
 
 Params: 
 
-	**pairs: Iterable&lt;any[]&gt;** An iterable of key-value pairs
+ - **pairs: Iterable<any[]>** An iterable of key-value pairs
 
 Returns: 
 
-	**Object** An object
+ - **Object** An object
 
 [Back to Top](#table-of-contents)
 
@@ -2002,19 +2002,19 @@ Returns:
 ### groupBy
 
 
-&#x60;function*: (func: function, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Object&#x60;
+`function*: (func: function, iterable: Iterable<any>) => Object`
 
 Takes an iterable of values and groups them by the result of calling a function
 
 Params: 
 
-	**func: function** A function to call to group elements by
+ - **func: function** A function to call to group elements by
 
-	**iterable: Iterable&lt;any&gt;** An iterable to iterate over
+ - **iterable: Iterable<any>** An iterable to iterate over
 
 Returns: 
 
-	**Object** An object where the result of func is the key and an array of elements that provided that key is the value
+ - **Object** An object where the result of func is the key and an array of elements that provided that key is the value
 
 [Back to Top](#table-of-contents)
 
@@ -2022,7 +2022,7 @@ Returns:
 ### intersect
 
 
-&#x60;function* [auto-curried]: (iterable1: Iterable&lt;any&gt;, iterable2: Iterable&lt;any&gt;, iterables: ...Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (iterable1: Iterable<any>, iterable2: Iterable<any>, iterables: ...Iterable<any>) => Iterable<any>`
 
 Returns only the items that appear in all iterables
 
@@ -2030,15 +2030,15 @@ Note: It uses the Set.has function to find matches
 
 Params: 
 
-	**iterable1: Iterable&lt;any&gt;** The first iterable to get values from
+ - **iterable1: Iterable<any>** The first iterable to get values from
 
-	**iterable2: Iterable&lt;any&gt;** The second iterable to get values from
+ - **iterable2: Iterable<any>** The second iterable to get values from
 
-	**iterables: ...Iterable&lt;any&gt;** Other iterables
+ - **iterables: ...Iterable<any>** Other iterables
 
 Returns: 
 
-	**Iterable&lt;any&gt;** values that only occur in all provided iterables
+ - **Iterable<any>** values that only occur in all provided iterables
 
 [Back to Top](#table-of-contents)
 
@@ -2046,19 +2046,19 @@ Returns:
 ### join
 
 
-&#x60;function [auto-curried]: (separator: string, iterable: Iterable&lt;any&gt;) &#x3D;&gt; string&#x60;
+`function [auto-curried]: (separator: string, iterable: Iterable<any>) => string`
 
 Returns the elements of an iterable as a string joined by the separator
 
 Params: 
 
-	**separator: string** The string to join elements with
+ - **separator: string** The string to join elements with
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**string** The resulting string
+ - **string** The resulting string
 
 [Back to Top](#table-of-contents)
 
@@ -2066,13 +2066,13 @@ Returns:
 ### last
 
 
-&#x60;function: (iterable: Iterable&lt;any&gt;) &#x3D;&gt; any&#x60;
+`function: (iterable: Iterable<any>) => any`
 
 Returns the last element of an iterable
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 [Back to Top](#table-of-contents)
 
@@ -2080,19 +2080,19 @@ Params:
 ### limit
 
 
-&#x60;function* [auto-curried]: (max: number, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (max: number, iterable: Iterable<any>) => Iterable<any>`
 
 Returns an iterable with no more than a provided maximum number of elements
 
 Params: 
 
-	**max: number** The maximum number of elements in the resulting iterable
+ - **max: number** The maximum number of elements in the resulting iterable
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2100,19 +2100,19 @@ Returns:
 ### map
 
 
-&#x60;function* [auto-curried]: (func: function, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (func: function, iterable: Iterable<any>) => Iterable<any>`
 
 Calls a function on each element of an iterable and returns an iterable of those results
 
 Params: 
 
-	**func: function** The funciton to call on each element of an iterable
+ - **func: function** The funciton to call on each element of an iterable
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2120,21 +2120,21 @@ Returns:
 ### reduce
 
 
-&#x60;function [auto-curried]: (func: function, start: any, iterable: Iterable&lt;any&gt;) &#x3D;&gt; any&#x60;
+`function [auto-curried]: (func: function, start: any, iterable: Iterable<any>) => any`
 
 Accumulates the values of an iterable by calling a function and passing in the last accumulate and current value
 
 Params: 
 
-	**func: function** The reducer function
+ - **func: function** The reducer function
 
-	**start: any** The initial accumulation value
+ - **start: any** The initial accumulation value
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**any** The resulting accumulation
+ - **any** The resulting accumulation
 
 [Back to Top](#table-of-contents)
 
@@ -2142,17 +2142,17 @@ Returns:
 ### removeFalsey
 
 
-&#x60;function: (iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function: (iterable: Iterable<any>) => Iterable<any>`
 
 Removes all falsey values from an iterable
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2160,17 +2160,17 @@ Returns:
 ### removeTruthy
 
 
-&#x60;function: (iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function: (iterable: Iterable<any>) => Iterable<any>`
 
 Removes all truthy values from an iterable
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2178,17 +2178,17 @@ Returns:
 ### reverse
 
 
-&#x60;function*: (iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function*: (iterable: Iterable<any>) => Iterable<any>`
 
 Reverses the elements of an iterable
 
 Params: 
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2196,21 +2196,21 @@ Returns:
 ### scan
 
 
-&#x60;function* [auto-curried]: (func: function, start: any, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (func: function, start: any, iterable: Iterable<any>) => Iterable<any>`
 
 Accumulates the values of an iterable by calling a function and returns all intermediate results
 
 Params: 
 
-	**func: function** The reducer function
+ - **func: function** The reducer function
 
-	**start: any** The initial accumulation value
+ - **start: any** The initial accumulation value
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** An iterable of all intermediate accumulations
+ - **Iterable<any>** An iterable of all intermediate accumulations
 
 [Back to Top](#table-of-contents)
 
@@ -2218,19 +2218,19 @@ Returns:
 ### skip
 
 
-&#x60;function* [auto-curried]: (n: number, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (n: number, iterable: Iterable<any>) => Iterable<any>`
 
 Skips the first n values of an iterable
 
 Params: 
 
-	**n: number** The number of elements to skip
+ - **n: number** The number of elements to skip
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2238,19 +2238,19 @@ Returns:
 ### some
 
 
-&#x60;function [auto-curried]: (predicate: Predicate, iterable: Iterable&lt;any&gt;) &#x3D;&gt; boolean&#x60;
+`function [auto-curried]: (predicate: Predicate, iterable: Iterable<any>) => boolean`
 
 Returns true if any element of an iterable returns true
 
 Params: 
 
-	**predicate: Predicate** The predicate to execute for each element
+ - **predicate: Predicate** The predicate to execute for each element
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**boolean** returns true if the predicate returns true for any element of the iterable
+ - **boolean** returns true if the predicate returns true for any element of the iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2258,19 +2258,19 @@ Returns:
 ### take
 
 
-&#x60;function* [auto-curried]: (n: number, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (n: number, iterable: Iterable<any>) => Iterable<any>`
 
 Keeps only the first n values of an iterable
 
 Params: 
 
-	**n: number** The number of elements to keep
+ - **n: number** The number of elements to keep
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2278,7 +2278,7 @@ Returns:
 ### takeWhile
 
 
-&#x60;function* [auto-curried]: (whileFunc: function | Iterable&lt;any&gt;, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (whileFunc: function | Iterable<any>, iterable: Iterable<any>) => Iterable<any>`
 
 Keeps elements from an iterable until the provided function returns a falsey value or terminates (if it is an iterable)
 
@@ -2286,13 +2286,13 @@ If whileFunc is a function, the current value will be passed in each time
 
 Params: 
 
-	**whileFunc: function | Iterable&lt;any&gt;** Used to determine when to stop returning elements from iterable
+ - **whileFunc: function | Iterable<any>** Used to determine when to stop returning elements from iterable
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2300,20 +2300,20 @@ Returns:
 ### takeWhilePullPush
 
 
-&#x60;function* [auto-curried]: (whileGenerator: Generator&lt;any&gt;, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (whileGenerator: Generator<any>, iterable: Iterable<any>) => Iterable<any>`
 
 Keeps elements from an iterable until the provided generator returns a falsey value
 After each step of pulling a value from the while generator, a value will be passed into the while generator
 
 Params: 
 
-	**whileGenerator: Generator&lt;any&gt;** Used to determine when to stop returning elements from iterable
+ - **whileGenerator: Generator<any>** Used to determine when to stop returning elements from iterable
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** The resulting iterable
+ - **Iterable<any>** The resulting iterable
 
 [Back to Top](#table-of-contents)
 
@@ -2321,7 +2321,7 @@ Returns:
 ### tap
 
 
-&#x60;function* [auto-curried]: (func: function, iterable: Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (func: function, iterable: Iterable<any>) => Iterable<any>`
 
 Calls a function for each element of an iterable and then passes the elmenet on
 
@@ -2329,13 +2329,13 @@ Often used for creating side effects (such as logging) while in the middle of pr
 
 Params: 
 
-	**func: function** Function to call on each element
+ - **func: function** Function to call on each element
 
-	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+ - **iterable: Iterable<any>** The iterable to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** An iterable with the values passed through
+ - **Iterable<any>** An iterable with the values passed through
 
 [Back to Top](#table-of-contents)
 
@@ -2343,17 +2343,17 @@ Returns:
 ### toIterableOrEmpty
 
 
-&#x60;function: (param: any) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function: (param: any) => Iterable<any>`
 
 If the parameter is an iterable it is returned, otherwise an empty array is returned
 
 Params: 
 
-	**param: any** An object to check if it is an iterable
+ - **param: any** An object to check if it is an iterable
 
 Returns: 
 
-	**Iterable&lt;any&gt;** undefined
+ - **Iterable<any>** undefined
 
 [Back to Top](#table-of-contents)
 
@@ -2361,7 +2361,7 @@ Returns:
 ### union
 
 
-&#x60;function* [auto-curried]: (iterable1: Iterable&lt;any&gt;, iterable2: Iterable&lt;any&gt;, iterables: ...Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (iterable1: Iterable<any>, iterable2: Iterable<any>, iterables: ...Iterable<any>) => Iterable<any>`
 
 Returns all the items in any iterable at most once
 
@@ -2369,15 +2369,15 @@ Note: It uses the Set.has function to make occurences unique
 
 Params: 
 
-	**iterable1: Iterable&lt;any&gt;** The first iterable to get values from
+ - **iterable1: Iterable<any>** The first iterable to get values from
 
-	**iterable2: Iterable&lt;any&gt;** The second iterable to get values from
+ - **iterable2: Iterable<any>** The second iterable to get values from
 
-	**iterables: ...Iterable&lt;any&gt;** Other iterables
+ - **iterables: ...Iterable<any>** Other iterables
 
 Returns: 
 
-	**Iterable&lt;any&gt;** values from all provided iterables
+ - **Iterable<any>** values from all provided iterables
 
 [Back to Top](#table-of-contents)
 
@@ -2385,24 +2385,24 @@ Returns:
 ### zip
 
 
-&#x60;function* [auto-curried]: (iterable1: Iterable&lt;any&gt;, iterable2: Iterable&lt;any&gt;, iterables: ...Iterable&lt;any&gt;) &#x3D;&gt; Iterable&lt;any&gt;&#x60;
+`function* [auto-curried]: (iterable1: Iterable<any>, iterable2: Iterable<any>, iterables: ...Iterable<any>) => Iterable<any>`
 
 Takes the corresponding elements of each iterable based on index and groups them
 
 E.g.
-&#x60;zip([1, 2, 3], [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], [4, 5, 6]) &#x3D;&gt; [[1, &#39;a&#39;, 4], [2, &#39;b&#39;, 5], [3, &#39;c&#39;, 6]]&#x60;
+`zip([1, 2, 3], ['a', 'b', 'c'], [4, 5, 6]) => [[1, 'a', 4], [2, 'b', 5], [3, 'c', 6]]`
 
 Params: 
 
-	**iterable1: Iterable&lt;any&gt;** The first iterable to iterate over
+ - **iterable1: Iterable<any>** The first iterable to iterate over
 
-	**iterable2: Iterable&lt;any&gt;** The second iterable to iterate over
+ - **iterable2: Iterable<any>** The second iterable to iterate over
 
-	**iterables: ...Iterable&lt;any&gt;** Other iterables to iterate over
+ - **iterables: ...Iterable<any>** Other iterables to iterate over
 
 Returns: 
 
-	**Iterable&lt;any&gt;** values from all provided iterables grouped by index
+ - **Iterable<any>** values from all provided iterables grouped by index
 
 [Back to Top](#table-of-contents)
 
@@ -2418,17 +2418,17 @@ Functions for handling boolean logic
 ### and
 
 
-&#x60;function: (bools: ...boolean) &#x3D;&gt; boolean&#x60;
+`function: (bools: ...boolean) => boolean`
 
 Ands a group of booleans
 
 Params: 
 
-	**bools: ...boolean** list of booleans
+ - **bools: ...boolean** list of booleans
 
 Returns: 
 
-	**boolean** result of and on all of them
+ - **boolean** result of and on all of them
 
 [Back to Top](#table-of-contents)
 
@@ -2436,17 +2436,17 @@ Returns:
 ### or
 
 
-&#x60;function: (bools: ...boolean) &#x3D;&gt; boolean&#x60;
+`function: (bools: ...boolean) => boolean`
 
 Ors a group of booleans
 
 Params: 
 
-	**bools: ...boolean** list of booleans
+ - **bools: ...boolean** list of booleans
 
 Returns: 
 
-	**boolean** result of or on all of them
+ - **boolean** result of or on all of them
 
 [Back to Top](#table-of-contents)
 
@@ -2454,17 +2454,17 @@ Returns:
 ### xor
 
 
-&#x60;function: (bools: ...boolean) &#x3D;&gt; boolean&#x60;
+`function: (bools: ...boolean) => boolean`
 
 Xors a group of booleans (only returns true if one and only one is true)
 
 Params: 
 
-	**bools: ...boolean** list of booleans
+ - **bools: ...boolean** list of booleans
 
 Returns: 
 
-	**boolean** result of xor on all of them
+ - **boolean** result of xor on all of them
 
 [Back to Top](#table-of-contents)
 
@@ -2472,17 +2472,17 @@ Returns:
 ### negate
 
 
-&#x60;function: (bool: boolean) &#x3D;&gt; boolean&#x60;
+`function: (bool: boolean) => boolean`
 
 Negates a boolean
 
 Params: 
 
-	**bool: boolean** boolean to negate
+ - **bool: boolean** boolean to negate
 
 Returns: 
 
-	**boolean** negation of the boolean
+ - **boolean** negation of the boolean
 
 [Back to Top](#table-of-contents)
 
@@ -2490,17 +2490,17 @@ Returns:
 ### negateAll
 
 
-&#x60;function: (bools: ...boolean) &#x3D;&gt; boolean[]&#x60;
+`function: (bools: ...boolean) => boolean[]`
 
 Negates a group of booleans
 
 Params: 
 
-	**bools: ...boolean** list of booleans
+ - **bools: ...boolean** list of booleans
 
 Returns: 
 
-	**boolean[]** result of negating each boolean
+ - **boolean[]** result of negating each boolean
 
 [Back to Top](#table-of-contents)
 
@@ -2516,15 +2516,15 @@ Functions for operating on objects
 ### copyInto
 
 
-&#x60;function [auto-curried]: (source: obj, target: obj) &#x3D;&gt; any&#x60;
+`function [auto-curried]: (source: obj, target: obj) => any`
 
 Copies attributes from source into a target
 
 Params: 
 
-	**source: obj** The object to copy attributes from
+ - **source: obj** The object to copy attributes from
 
-	**target: obj** The object to copy attributes into
+ - **target: obj** The object to copy attributes into
 
 [Back to Top](#table-of-contents)
 
@@ -2532,16 +2532,16 @@ Params:
 ### copyIntoDeep
 
 
-&#x60;function [auto-curried]: (source: obj, target: obj) &#x3D;&gt; any&#x60;
+`function [auto-curried]: (source: obj, target: obj) => any`
 
 Copies attributes from source into a target
 Values are deeply cloned when copied
 
 Params: 
 
-	**source: obj** The object to copy attributes from
+ - **source: obj** The object to copy attributes from
 
-	**target: obj** The object to copy attributes into
+ - **target: obj** The object to copy attributes into
 
 [Back to Top](#table-of-contents)
 
@@ -2549,13 +2549,13 @@ Params:
 ### entries
 
 
-&#x60;function: (param: object | Map | Set | Array | Iterable) &#x3D;&gt; any&#x60;
+`function: (param: object | Map | Set | Array | Iterable) => any`
 
 Grabs entries for an object
 
 Params: 
 
-	**param: object | Map | Set | Array | Iterable** 
+ - **param: object | Map | Set | Array | Iterable** 
 
 [Back to Top](#table-of-contents)
 
@@ -2581,18 +2581,18 @@ Misc utility functions
 ### cloneShallow
 
 
-&#x60;function: (toClone: any) &#x3D;&gt; any&#x60;
+`function: (toClone: any) => any`
 
 Performs a shallow clone
-Shallow clones don&#39;t copy any nested objects, arrays, etc
+Shallow clones don't copy any nested objects, arrays, etc
 
 Params: 
 
-	**toClone: any** what should be cloned
+ - **toClone: any** what should be cloned
 
 Returns: 
 
-	**any** cloned object
+ - **any** cloned object
 
 [Back to Top](#table-of-contents)
 
@@ -2600,18 +2600,18 @@ Returns:
 ### cloneDeep
 
 
-&#x60;function: (toClone: any) &#x3D;&gt; any&#x60;
+`function: (toClone: any) => any`
 
 Performs a deep clone
 Deep clones will also clone any nested objects, arrays, etc
 
 Params: 
 
-	**toClone: any** what should be cloned
+ - **toClone: any** what should be cloned
 
 Returns: 
 
-	**any** cloned object
+ - **any** cloned object
 
 [Back to Top](#table-of-contents)
 
@@ -2619,26 +2619,26 @@ Returns:
 ### lazyRange
 
 
-&#x60;function: (start: number, end: number, step: number) &#x3D;&gt; Iterable&lt;number&gt;&#x60;
+`function: (start: number, end: number, step: number) => Iterable<number>`
 
 Generates a range of numbers lazily (can be infinite range)
 
 Note: if start is provided but end is not then it will act as if starting at 0 and ending at the provided number
 E.g. lazyRange(4) is the same as lazyRange(0, 4)
 
-Note: if start &gt; end then it will step down from start to end
+Note: if start > end then it will step down from start to end
 
 Params: 
 
-	**start: number** (Optional, defaults to 0) the starting number for the range
+ - **start: number** (Optional, defaults to 0) the starting number for the range
 
-	**end: number** (Optional, defaults to Infinity) the ending number for the range
+ - **end: number** (Optional, defaults to Infinity) the ending number for the range
 
-	**step: number** (optional, defaults to 1) the step size to take for the range
+ - **step: number** (optional, defaults to 1) the step size to take for the range
 
 Returns: 
 
-	**Iterable&lt;number&gt;** iterable for the range to be generated
+ - **Iterable<number>** iterable for the range to be generated
 
 [Back to Top](#table-of-contents)
 
@@ -2646,26 +2646,26 @@ Returns:
 ### range
 
 
-&#x60;function: (start: number, end: number, step: number) &#x3D;&gt; number[]&#x60;
+`function: (start: number, end: number, step: number) => number[]`
 
 Generates a range of numbers and returns them as an array
 
 Note: if start is provided but end is not then it will act as if starting at 0 and ending at the provided number
 E.g. range(4) is the same as range(0, 4)
 
-Note: if start &gt; end then it will step down from start to end
+Note: if start > end then it will step down from start to end
 
 Params: 
 
-	**start: number** (Optional, defaults to 0) the starting number for the range
+ - **start: number** (Optional, defaults to 0) the starting number for the range
 
-	**end: number** the ending number for the range
+ - **end: number** the ending number for the range
 
-	**step: number** (optional, defaults to 1) the step size to take for the range
+ - **step: number** (optional, defaults to 1) the step size to take for the range
 
 Returns: 
 
-	**number[]** number array for the range
+ - **number[]** number array for the range
 
 [Back to Top](#table-of-contents)
 
