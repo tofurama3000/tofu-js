@@ -2,6 +2,11 @@ import { isInfinite } from '../is/isInfinite';
 import { isNil } from '../is/isNil';
 
 /**
+ * @module utils:lazyRange
+ * @ignore
+ */
+
+/**
  * Generates a range of numbers lazily (can be infinite range)
  * 
  * Note: if start is provided but end is not then it will act as if starting at 0 and ending at the provided number

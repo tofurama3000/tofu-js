@@ -1,4 +1,5 @@
 /**
+ * An immutable stack
  * @module immutable:Stack
  */
 

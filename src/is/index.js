@@ -1,4 +1,5 @@
 /**
+ * Functions for detecting types and properties
  * @module is
  */
 

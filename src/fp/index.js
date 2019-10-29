@@ -1,4 +1,5 @@
 /**
+ * Functions for working with functions
  * @module fp
  */
 

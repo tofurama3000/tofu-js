@@ -1,4 +1,5 @@
 /**
+ * Collection of immutable data structures
  * @module immutable
  */
 

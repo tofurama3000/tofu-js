@@ -1,4 +1,5 @@
 /**
+ * Functions for handling boolean logic
  * @module logic
  */
 

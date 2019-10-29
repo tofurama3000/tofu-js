@@ -1,4 +1,5 @@
 /**
+ * Functions for working with arrays
  * @module arrays
  */
 

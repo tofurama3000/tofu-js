@@ -1,6 +1,11 @@
 import { isNil } from '../is/isNil';
 
 /**
+ * @module utils:range
+ * @ignore
+ */
+
+/**
  * Generates a range of numbers and returns them as an array
  * 
  * Note: if start is provided but end is not then it will act as if starting at 0 and ending at the provided number
