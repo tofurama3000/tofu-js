@@ -167,6 +167,8 @@ Returns:
 
 	**any[][]** The chunked array
 
+[Back to Top](#table-of-contents)
+
 
 ### filter
 
@@ -185,6 +187,8 @@ Returns:
 
 	**any[]** The resulting array
 
+[Back to Top](#table-of-contents)
+
 
 ### first
 
@@ -200,6 +204,8 @@ Params:
 Returns: 
 
 	**any | null** The first array element
+
+[Back to Top](#table-of-contents)
 
 
 ### firstOr
@@ -219,6 +225,8 @@ Returns:
 
 	**any** The first array element or default value
 
+[Back to Top](#table-of-contents)
+
 
 ### firstOrNull
 
@@ -234,6 +242,8 @@ Params:
 Returns: 
 
 	**any | null** The first array element
+
+[Back to Top](#table-of-contents)
 
 
 ### flatMap
@@ -253,6 +263,8 @@ Returns:
 
 	**any[]** The resulting array
 
+[Back to Top](#table-of-contents)
+
 
 ### flatten
 
@@ -269,6 +281,8 @@ Returns:
 
 	**any[]** The resulting array
 
+[Back to Top](#table-of-contents)
+
 
 ### fromPairs
 
@@ -284,6 +298,8 @@ Params:
 Returns: 
 
 	**Object** The resulting object
+
+[Back to Top](#table-of-contents)
 
 
 ### join
@@ -303,6 +319,8 @@ Returns:
 
 	**string** The resulting string
 
+[Back to Top](#table-of-contents)
+
 
 ### limit
 
@@ -321,6 +339,8 @@ Returns:
 
 	**any[]** The resulting array
 
+[Back to Top](#table-of-contents)
+
 
 ### map
 
@@ -338,6 +358,8 @@ Params:
 Returns: 
 
 	**any[]** The resulting array
+
+[Back to Top](#table-of-contents)
 
 
 ### reduce
@@ -359,6 +381,8 @@ Returns:
 
 	**any** The resulting accumulation
 
+[Back to Top](#table-of-contents)
+
 
 ### scan
 
@@ -379,6 +403,8 @@ Returns:
 
 	**any[]** The resulting intermediate accumulation values
 
+[Back to Top](#table-of-contents)
+
 
 ### skip
 
@@ -396,6 +422,8 @@ Params:
 Returns: 
 
 	**any[]** The resulting array
+
+[Back to Top](#table-of-contents)
 
 
 ### takeWhile
@@ -415,6 +443,8 @@ Returns:
 
 	**any[]** The resulting array
 
+[Back to Top](#table-of-contents)
+
 
 ### tap
 
@@ -433,6 +463,8 @@ Returns:
 
 	**any[]** The original array
 
+[Back to Top](#table-of-contents)
+
 
 ### toArrayOrEmpty
 
@@ -448,6 +480,8 @@ Params:
 Returns: 
 
 	**any[]** The resulting array
+
+[Back to Top](#table-of-contents)
 
 
 ### zip
@@ -471,6 +505,8 @@ Params:
 Returns: 
 
 	**any[][]** The resulting array
+
+[Back to Top](#table-of-contents)
 
 
 ## fp
@@ -496,6 +532,8 @@ Returns:
 
 	**function** undefined
 
+[Back to Top](#table-of-contents)
+
 
 ### pipe
 
@@ -518,6 +556,8 @@ Returns:
 
 	**function | any** undefined
 
+[Back to Top](#table-of-contents)
+
 
 ### and
 
@@ -535,6 +575,8 @@ Returns:
 
 	**Predicate** undefined
 
+[Back to Top](#table-of-contents)
+
 
 ### or
 
@@ -551,6 +593,8 @@ Params:
 Returns: 
 
 	**Predicate** undefined
+
+[Back to Top](#table-of-contents)
 
 
 ### xor
@@ -571,6 +615,8 @@ Returns:
 
 	**Predicate** undefined
 
+[Back to Top](#table-of-contents)
+
 
 ### negate
 
@@ -587,6 +633,8 @@ Params:
 Returns: 
 
 	**Predicate** undefined
+
+[Back to Top](#table-of-contents)
 
 
 ### toPredicate
@@ -605,6 +653,8 @@ Returns:
 
 	**Predicate** undefined
 
+[Back to Top](#table-of-contents)
+
 
 ### boolToPredicate
 
@@ -620,6 +670,8 @@ Params:
 Returns: 
 
 	**Predicate** undefined
+
+[Back to Top](#table-of-contents)
 
 
 ### reverseArgs
@@ -637,6 +689,8 @@ Returns:
 
 	**function** Function that will reverse the arguments
 
+[Back to Top](#table-of-contents)
+
 
 ### reverseCurry
 
@@ -652,6 +706,8 @@ Params:
 Returns: 
 
 	**function** undefined
+
+[Back to Top](#table-of-contents)
 
 
 ### spread
@@ -671,6 +727,8 @@ Returns:
 
 	**any** Result of calling func(...args)
 
+[Back to Top](#table-of-contents)
+
 
 ## immutable
 
@@ -687,6 +745,8 @@ Collection of immutable data structures
 
 An immutable list
 
+[Back to Top](#table-of-contents)
+
 
 #### count
 
@@ -702,6 +762,8 @@ Params:
 Returns: 
 
 	**number** The list size
+
+[Back to Top](#table-of-contents)
 
 
 #### equals
@@ -723,6 +785,8 @@ Returns:
 
 	**ooolean** Whether or not they are equal
 
+[Back to Top](#table-of-contents)
+
 
 #### add
 
@@ -740,6 +804,8 @@ Params:
 Returns: 
 
 	**List** A list with the element added
+
+[Back to Top](#table-of-contents)
 
 
 #### concat
@@ -759,6 +825,8 @@ Returns:
 
 	**List** A list that is the result of concatenating previous lists
 
+[Back to Top](#table-of-contents)
+
 
 #### drop
 
@@ -777,6 +845,8 @@ Returns:
 
 	**List** A list with that many elements dropped
 
+[Back to Top](#table-of-contents)
+
 
 #### dropFirst
 
@@ -792,6 +862,8 @@ Params:
 Returns: 
 
 	**List** A list with the first element dropped
+
+[Back to Top](#table-of-contents)
 
 
 #### map
@@ -811,6 +883,8 @@ Returns:
 
 	**List** The resulting list
 
+[Back to Top](#table-of-contents)
+
 
 #### nestedToList
 
@@ -827,6 +901,8 @@ Returns:
 
 	**List** The resulting list
 
+[Back to Top](#table-of-contents)
+
 
 #### reverse
 
@@ -842,6 +918,8 @@ Params:
 Returns: 
 
 	**List** The reversed list
+
+[Back to Top](#table-of-contents)
 
 
 #### split
@@ -861,6 +939,8 @@ Returns:
 
 	**List[]** A pair of lists representing the split
 
+[Back to Top](#table-of-contents)
+
 
 #### splitOn
 
@@ -879,6 +959,8 @@ Returns:
 
 	**List[]** The resulting list pair
 
+[Back to Top](#table-of-contents)
+
 
 #### toArray
 
@@ -894,6 +976,8 @@ Params:
 Returns: 
 
 	**any[]** The resulting array
+
+[Back to Top](#table-of-contents)
 
 
 #### toList
@@ -913,6 +997,8 @@ Returns:
 
 	**List** The resulting list
 
+[Back to Top](#table-of-contents)
+
 
 #### isEmpty
 
@@ -928,6 +1014,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is empty
+
+[Back to Top](#table-of-contents)
 
 
 #### isList
@@ -945,6 +1033,8 @@ Returns:
 
 	**boolean** Whether it is an immutable list
 
+[Back to Top](#table-of-contents)
+
 
 #### isListLike
 
@@ -960,6 +1050,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is list-like
+
+[Back to Top](#table-of-contents)
 
 
 #### reduce
@@ -981,6 +1073,8 @@ Returns:
 
 	**any** The result of the list
 
+[Back to Top](#table-of-contents)
+
 
 ### Stack
 
@@ -988,6 +1082,8 @@ Returns:
 
 
 An immutable stack
+
+[Back to Top](#table-of-contents)
 
 
 #### Stack
@@ -1000,6 +1096,8 @@ Creates an immutable Stack
 Returns: 
 
 	**Stack** a stack
+
+[Back to Top](#table-of-contents)
 
 
 #### push
@@ -1021,6 +1119,8 @@ Returns:
 
 	**Stack** A new stack with the items pushed
 
+[Back to Top](#table-of-contents)
+
 
 #### pop
 
@@ -1036,6 +1136,8 @@ Params:
 Returns: 
 
 	**Stack** A new stack with the top popped
+
+[Back to Top](#table-of-contents)
 
 
 #### peek
@@ -1053,6 +1155,8 @@ Returns:
 
 	**any** The first item on the stack or undefined if it is empty
 
+[Back to Top](#table-of-contents)
+
 
 #### isEmpty
 
@@ -1069,6 +1173,8 @@ Returns:
 
 	**boolean** Whether or not the stack is empty
 
+[Back to Top](#table-of-contents)
+
 
 #### isStack
 
@@ -1084,6 +1190,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is an immutable stack
+
+[Back to Top](#table-of-contents)
 
 
 ## is
@@ -1109,6 +1217,8 @@ Returns:
 
 	**boolean** Whether or not it is an array
 
+[Back to Top](#table-of-contents)
+
 
 ### isBuffer
 
@@ -1124,6 +1234,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is a buffer
+
+[Back to Top](#table-of-contents)
 
 
 ### isEqual
@@ -1145,6 +1257,8 @@ Returns:
 
 	**boolean** Whether or not they are equal
 
+[Back to Top](#table-of-contents)
+
 
 ### isFloat
 
@@ -1160,6 +1274,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is a floating point number
+
+[Back to Top](#table-of-contents)
 
 
 ### isFunction
@@ -1177,6 +1293,8 @@ Returns:
 
 	**boolean** Whether or not it is a function
 
+[Back to Top](#table-of-contents)
+
 
 ### isInfinite
 
@@ -1192,6 +1310,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is infinite
+
+[Back to Top](#table-of-contents)
 
 
 ### isInteger
@@ -1209,6 +1329,8 @@ Returns:
 
 	**boolean** Whether or not it is an integer
 
+[Back to Top](#table-of-contents)
+
 
 ### isIterable
 
@@ -1224,6 +1346,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is an iterable
+
+[Back to Top](#table-of-contents)
 
 
 ### isMap
@@ -1241,6 +1365,8 @@ Returns:
 
 	**boolean** Whether or not it is a Map
 
+[Back to Top](#table-of-contents)
+
 
 ### isNil
 
@@ -1256,6 +1382,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is either null or undefined
+
+[Back to Top](#table-of-contents)
 
 
 ### isNull
@@ -1273,6 +1401,8 @@ Returns:
 
 	**boolean** Whether or not it is null
 
+[Back to Top](#table-of-contents)
+
 
 ### isNumber
 
@@ -1288,6 +1418,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is a number
+
+[Back to Top](#table-of-contents)
 
 
 ### isObject
@@ -1305,6 +1437,8 @@ Returns:
 
 	**boolean** Whether or not it is an Object
 
+[Back to Top](#table-of-contents)
+
 
 ### isSet
 
@@ -1320,6 +1454,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is a Set
+
+[Back to Top](#table-of-contents)
 
 
 ### isString
@@ -1337,6 +1473,8 @@ Returns:
 
 	**boolean** Whether or not it is a string
 
+[Back to Top](#table-of-contents)
+
 
 ### isUndefined
 
@@ -1352,6 +1490,8 @@ Params:
 Returns: 
 
 	**boolean** Whether or not it is undefined
+
+[Back to Top](#table-of-contents)
 
 
 ## iterables
@@ -1380,6 +1520,8 @@ Returns:
 
 	**boolean** returns true if the predicate returns true for all elements of the iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### chunk
 
@@ -1401,6 +1543,8 @@ Returns:
 
 	**Iterable&lt;any[]&gt;** returns an iterable of arrays of chunked elements
 
+[Back to Top](#table-of-contents)
+
 
 ### collectToArray
 
@@ -1420,6 +1564,8 @@ Params:
 Returns: 
 
 	**any[]** returns the iterable as an array
+
+[Back to Top](#table-of-contents)
 
 
 ### collectToList
@@ -1441,6 +1587,8 @@ Returns:
 
 	**List&lt;any&gt;** returns the iterable as an immutable list
 
+[Back to Top](#table-of-contents)
+
 
 ### collectToSet
 
@@ -1460,6 +1608,8 @@ Params:
 Returns: 
 
 	**Set&lt;any&gt;** returns the iterable as a Set
+
+[Back to Top](#table-of-contents)
 
 
 ### concat
@@ -1481,6 +1631,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** the resulting concatenation of the provided iterables
 
+[Back to Top](#table-of-contents)
+
 
 ### contains
 
@@ -1499,6 +1651,8 @@ Returns:
 
 	**boolean** whether or not the value was found
 
+[Back to Top](#table-of-contents)
+
 
 ### containsEquals
 
@@ -1516,6 +1670,8 @@ Params:
 Returns: 
 
 	**boolean** whether or not the value was found
+
+[Back to Top](#table-of-contents)
 
 
 ### difference
@@ -1540,6 +1696,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** values from iterable1 not in the other iterables
 
+[Back to Top](#table-of-contents)
+
 
 ### fill
 
@@ -1562,6 +1720,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** An iterable with some values filled
 
+[Back to Top](#table-of-contents)
+
 
 ### fillAll
 
@@ -1579,6 +1739,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** An iterable with it&#39;s values filled
+
+[Back to Top](#table-of-contents)
 
 
 ### fillEnd
@@ -1600,6 +1762,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** The resulting iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### fillStart
 
@@ -1620,6 +1784,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** The resulting iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### filter
 
@@ -1638,6 +1804,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** The resulting iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### find
 
@@ -1655,6 +1823,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** An iterable of one element if a match is found or an empty iterable otherwise
+
+[Back to Top](#table-of-contents)
 
 
 ### findOr
@@ -1676,6 +1846,8 @@ Returns:
 
 	**any** The first element a predicate returned true for or defaultValue if none is found
 
+[Back to Top](#table-of-contents)
+
 
 ### findOrNull
 
@@ -1694,6 +1866,8 @@ Returns:
 
 	**any** The first element a predicate returned true for or null if none is found
 
+[Back to Top](#table-of-contents)
+
 
 ### first
 
@@ -1701,6 +1875,8 @@ Returns:
 
 
 Alias for head
+
+[Back to Top](#table-of-contents)
 
 
 ### firstOr
@@ -1720,6 +1896,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** The first element of the iterable or defaultValue if it is empty
 
+[Back to Top](#table-of-contents)
+
 
 ### firstOrNull
 
@@ -1735,6 +1913,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** The first element of the iterable or null if it is empty
+
+[Back to Top](#table-of-contents)
 
 
 ### flatMap
@@ -1753,6 +1933,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** The resulting iterable
+
+[Back to Top](#table-of-contents)
 
 
 ### flatten
@@ -1773,6 +1955,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** The resulting iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### forEach
 
@@ -1790,6 +1974,8 @@ Params:
 Returns: 
 
 	**void** Does not return
+
+[Back to Top](#table-of-contents)
 
 
 ### fromPairs
@@ -1810,6 +1996,8 @@ Returns:
 
 	**Object** An object
 
+[Back to Top](#table-of-contents)
+
 
 ### groupBy
 
@@ -1827,6 +2015,8 @@ Params:
 Returns: 
 
 	**Object** An object where the result of func is the key and an array of elements that provided that key is the value
+
+[Back to Top](#table-of-contents)
 
 
 ### intersect
@@ -1850,6 +2040,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** values that only occur in all provided iterables
 
+[Back to Top](#table-of-contents)
+
 
 ### join
 
@@ -1868,6 +2060,8 @@ Returns:
 
 	**string** The resulting string
 
+[Back to Top](#table-of-contents)
+
 
 ### last
 
@@ -1879,6 +2073,8 @@ Returns the last element of an iterable
 Params: 
 
 	**iterable: Iterable&lt;any&gt;** The iterable to iterate over
+
+[Back to Top](#table-of-contents)
 
 
 ### limit
@@ -1898,6 +2094,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** The resulting iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### map
 
@@ -1915,6 +2113,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** The resulting iterable
+
+[Back to Top](#table-of-contents)
 
 
 ### reduce
@@ -1936,6 +2136,8 @@ Returns:
 
 	**any** The resulting accumulation
 
+[Back to Top](#table-of-contents)
+
 
 ### removeFalsey
 
@@ -1951,6 +2153,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** The resulting iterable
+
+[Back to Top](#table-of-contents)
 
 
 ### removeTruthy
@@ -1968,6 +2172,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** The resulting iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### reverse
 
@@ -1983,6 +2189,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** The resulting iterable
+
+[Back to Top](#table-of-contents)
 
 
 ### scan
@@ -2004,6 +2212,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** An iterable of all intermediate accumulations
 
+[Back to Top](#table-of-contents)
+
 
 ### skip
 
@@ -2021,6 +2231,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** The resulting iterable
+
+[Back to Top](#table-of-contents)
 
 
 ### some
@@ -2040,6 +2252,8 @@ Returns:
 
 	**boolean** returns true if the predicate returns true for any element of the iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### take
 
@@ -2057,6 +2271,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** The resulting iterable
+
+[Back to Top](#table-of-contents)
 
 
 ### takeWhile
@@ -2078,6 +2294,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** The resulting iterable
 
+[Back to Top](#table-of-contents)
+
 
 ### takeWhilePullPush
 
@@ -2096,6 +2314,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** The resulting iterable
+
+[Back to Top](#table-of-contents)
 
 
 ### tap
@@ -2117,6 +2337,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** An iterable with the values passed through
 
+[Back to Top](#table-of-contents)
+
 
 ### toIterableOrEmpty
 
@@ -2132,6 +2354,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** undefined
+
+[Back to Top](#table-of-contents)
 
 
 ### union
@@ -2155,6 +2379,8 @@ Returns:
 
 	**Iterable&lt;any&gt;** values from all provided iterables
 
+[Back to Top](#table-of-contents)
+
 
 ### zip
 
@@ -2177,6 +2403,8 @@ Params:
 Returns: 
 
 	**Iterable&lt;any&gt;** values from all provided iterables grouped by index
+
+[Back to Top](#table-of-contents)
 
 
 ## logic
@@ -2202,6 +2430,8 @@ Returns:
 
 	**boolean** result of and on all of them
 
+[Back to Top](#table-of-contents)
+
 
 ### or
 
@@ -2217,6 +2447,8 @@ Params:
 Returns: 
 
 	**boolean** result of or on all of them
+
+[Back to Top](#table-of-contents)
 
 
 ### xor
@@ -2234,6 +2466,8 @@ Returns:
 
 	**boolean** result of xor on all of them
 
+[Back to Top](#table-of-contents)
+
 
 ### negate
 
@@ -2250,6 +2484,8 @@ Returns:
 
 	**boolean** negation of the boolean
 
+[Back to Top](#table-of-contents)
+
 
 ### negateAll
 
@@ -2265,6 +2501,8 @@ Params:
 Returns: 
 
 	**boolean[]** result of negating each boolean
+
+[Back to Top](#table-of-contents)
 
 
 ## obj
@@ -2288,6 +2526,8 @@ Params:
 
 	**target: obj** The object to copy attributes into
 
+[Back to Top](#table-of-contents)
+
 
 ### copyIntoDeep
 
@@ -2303,6 +2543,8 @@ Params:
 
 	**target: obj** The object to copy attributes into
 
+[Back to Top](#table-of-contents)
+
 
 ### entries
 
@@ -2315,6 +2557,8 @@ Params:
 
 	**param: object | Map | Set | Array | Iterable** 
 
+[Back to Top](#table-of-contents)
+
 
 ### toPairs
 
@@ -2322,6 +2566,8 @@ Params:
 
 
 Splits an object into pairs
+
+[Back to Top](#table-of-contents)
 
 
 ## utils
@@ -2348,6 +2594,8 @@ Returns:
 
 	**any** cloned object
 
+[Back to Top](#table-of-contents)
+
 
 ### cloneDeep
 
@@ -2364,6 +2612,8 @@ Params:
 Returns: 
 
 	**any** cloned object
+
+[Back to Top](#table-of-contents)
 
 
 ### lazyRange
@@ -2390,6 +2640,8 @@ Returns:
 
 	**Iterable&lt;number&gt;** iterable for the range to be generated
 
+[Back to Top](#table-of-contents)
+
 
 ### range
 
@@ -2414,5 +2666,7 @@ Params:
 Returns: 
 
 	**number[]** number array for the range
+
+[Back to Top](#table-of-contents)
 
 
