@@ -1,3 +1,7 @@
+/**
+ * @module arrays
+ */
+
 export * from './filter';
 export * from './flatMap';
 export * from './flatten';
