@@ -10,7 +10,7 @@
  * 
  * @param {List} list1 The first list to check
  * @param {List} list2 The second list to check
- * @returns {ooolean} Whether or not they are equal
+ * @returns {boolean} Whether or not they are equal
  */
 export function equals(list1, list2) {
   let curList1 = list1;

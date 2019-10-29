@@ -769,7 +769,7 @@ Returns:
 #### equals
 
 
-`function: (list1: List, list2: List) => ooolean`
+`function: (list1: List, list2: List) => boolean`
 
 Returns whether or not two lists are equal
 
@@ -783,7 +783,7 @@ Params:
 
 Returns: 
 
- - **ooolean** Whether or not they are equal
+ - **boolean** Whether or not they are equal
 
 [Back to Top](#table-of-contents)
 
