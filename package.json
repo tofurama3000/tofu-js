@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "types": "./dist/index.d.ts",
   "author": "Matt Tolman",
+  "repository": {
+    "url": "https://github.com/tofurama3000/hat-js",
+  },
   "license": "MIT",
   "private": false,
   "main": "dist/hatJs.cjs.js",
