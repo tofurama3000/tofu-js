@@ -1,5 +1,5 @@
 import { cloneShallow, cloneDeep } from './clone';
-import { isEqual } from './isEqual';
+import { isEqual } from '../is/isEqual';
 
 describe('cloneShallow', () => {
   it('works on obj', () => {
