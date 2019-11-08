@@ -2,7 +2,7 @@
   "name": "hat-js",
   "version": "0.0.1",
   "types": "./dist/index.d.ts",
-  "author": "tofurama3000",
+  "author": "Matt Tolman",
   "license": "MIT",
   "private": false,
   "main": "dist/hatJs.cjs.js",
