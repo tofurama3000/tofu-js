@@ -325,22 +325,66 @@ describe('Zipper', () => {
 
   it('can do a DFS traversal', () => {
     let zipper = createZipper([[1, 2], [3, 4, [5, 6, 7], 8], 9, [[10]]]);
-    const order = []
+    const order = [];
 
-    while(!zipper.finished) {
+    while (!zipper.finished) {
       if (typeof zipper.node() === 'number') {
-        order.push(zipper.node())
+        order.push(zipper.node());
       }
-      zipper = zipper.next()
+      zipper = zipper.next();
     }
-    expect(order).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    expect(order).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
 
   it('can convert to an array', () => {
     let zipper = createZipper([[1, 2], [3, 4, [5, 6, 7], 8], 9, [[10]]]);
-    expect(zipper.toArray()).toEqual([[1, 2], [3, 4, [5, 6, 7], 8], 9, [[10]]])
-    expect(zipper.moveDown().moveRight().toArray()).toEqual([3, 4, [5, 6, 7], 8])
-    expect(zipper.moveDown().toArray()).toEqual([1, 2])
-    expect(zipper.moveDown().moveDown().toArray()).toEqual(1)
+    expect(zipper.toArray()).toEqual([[1, 2], [3, 4, [5, 6, 7], 8], 9, [[10]]]);
+    expect(
+      zipper
+        .moveDown()
+        .moveRight()
+        .toArray()
+    ).toEqual([3, 4, [5, 6, 7], 8]);
+    expect(zipper.moveDown().toArray()).toEqual([1, 2]);
+    expect(
+      zipper
+        .moveDown()
+        .moveDown()
+        .toArray()
+    ).toEqual(1);
+  });
+
+  it('can go to the rightmost position', () => {
+    expect(
+      createZipper([1, 2, 3, 4, 5])
+        .moveDown()
+        .rightmost()
+        .node()
+    ).toBe(5);
+    expect(
+      createZipper([1])
+        .moveDown()
+        .rightmost()
+        .node()
+    ).toBe(1);
+  });
+
+  it('can go to the leftmost position', () => {
+    expect(
+      createZipper([1, 2, 3, 4, 5])
+        .moveDown()
+        .moveRight()
+        .moveRight()
+        .moveRight()
+        .moveRight()
+        .leftmost()
+        .node()
+    ).toBe(1);
+    expect(
+      createZipper([1])
+        .moveDown()
+        .leftmost()
+        .node()
+    ).toBe(1);
   });
 });

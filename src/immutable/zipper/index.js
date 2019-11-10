@@ -22,7 +22,7 @@ const Top = Symbol('top');
 export function createZipper(iterable) {
   return addZipperFuncs({
     tree: nestedToList(iterable),
-    path: Top,
+    path: Top
   });
 }
 
@@ -55,6 +55,19 @@ export function moveLeft({ tree, path }) {
 }
 
 /**
+ * Moves to the leftmost position at the current level in a huet zipper
+ * @param {HuetZipper} zipper The zipper to operate on
+ * @returns {HuetZipper} The leftmost position
+ */
+export function leftmost(zipper) {
+  let currentZipper = zipper;
+  while (currentZipper.canMoveLeft()) {
+    currentZipper = currentZipper.moveLeft();
+  }
+  return currentZipper;
+}
+
+/**
  * Returns whether or not you can move right from a node
  * @param {HuetZipper} zipper The zipper to operate on
  * @returns {boolean} Whether or not you can move
@@ -80,6 +93,19 @@ export function moveRight({ tree, path }) {
       right: path.right.rest()
     }
   });
+}
+
+/**
+ * Moves to the rightmost position at the current level in a huet zipper
+ * @param {HuetZipper} zipper The zipper to operate on
+ * @returns {HuetZipper} The rightmost position
+ */
+export function rightmost(zipper) {
+  let currentZipper = zipper;
+  while (currentZipper.canMoveRight()) {
+    currentZipper = currentZipper.moveRight();
+  }
+  return currentZipper;
 }
 
 /**
@@ -260,19 +286,19 @@ export function next(zipper) {
   };
 
   if (zipper.canMoveDown()) {
-    return addNotFinished(zipper.moveDown())
+    return addNotFinished(zipper.moveDown());
   } else if (zipper.canMoveRight()) {
-    return addNotFinished(zipper.moveRight())
+    return addNotFinished(zipper.moveRight());
   } else {
-    let currentZipper = zipper
+    let currentZipper = zipper;
     while (currentZipper.canMoveUp()) {
-      currentZipper = currentZipper.moveUp()
-      if(currentZipper.canMoveRight()) {
-        return addNotFinished(currentZipper.moveRight())
+      currentZipper = currentZipper.moveUp();
+      if (currentZipper.canMoveRight()) {
+        return addNotFinished(currentZipper.moveRight());
       }
     }
-    currentZipper.finished = true
-    return currentZipper
+    currentZipper.finished = true;
+    return currentZipper;
   }
 }
 
@@ -281,11 +307,20 @@ export function next(zipper) {
  * @param {HuetZipper} zipper The zipper to operate on
  * @returns {any[]} The tree represented with arrays
  */
-export function toArray({tree}) {
+export function toArray({ tree }) {
   if (isList(tree)) {
-    return toArrayNested(tree)
+    return toArrayNested(tree);
   }
-  return tree
+  return tree;
+}
+
+/**
+ * Returns whether or not a zipper is at the end of a DFS walk
+ * @param {HuetZipper} zipper The zipper to check
+ * @returns {boolean} Whether or not it is the end of a DFS walk
+ */
+export function endOfDFS({ finished }) {
+  return finished;
 }
 
 const bind = zipper => ([name, func]) => {
@@ -300,9 +335,11 @@ function addZipperFuncs(zipper) {
     canMoveUp,
     canMoveDown,
     delete: deleteNode,
+    endOfDFS,
     insertRight,
     insertLeft,
     insertDown,
+    leftmost,
     moveRight,
     moveLeft,
     moveDown,
@@ -310,6 +347,7 @@ function addZipperFuncs(zipper) {
     next,
     node,
     nodeRaw,
+    rightmost,
     toArray
   }).forEach(bind(zipper));
   return zipper;
