@@ -6,7 +6,7 @@ import { curry } from '../fp/curry';
 
 /**
  * Returns the first element of an iterable or a default value if the iterable is empty
- * 
+ *
  * @kind function
  * @param {any} defaultValue the vaue to return if the iterable is empty
  * @param {Iterable<any>} iterable The iterable to grab the first element of

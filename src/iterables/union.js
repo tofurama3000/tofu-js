@@ -8,9 +8,9 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Returns all the items in any iterable at most once
- * 
+ *
  * Note: It uses the Set.has function to make occurences unique
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

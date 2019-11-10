@@ -22,7 +22,6 @@ export const copyInto = curry((source, target) => {
   return target;
 });
 
-
 /**
  * Copies attributes from source into a target
  * Values are deeply cloned when copied
@@ -30,7 +29,7 @@ export const copyInto = curry((source, target) => {
  * @kind function
  * @param {obj} source The object to copy attributes from
  * @param {obj} target The object to copy attributes into
- */export const copyIntoDeep = curry((source, target) => {
+ */ export const copyIntoDeep = curry((source, target) => {
   for (const prop in source) {
     if (source.hasOwnProperty(prop)) {
       target[prop] = cloneDeep(source[prop]);

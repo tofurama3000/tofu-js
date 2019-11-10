@@ -2,16 +2,45 @@
  * An immutable list
  * @module immutable:List
  */
+export * from './count';
+export * from './equals';
+export * from './isEmpty';
+export * from './isList';
+export * from './isListLike';
+export * from './reduce';
 
 import { count } from './count';
 import { equals } from './equals';
 import { isEmpty } from './isEmpty';
 import { isListSym } from './__list-sym';
 import { reduce } from './reduce';
+import { isList } from './isList';
+
+export function emptyList() {
+  return __addListFunctions([]);
+}
+
+/**
+ * Returns the first element in a list or null if the list is empty
+ * @param {List} list List to add the element to
+ * @returns {any} First element of the list
+ */
+export function first(list) {
+  return list.isEmpty() ? null : list[0];
+}
+
+/**
+ * Returns the list excluding the first element or an empty list if it is empty
+ * @param {List} list List
+ * @returns {List} List without the first element
+ */
+export function rest(list) {
+  return list.isEmpty() ? emptyList() : list[1];
+}
 
 /**
  * Adds an element to the front of an immutable list
- * @param {List} list List to add the element to 
+ * @param {List} list List to add the element to
  * @param {any} elem The element to add
  * @returns {List} A list with the element added
  */
@@ -30,7 +59,6 @@ export const collectToList = iterable => {
   }
   return __addListFunctions(list);
 };
-
 
 /**
  * Concatenates immutable lists
@@ -62,7 +90,6 @@ export function concat(list1, ...lists) {
   return concat(newList, ...rest);
 }
 
-
 /**
  * Drops n elements from the start of a list
  * @param {List} list List to operate on
@@ -76,7 +103,6 @@ export function drop(list, n = 1) {
   }
   return curList || __addListFunctions([]);
 }
-
 
 /**
  * Drops the first element from the start of a list
@@ -136,7 +162,7 @@ export function reverse(list) {
 export function split(list, index = 1) {
   let curList = list;
   let previous = [];
-  for (let i = 0; i <= index && curList && curList.length; ++i) {
+  for (let i = 0; i < index && curList && curList.length; ++i) {
     previous.push(curList[0]);
     curList = curList[1];
   }
@@ -173,12 +199,26 @@ export function toArray(list) {
   return array;
 }
 
+/**
+ * Converts a list and all sub-lists to an array
+ * @param {List} list List to operate on
+ * @returns {any[]} The resulting array
+ */
+export function toArrayNested(list) {
+  const array = [];
+  let curList = list;
+  while (curList.length) {
+    array.push(isList(curList[0]) ? toArrayNested(curList[0]) : curList[0]);
+    curList = curList[1];
+  }
+  return array;
+}
 
 /**
  * Converts an array to a list or wraps an object in a list
- * 
+ *
  * This does not affect any nested arrays
- * 
+ *
  * @param {any[] | any} obj The object to turn into a list
  * @returns {List} The resulting list
  */
@@ -209,12 +249,15 @@ export function __addListFunctions(list) {
     drop,
     dropFirst,
     equals,
+    first,
     isEmpty,
     map,
     reduce,
+    rest,
     reverse,
     split,
-    splitOn
+    splitOn,
+    toArray
   );
 
   return list;

@@ -6,10 +6,10 @@ import { toArrayOrEmpty } from './toArrayOrEmpty';
  * @ignore
  */
 
- /**
-  * Flattens one layer of nested arrays in an array
-  * @kind function
-  * @param {any[]} array Array to operate on
-  * @returns {any[]} The resulting array
-  */
+/**
+ * Flattens one layer of nested arrays in an array
+ * @kind function
+ * @param {any[]} array Array to operate on
+ * @returns {any[]} The resulting array
+ */
 export const flatten = curry(array => [].concat(...toArrayOrEmpty(array)));

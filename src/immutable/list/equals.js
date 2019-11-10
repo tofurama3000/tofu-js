@@ -5,9 +5,9 @@
 
 /**
  * Returns whether or not two lists are equal
- * 
+ *
  * Lists are considered equal if they have identical elements
- * 
+ *
  * @param {List} list1 The first list to check
  * @param {List} list2 The second list to check
  * @returns {boolean} Whether or not they are equal

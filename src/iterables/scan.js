@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Accumulates the values of an iterable by calling a function and returns all intermediate results
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

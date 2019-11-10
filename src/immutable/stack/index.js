@@ -14,10 +14,10 @@ export function Stack() {
 }
 
 /**
- * Pushes items onto the stack 
- * 
+ * Pushes items onto the stack
+ *
  * Note: They will be popped off in reverse order
- * 
+ *
  * @param {Stack} stack Stack to push to
  * @param  {...any} items Items to push
  * @returns {Stack} A new stack with the items pushed
@@ -32,8 +32,8 @@ export function push(stack, ...items) {
 
 /**
  * Pops the top item from the stack
- * 
- * @param {Stack} stack Stack to pop from 
+ *
+ * @param {Stack} stack Stack to pop from
  * @returns {Stack} A new stack with the top popped
  */
 export function pop(stack) {
@@ -42,7 +42,7 @@ export function pop(stack) {
 
 /**
  * Peeks at the first item on the stack
- * 
+ *
  * @param {Stack} stack Stack to peek into
  * @returns {any} The first item on the stack or undefined if it is empty
  */
@@ -52,7 +52,7 @@ export function peek(stack) {
 
 /**
  * Checks a stack to see if it's empty
- * 
+ *
  * @param {Stack} stack Stack to check
  * @returns {boolean} Whether or not the stack is empty
  */
@@ -62,7 +62,7 @@ export function isEmpty(stack) {
 
 /**
  * Checks a stack to see if an object is an immutable stack
- * 
+ *
  * @param {any} obj The object to check
  * @returns {boolean} Whether or not it is an immutable stack
  */

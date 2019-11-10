@@ -1,4 +1,3 @@
-import pkg from './package.json';
 import { terser } from 'rollup-plugin-terser';
 
 export default [
@@ -7,7 +6,7 @@ export default [
 		output: [
 			{
 				name: 'hatJs',
-				file: pkg.browser,
+				file: 'dist/hat-js.umd.js',
 				format: 'umd'
 			}
 		],
@@ -19,12 +18,20 @@ export default [
     input: 'src/index.js',
 		output: [
 			{
-				file: pkg.main,
-				format: 'cjs'
-			},
-			{
-				file: pkg.module,
+				file: 'dist/hat-js.esm.js',
 				format: 'es'
+			}
+		],
+		plugins: [terser()]
+	},
+	{
+		input: 'src/index.js',
+		plugins: [],
+		preserveModules: true,
+		output: [
+			{
+				dir: "dist",
+				format: 'cjs'
 			}
 		]
 	}

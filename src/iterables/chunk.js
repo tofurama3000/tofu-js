@@ -8,7 +8,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 /**
  * Chuncks an iterable into groups of a specific size.
  * This is itself an iterable and will return each chunk lazily as needed
- * 
+ *
  * If the chunk size does not divide fully into the iterable size, the last chunk returned will be the remaining items (no padding)
  * @autocurried
  * @generator

@@ -9,9 +9,9 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 /**
  * Returns the items in the first iterable that are not in the other iterables
  * Can be thought of as performing the Set difference operator (A - B)
- * 
+ *
  * Note: It uses the Set has function to find the difference
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

@@ -22,7 +22,8 @@ export function cloneShallow(toClone) {
   if (isArray(toClone)) return toClone.slice(0);
   else if (isBuffer(toClone)) return Buffer.from(toClone);
   else if (isSet(toClone)) return reduce((a, c) => a.add(c), new Set(), toClone.values());
-  else if (isMap(toClone)) return reduce((a, [key, val]) => a.set(key, val), new Map(), toClone.entries());
+  else if (isMap(toClone))
+    return reduce((a, [key, val]) => a.set(key, val), new Map(), toClone.entries());
   else if (isObject(toClone)) return Object.assign({}, toClone);
   else return toClone;
 }
@@ -36,7 +37,8 @@ export function cloneShallow(toClone) {
 export function cloneDeep(toClone) {
   if (isArray(toClone)) return map(cloneDeep, toClone);
   else if (isBuffer(toClone)) return Buffer.from(toClone);
-  else if (isSet(toClone)) return reduce((a, c) => a.add(cloneDeep(c)), new Set(), toClone.values());
+  else if (isSet(toClone))
+    return reduce((a, c) => a.add(cloneDeep(c)), new Set(), toClone.values());
   else if (isMap(toClone))
     return reduce(
       (a, [key, val]) => a.set(cloneDeep(key), cloneDeep(val)),

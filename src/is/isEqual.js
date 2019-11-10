@@ -2,16 +2,14 @@
  * @module is:isEqual
  * @ignore
  */
-import {
-  isArray,
-  isBuffer,
-  isIterable,
-  isMap,
-  isNull,
-  isObject,
-  isSet,
-  isUndefined
-} from './index';
+import { isArray } from './isArray';
+import { isBuffer } from './isBuffer';
+import { isIterable } from './isIterable';
+import { isMap } from './isMap';
+import { isNull } from './isNull';
+import { isObject } from './isObject';
+import { isSet } from './isSet';
+import { isUndefined } from './isUndefined';
 import { zip } from '../iterables/zip';
 import { map } from '../iterables/map';
 import { reduce } from '../iterables/reduce';
@@ -22,12 +20,12 @@ import { isListLike } from '../immutable/list/isListLike';
 
 /**
  * Performs value equality on the parameters to test for equality
- * 
+ *
  * Note: This is slow since it does traverse all elements in a collection
- * 
+ *
  * @kind function
  * @param {any} left The first object to test
- * @param {any} right The second object to test* 
+ * @param {any} right The second object to test*
  * @returns {boolean} Whether or not they are equal
  */
 export function isEqual(left, right) {

@@ -8,7 +8,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Converts an iterable into an array
- * 
+ *
  * The maximum number of elements to iterate over can optionally be provided as well
  *
  * @kind function

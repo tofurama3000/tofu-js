@@ -6,12 +6,12 @@ import { toArrayOrEmpty } from './toArrayOrEmpty';
  * @ignore
  */
 
- /**
-  * Filters out the elements of an array where the predicate returns false
-  * @autocurried
-  * @kind function
-  * @param {Predicate} func Function to filter by
-  * @param {any[]} array Array to filter
-  * @returns {any[]} The resulting array
-  */
+/**
+ * Filters out the elements of an array where the predicate returns false
+ * @autocurried
+ * @kind function
+ * @param {Predicate} func Function to filter by
+ * @param {any[]} array Array to filter
+ * @returns {any[]} The resulting array
+ */
 export const filter = curry((func, array) => toArrayOrEmpty(array).filter(func));

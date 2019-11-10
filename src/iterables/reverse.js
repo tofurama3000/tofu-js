@@ -7,7 +7,7 @@ import { collectToArray } from './collectToArray';
 
 /**
  * Reverses the elements of an iterable
- * 
+ *
  * @generator
  * @kind function
  * @param {Iterable<any>} iterable The iterable to iterate over

@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Accumulates the values of an iterable by calling a function and passing in the last accumulate and current value
- * 
+ *
  * @autocurried
  * @kind function
  * @param {function} func The reducer function

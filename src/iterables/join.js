@@ -8,7 +8,7 @@ import { collectToArray } from './collectToArray';
 
 /**
  * Returns the elements of an iterable as a string joined by the separator
- * 
+ *
  * @autocurried
  * @kind function
  * @param {string} separator The string to join elements with

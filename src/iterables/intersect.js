@@ -8,9 +8,9 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Returns only the items that appear in all iterables
- * 
+ *
  * Note: It uses the Set.has function to find matches
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

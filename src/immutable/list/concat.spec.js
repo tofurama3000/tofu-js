@@ -7,7 +7,10 @@ describe('Immutable List concat', () => {
     const list1 = List.toList([1, 2, 3]);
     const list2 = List.toList([4, 5, 6]);
     const concatenated = concat(list1, list2);
-    assertEqualLists(concatenated.map(x => x + 1), List.toList([2, 3, 4, 5, 6, 7]));
+    assertEqualLists(
+      concatenated.map(x => x + 1),
+      List.toList([2, 3, 4, 5, 6, 7])
+    );
     expect([...concatenated]).toEqual([1, 2, 3, 4, 5, 6]);
   });
 

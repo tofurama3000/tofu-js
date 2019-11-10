@@ -7,10 +7,10 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Takes the corresponding elements of each iterable based on index and groups them
- * 
+ *
  * E.g.
  * `zip([1, 2, 3], ['a', 'b', 'c'], [4, 5, 6]) => [[1, 'a', 4], [2, 'b', 5], [3, 'c', 6]]`
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Calls a function on each element of an iterable
- * 
+ *
  * @kind function
  * @param {function} func The function to call for each element
  * @param {Iterable<any>} iterable The iterable to flatten

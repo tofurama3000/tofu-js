@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Skips the first n values of an iterable
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

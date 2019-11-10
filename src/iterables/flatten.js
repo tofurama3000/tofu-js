@@ -8,10 +8,10 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Takes an iterable of iterables and concatenates the inner iterables into one iterable
- * 
+ *
  * E.g.
  * [[1, 2, 3], [4, 5, 6]] => [1, 2, 3, 4, 5, 6]
- * 
+ *
  * @generator
  * @kind function
  * @param {Iterable<any>} iterable The iterable to flatten

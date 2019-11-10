@@ -3,43 +3,42 @@
  * @ignore
  */
 
- /**
-  * Performs the and operation on a group of predicates
-  * This returns a function that takes a parameter to pass to the predicates
-  * @param  {...Predicate} predicates Predicates to and
-  * @returns {Predicate}
-  */
- export const and = (...predicates) => param =>
+/**
+ * Performs the and operation on a group of predicates
+ * This returns a function that takes a parameter to pass to the predicates
+ * @param  {...Predicate} predicates Predicates to and
+ * @returns {Predicate}
+ */
+export const and = (...predicates) => param =>
   [...predicates].reduce((a, p) => a && p(param), true) && !!predicates.length;
 
- /**
-  * Performs the and operation on a group of predicates
-  * This returns a function that takes a parameter to pass to the predicates
-  * @param  {...Predicate} predicates Predicates to and
-  * @returns {Predicate}
-  */
+/**
+ * Performs the and operation on a group of predicates
+ * This returns a function that takes a parameter to pass to the predicates
+ * @param  {...Predicate} predicates Predicates to and
+ * @returns {Predicate}
+ */
 export const or = (...predicates) => param =>
   [...predicates].reduce((a, p) => a || p(param), false);
 
- /**
-  * Performs the and operation on a group of predicates
-  * This returns a function that takes a parameter to pass to the predicates
-  * 
-  * Will return true if only one predicate returns true, false otherwise
-  * 
-  * @param  {...Predicate} predicates Predicates to and
-  * @returns {Predicate}
-  */
+/**
+ * Performs the and operation on a group of predicates
+ * This returns a function that takes a parameter to pass to the predicates
+ *
+ * Will return true if only one predicate returns true, false otherwise
+ *
+ * @param  {...Predicate} predicates Predicates to and
+ * @returns {Predicate}
+ */
 export const xor = (...predicates) => param =>
   [...predicates].map(p => +p(param)).reduce((a, c) => a + c, 0) === 1;
 
-
 /**
-  * Negates a predicate
-  * This returns a function that takes a parameter to pass to the predicates
-  * @param  {...Predicate} predicates Predicate to negate
-  * @returns {Predicate}
-  */
+ * Negates a predicate
+ * This returns a function that takes a parameter to pass to the predicates
+ * @param  {...Predicate} predicates Predicate to negate
+ * @returns {Predicate}
+ */
 export const negate = p1 => param => !p1(param);
 
 /**

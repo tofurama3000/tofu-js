@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Fills all values of an iterable with a provided value
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

@@ -9,7 +9,7 @@ import { firstOr } from './firstOr';
 
 /**
  * Returns the first element in an iterable that a predicate returns true for or a default value if none is found
- * 
+ *
  * @autocurried
  * @kind function
  * @param {any} defaultValue The value to return if no element is found

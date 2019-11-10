@@ -7,9 +7,9 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Calls a function for each element of an iterable and then passes the elmenet on
- * 
+ *
  * Often used for creating side effects (such as logging) while in the middle of processing an iterable
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

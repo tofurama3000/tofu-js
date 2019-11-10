@@ -11,7 +11,7 @@ import { map } from '../iterables/map';
 /**
  * Grabs entries for an object
  * @kind function
- * @param {object | Map | Set | Array | Iterable} param 
+ * @param {object | Map | Set | Array | Iterable} param
  */
 export const entries = param => {
   if (param instanceof Map) {

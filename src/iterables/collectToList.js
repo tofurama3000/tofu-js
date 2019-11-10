@@ -9,7 +9,7 @@ import { collectToList as listCollectToList } from '../immutable/list/index';
 
 /**
  * Converts an iterable into an immutable List
- * 
+ *
  * The maximum number of elements to iterate over can optionally be provided as well
  *
  * @kind function

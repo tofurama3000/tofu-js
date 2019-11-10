@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Returns true if any element of an iterable returns true
- * 
+ *
  * @autocurried
  * @kind function
  * @param {Predicate} predicate The predicate to execute for each element

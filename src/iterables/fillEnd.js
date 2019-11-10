@@ -7,7 +7,7 @@ import { fill } from './fill';
 
 /**
  * Replaces all values in an iterable with a specified value after a provided index
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Calls a function on each element of an iterable and returns an iterable of those results
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

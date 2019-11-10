@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Returns an iterable with no more than a provided maximum number of elements
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

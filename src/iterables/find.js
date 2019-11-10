@@ -9,7 +9,7 @@ import { filter } from './filter';
 
 /**
  * Returns an iterable holding first element in an iterable for which a predicate returns true or an empty iterable if none is found
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

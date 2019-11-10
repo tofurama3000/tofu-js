@@ -6,14 +6,14 @@ import { toArrayOrEmpty } from './toArrayOrEmpty';
  * @ignore
  */
 
- /**
-  * Calls a function for each element in the array and returns the array
-  * @kind function
-  * @autocurried
-  * @param {function} func Function to call on the array
-  * @param {any[]} array Array to operate on
-  * @returns {any[]} The original array
-  */
+/**
+ * Calls a function for each element in the array and returns the array
+ * @kind function
+ * @autocurried
+ * @param {function} func Function to call on the array
+ * @param {any[]} array Array to operate on
+ * @returns {any[]} The original array
+ */
 export const tap = curry((func, array) => {
   toArrayOrEmpty(array).forEach(func);
   return array;

@@ -8,7 +8,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Performs map(func, iterable) followed by flatten(iterable) on an iterable
- * 
+ *
  * @generator
  * @autocurried
  * @kind function

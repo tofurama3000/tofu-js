@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Fills an iterable between the start and end indexes with a value
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

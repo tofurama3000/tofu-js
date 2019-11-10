@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Takes an iterable of values and groups them by the result of calling a function
- * 
+ *
  * @generator
  * @kind function
  * @param {function} func A function to call to group elements by

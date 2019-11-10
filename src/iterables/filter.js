@@ -7,7 +7,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Filters values from an iterable where a predicate returns false
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

@@ -8,7 +8,7 @@ import { toIterableOrEmpty } from './toIterableOrEmpty';
 
 /**
  * Converts an iterable into a native Set
- * 
+ *
  * The maximum number of elements to iterate over can optionally be provided as well
  *
  * @kind function

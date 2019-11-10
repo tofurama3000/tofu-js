@@ -7,7 +7,7 @@ import { curry } from '../fp/curry';
 
 /**
  * Keeps only the first n values of an iterable
- * 
+ *
  * @autocurried
  * @generator
  * @kind function

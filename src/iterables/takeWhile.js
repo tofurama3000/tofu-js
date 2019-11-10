@@ -7,9 +7,9 @@ import { isIterable } from '../is/isIterable';
 
 /**
  * Keeps elements from an iterable until the provided function returns a falsey value or terminates (if it is an iterable)
- * 
+ *
  * If whileFunc is a function, the current value will be passed in each time
- * 
+ *
  * @autocurried
  * @generator
  * @kind function
@@ -36,7 +36,7 @@ export const takeWhile = curry(function*(whileFunc, iterable) {
 /**
  * Keeps elements from an iterable until the provided generator returns a falsey value
  * After each step of pulling a value from the while generator, a value will be passed into the while generator
- * 
+ *
  * @autocurried
  * @generator
  * @kind function
