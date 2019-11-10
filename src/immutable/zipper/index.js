@@ -8,7 +8,6 @@
 // location = [tree, path]
 import { emptyList, nestedToList, isList, toArrayNested } from '../list/index';
 import { curry } from '../../fp/curry';
-import { isFunction } from '../../is/isFunction';
 import { entries } from '../../obj/entries';
 
 const Top = Symbol('top');
@@ -160,7 +159,7 @@ export const insertRight = curry((newElem, { tree, path }) => {
   if (path === Top) {
     throw 'Cannot insert at top';
   }
-  return addZipperFuncs({ tree, path: { ...path, right: path.right.add(newElem) } });
+  return addZipperFuncs({ tree, path: { ...path, right: path.right.add(nestedToList(newElem)) } });
 });
 
 /**
@@ -176,7 +175,7 @@ export const insertLeft = curry((newElem, { tree, path }) => {
   if (path === Top) {
     throw 'Cannot insert at top';
   }
-  return addZipperFuncs({ tree, path: { ...path, left: path.left.add(newElem) } });
+  return addZipperFuncs({ tree, path: { ...path, left: nestedToList(path.left.add(newElem)) } });
 });
 
 /**
@@ -192,7 +191,10 @@ export const insertDown = curry((newElem, { tree, path }) => {
   if (!isList(tree)) {
     throw 'Cannot insert below an element';
   }
-  return addZipperFuncs({ tree: newElem, path: { left: emptyList(), path, right: tree } });
+  return addZipperFuncs({
+    tree: nestedToList(newElem),
+    path: { left: emptyList(), path, right: tree }
+  });
 });
 
 /**

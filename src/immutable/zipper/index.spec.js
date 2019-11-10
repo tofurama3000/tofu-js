@@ -212,6 +212,15 @@ describe('Zipper', () => {
         .node()
     ).toEqual([1, 4, 2, 3]);
 
+    expect(
+      zipper
+        .moveDown()
+        .insertRight([1, 2])
+        .moveRight()
+        .nodeRaw()
+        .equals([1, [2, []]])
+    ).toBe(true);
+
     expect(() => createZipper([1]).insertRight(1)).toThrow();
   });
 
@@ -234,6 +243,15 @@ describe('Zipper', () => {
         .node()
     ).toEqual([4, 1, 2, 3]);
 
+    expect(
+      zipper
+        .moveDown()
+        .insertLeft([1, 2])
+        .moveLeft()
+        .nodeRaw()
+        .equals([1, [2, []]])
+    ).toBe(true);
+
     expect(() => createZipper([1]).insertLeft(1)).toThrow();
   });
 
@@ -246,6 +264,14 @@ describe('Zipper', () => {
         .insertDown(4)
         .node()
     ).toBe(4);
+
+    expect(
+      zipper
+        .moveDown()
+        .insertDown([1, 2])
+        .nodeRaw()
+        .equals([1, [2, []]])
+    ).toBe(true);
 
     expect(
       zipper

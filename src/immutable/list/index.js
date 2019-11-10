@@ -131,8 +131,10 @@ export function map(list, func) {
 
 /**
  * Converts all nested arrays in an object into lists
+ * Note: if given a non-iterable it will not wrap it in a list
+ *
  * @param {any} obj Object to covert
- * @returns {List} The resulting list
+ * @returns {List | any} The resulting list
  */
 export function nestedToList(obj) {
   return listify(obj);
