@@ -22,7 +22,7 @@ const Top = Symbol('top');
 export function createZipper(iterable) {
   return addZipperFuncs({
     tree: nestedToList(iterable),
-    path: Top
+    path: Top,
   });
 }
 
@@ -102,7 +102,7 @@ export function moveUp({ tree, path }) {
   }
   return addZipperFuncs({
     tree: path.left.reverse().concat(path.right.add(tree)),
-    path
+    path: path.up
   });
 }
 
@@ -248,6 +248,46 @@ export function nodeRaw({ tree }) {
   return tree;
 }
 
+/**
+ * Returns the next element in the tree for a DFS traversal
+ * @param {HuetZipper} zipper The zipper to operate navigate
+ * @returns {HuetZipper} The next element
+ */
+export function next(zipper) {
+  const addNotFinished = e => {
+    e.finished = false;
+    return e;
+  };
+
+  if (zipper.canMoveDown()) {
+    return addNotFinished(zipper.moveDown())
+  } else if (zipper.canMoveRight()) {
+    return addNotFinished(zipper.moveRight())
+  } else {
+    let currentZipper = zipper
+    while (currentZipper.canMoveUp()) {
+      currentZipper = currentZipper.moveUp()
+      if(currentZipper.canMoveRight()) {
+        return addNotFinished(currentZipper.moveRight())
+      }
+    }
+    currentZipper.finished = true
+    return currentZipper
+  }
+}
+
+/**
+ * Returns the current tree and it's sub elements as an array
+ * @param {HuetZipper} zipper The zipper to operate on
+ * @returns {any[]} The tree represented with arrays
+ */
+export function toArray({tree}) {
+  if (isList(tree)) {
+    return toArrayNested(tree)
+  }
+  return tree
+}
+
 const bind = zipper => ([name, func]) => {
   zipper[name] = (...args) => func(...args, zipper);
 };
@@ -267,8 +307,10 @@ function addZipperFuncs(zipper) {
     moveLeft,
     moveDown,
     moveUp,
+    next,
     node,
-    nodeRaw
+    nodeRaw,
+    toArray
   }).forEach(bind(zipper));
   return zipper;
 }

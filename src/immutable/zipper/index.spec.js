@@ -171,6 +171,15 @@ describe('Zipper', () => {
         .node()
     ).toEqual([1, 2, 3, 4]);
 
+    expect(
+      zipper
+        .moveDown()
+        .moveDown()
+        .moveUp()
+        .moveUp()
+        .node()
+    ).toEqual([[1, 2, 3, 4]]);
+
     expect(() => zipper.moveUp()).toThrow();
   });
 
@@ -312,5 +321,26 @@ describe('Zipper', () => {
     expect(del3.moveUp().node()).toEqual([1, [], 3]);
 
     expect(() => createZipper([1, 2, 3]).delete()).toThrow();
+  });
+
+  it('can do a DFS traversal', () => {
+    let zipper = createZipper([[1, 2], [3, 4, [5, 6, 7], 8], 9, [[10]]]);
+    const order = []
+
+    while(!zipper.finished) {
+      if (typeof zipper.node() === 'number') {
+        order.push(zipper.node())
+      }
+      zipper = zipper.next()
+    }
+    expect(order).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  });
+
+  it('can convert to an array', () => {
+    let zipper = createZipper([[1, 2], [3, 4, [5, 6, 7], 8], 9, [[10]]]);
+    expect(zipper.toArray()).toEqual([[1, 2], [3, 4, [5, 6, 7], 8], 9, [[10]]])
+    expect(zipper.moveDown().moveRight().toArray()).toEqual([3, 4, [5, 6, 7], 8])
+    expect(zipper.moveDown().toArray()).toEqual([1, 2])
+    expect(zipper.moveDown().moveDown().toArray()).toEqual(1)
   });
 });
