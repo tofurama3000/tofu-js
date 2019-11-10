@@ -96,6 +96,19 @@ export function moveRight({ tree, path }) {
 }
 
 /**
+ * Moves to the root (top) position in a huet zipper
+ * @param {HuetZipper} zipper The zipper to operate on
+ * @returns {HuetZipper} The top position
+ */
+export function root(zipper) {
+  let currentZipper = zipper;
+  while (currentZipper.canMoveUp()) {
+    currentZipper = currentZipper.moveUp();
+  }
+  return currentZipper;
+}
+
+/**
  * Moves to the rightmost position at the current level in a huet zipper
  * @param {HuetZipper} zipper The zipper to operate on
  * @returns {HuetZipper} The rightmost position
@@ -348,6 +361,7 @@ function addZipperFuncs(zipper) {
     node,
     nodeRaw,
     rightmost,
+    root,
     toArray
   }).forEach(bind(zipper));
   return zipper;

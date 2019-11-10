@@ -354,6 +354,12 @@ describe('Zipper', () => {
     ).toEqual(1);
   });
 
+  it('can move to the root', () => {
+    let zipper = createZipper([[[[[[1, 2]]]]]]);
+    expect(zipper.root().node()).toEqual([[[[[[1, 2]]]]]]);
+    expect(zipper.moveDown().moveDown().moveDown().moveDown().moveDown().moveDown().root().node()).toEqual([[[[[[1, 2]]]]]]);
+  });
+
   it('can go to the rightmost position', () => {
     expect(
       createZipper([1, 2, 3, 4, 5])
