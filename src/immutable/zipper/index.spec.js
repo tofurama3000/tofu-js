@@ -1,17 +1,17 @@
 import { createZipper } from './index';
 
 describe('Zipper', () => {
-
   it('can detect if can go down', () => {
     const zipper = createZipper([1, 2]);
 
-    expect(
-      zipper
-        .canMoveDown()
-    ).toBe(true);
+    expect(zipper.canMoveDown()).toBe(true);
 
     expect(zipper.moveDown().canMoveDown()).toBe(false);
-    expect(createZipper([[], 1]).moveDown().canMoveDown()).toBe(false);
+    expect(
+      createZipper([[], 1])
+        .moveDown()
+        .canMoveDown()
+    ).toBe(false);
   });
 
   it('can go down', () => {
@@ -50,14 +50,15 @@ describe('Zipper', () => {
   it('can detect if can go right', () => {
     const zipper = createZipper([1, 2]);
 
+    expect(zipper.moveDown().canMoveRight()).toBe(true);
+
+    expect(zipper.canMoveRight()).toBe(false);
     expect(
       zipper
         .moveDown()
+        .moveRight()
         .canMoveRight()
-    ).toBe(true);
-
-    expect(zipper.canMoveRight()).toBe(false);
-    expect(zipper.moveDown().moveRight().canMoveRight()).toBe(false);
+    ).toBe(false);
   });
 
   it('can go right', () => {
@@ -254,26 +255,36 @@ describe('Zipper', () => {
         .node()
     ).toEqual([4, 1]);
 
-    expect(() => createZipper([1]).moveDown().insertDown(1)).toThrow()
+    expect(() =>
+      createZipper([1])
+        .moveDown()
+        .insertDown(1)
+    ).toThrow();
   });
-
-
 
   it('can delete elements', () => {
     const zipper = createZipper([1, 2, 3]);
 
-    const del1 =  zipper.moveDown().delete()
+    const del1 = zipper.moveDown().delete();
     expect(del1.node()).toBe(2);
     expect(del1.moveUp().node()).toEqual([2, 3]);
 
-    const del2 =  zipper.moveDown().moveRight().moveRight().delete()
+    const del2 = zipper
+      .moveDown()
+      .moveRight()
+      .moveRight()
+      .delete();
     expect(del2.node()).toBe(2);
     expect(del2.moveUp().node()).toEqual([1, 2]);
 
-    const del3 = createZipper([1, [2], 3]).moveDown().moveRight().moveDown().delete()
+    const del3 = createZipper([1, [2], 3])
+      .moveDown()
+      .moveRight()
+      .moveDown()
+      .delete();
     expect(del3.node()).toEqual([]);
     expect(del3.moveUp().node()).toEqual([1, [], 3]);
 
-    expect(() => createZipper([1, 2, 3]).delete()).toThrow()
+    expect(() => createZipper([1, 2, 3]).delete()).toThrow();
   });
 });

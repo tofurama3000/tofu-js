@@ -30,7 +30,7 @@ export function createZipper(iterable) {
 /**
  * Returns whether or not you can move left from a node
  * @param {HuetZipper} zipper The zipper to operate on
- * @returns {boolean} Whether or not you can move 
+ * @returns {boolean} Whether or not you can move
  */
 export function canMoveLeft({ path }) {
   return path !== Top && !path.left.isEmpty();
@@ -58,7 +58,7 @@ export function moveLeft({ tree, path }) {
 /**
  * Returns whether or not you can move right from a node
  * @param {HuetZipper} zipper The zipper to operate on
- * @returns {boolean} Whether or not you can move 
+ * @returns {boolean} Whether or not you can move
  */
 export function canMoveRight({ path }) {
   return path !== Top && !path.right.isEmpty();
@@ -70,8 +70,8 @@ export function canMoveRight({ path }) {
  * @returns {HuetZipper} A zipper that represents the result
  */
 export function moveRight({ tree, path }) {
-  if (!canMoveRight({path})) {
-    throw "Cannot move right"
+  if (!canMoveRight({ path })) {
+    throw 'Cannot move right';
   }
   return addZipperFuncs({
     tree: path.right.first(),
@@ -86,7 +86,7 @@ export function moveRight({ tree, path }) {
 /**
  * Returns whether or not you can move up from a node
  * @param {HuetZipper} zipper The zipper to operate on
- * @returns {boolean} Whether or not you can move 
+ * @returns {boolean} Whether or not you can move
  */
 export function canMoveUp({ path }) {
   return path !== Top;
@@ -98,8 +98,8 @@ export function canMoveUp({ path }) {
  * @returns {HuetZipper} A zipper that represents the result
  */
 export function moveUp({ tree, path }) {
-  if (!canMoveUp({path})) {
-    throw "Cannot move up"
+  if (!canMoveUp({ path })) {
+    throw 'Cannot move up';
   }
   return addZipperFuncs({
     tree: path.left.reverse().concat(path.right.add(tree)),
@@ -110,10 +110,10 @@ export function moveUp({ tree, path }) {
 /**
  * Returns whether or not you can move down from a node
  * @param {HuetZipper} zipper The zipper to operate on
- * @returns {boolean} Whether or not you can move 
+ * @returns {boolean} Whether or not you can move
  */
 export function canMoveDown({ tree }) {
-  return isList(tree) && !tree.isEmpty()
+  return isList(tree) && !tree.isEmpty();
 }
 
 /**
@@ -122,8 +122,8 @@ export function canMoveDown({ tree }) {
  * @returns {HuetZipper} A zipper that represents the result
  */
 export function moveDown({ tree, path }) {
-  if (!canMoveDown({tree})) {
-    throw "Cannot move down";
+  if (!canMoveDown({ tree })) {
+    throw 'Cannot move down';
   }
 
   return addZipperFuncs({
@@ -200,9 +200,9 @@ export const insertDown = curry((newElem, { tree, path }) => {
  * @param {HuetZipper} zipper The zipper to operate on
  * @returns {HuetZipper} The zipper with the current element removed
  */
-export function deleteNode({path}) {
+export function deleteNode({ path }) {
   if (path === Top) {
-    throw "Cannot delete top of tree"
+    throw 'Cannot delete top of tree';
   }
   if (!path.right.isEmpty()) {
     return addZipperFuncs({
@@ -211,7 +211,7 @@ export function deleteNode({path}) {
         ...path,
         right: path.right.rest()
       }
-    })
+    });
   } else if (!path.left.isEmpty()) {
     return addZipperFuncs({
       tree: path.left.first(),
@@ -219,12 +219,12 @@ export function deleteNode({path}) {
         ...path,
         left: path.left.rest()
       }
-    })
+    });
   } else {
     return addZipperFuncs({
       tree: [],
       path: path.up
-    })
+    });
   }
 }
 
