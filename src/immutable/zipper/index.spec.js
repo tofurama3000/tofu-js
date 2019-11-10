@@ -323,11 +323,31 @@ describe('Zipper', () => {
     expect(() => createZipper([1, 2, 3]).delete()).toThrow();
   });
 
+  it('can detect end of DFS traversal', () => {
+    let zipper = createZipper([[1, 2]]);
+    expect(zipper.next().endOfDFS()).toBe(false);
+    expect(
+      zipper
+        .next()
+        .next()
+        .next()
+        .endOfDFS()
+    ).toBe(false);
+    expect(
+      zipper
+        .next()
+        .next()
+        .next()
+        .next()
+        .endOfDFS()
+    ).toBe(true);
+  });
+
   it('can do a DFS traversal', () => {
     let zipper = createZipper([[1, 2], [3, 4, [5, 6, 7], 8], 9, [[10]]]);
     const order = [];
 
-    while (!zipper.finished) {
+    while (!zipper.endOfDFS()) {
       if (typeof zipper.node() === 'number') {
         order.push(zipper.node());
       }
@@ -357,7 +377,17 @@ describe('Zipper', () => {
   it('can move to the root', () => {
     let zipper = createZipper([[[[[[1, 2]]]]]]);
     expect(zipper.root().node()).toEqual([[[[[[1, 2]]]]]]);
-    expect(zipper.moveDown().moveDown().moveDown().moveDown().moveDown().moveDown().root().node()).toEqual([[[[[[1, 2]]]]]]);
+    expect(
+      zipper
+        .moveDown()
+        .moveDown()
+        .moveDown()
+        .moveDown()
+        .moveDown()
+        .moveDown()
+        .root()
+        .node()
+    ).toEqual([[[[[[1, 2]]]]]]);
   });
 
   it('can go to the rightmost position', () => {

@@ -68,8 +68,11 @@ This is a collection of useful JavaScript functions
      - [createZipper](#createZipper)
      - [canMoveLeft](#canMoveLeft)
      - [moveLeft](#moveLeft)
+     - [leftmost](#leftmost)
      - [canMoveRight](#canMoveRight)
      - [moveRight](#moveRight)
+     - [root](#root)
+     - [rightmost](#rightmost)
      - [canMoveUp](#canMoveUp)
      - [moveUp](#moveUp)
      - [canMoveDown](#canMoveDown)
@@ -81,6 +84,9 @@ This is a collection of useful JavaScript functions
      - [deleteNode](#deleteNode)
      - [node](#node)
      - [nodeRaw](#nodeRaw)
+     - [next](#next)
+     - [toArray](#toArray)
+     - [endOfDFS](#endOfDFS)
  - [is](#is)
    - [isArray](#isArray)
    - [isBuffer](#isBuffer)
@@ -970,9 +976,10 @@ Returns:
 ### nestedToList
 
 
-&#x60;function: (obj: any) &#x3D;&gt; List&#x60;
+&#x60;function: (obj: any) &#x3D;&gt; List | any&#x60;
 
 Converts all nested arrays in an object into lists
+Note: if given a non-iterable it will not wrap it in a list
 
 Params: 
 
@@ -980,7 +987,7 @@ Params:
 
 Returns: 
 
-	**List** The resulting list
+	**List | any** The resulting list
 
 [Back to Top](#table-of-contents)
 
@@ -1358,6 +1365,24 @@ Returns:
 [Back to Top](#table-of-contents)
 
 
+### leftmost
+
+
+&#x60;function: (zipper: HuetZipper) &#x3D;&gt; HuetZipper&#x60;
+
+Moves to the leftmost position at the current level in a huet zipper
+
+Params: 
+
+	**zipper: HuetZipper** The zipper to operate on
+
+Returns: 
+
+	**HuetZipper** The leftmost position
+
+[Back to Top](#table-of-contents)
+
+
 ### canMoveRight
 
 
@@ -1390,6 +1415,42 @@ Params:
 Returns: 
 
 	**HuetZipper** A zipper that represents the result
+
+[Back to Top](#table-of-contents)
+
+
+### root
+
+
+&#x60;function: (zipper: HuetZipper) &#x3D;&gt; HuetZipper&#x60;
+
+Moves to the root (top) position in a huet zipper
+
+Params: 
+
+	**zipper: HuetZipper** The zipper to operate on
+
+Returns: 
+
+	**HuetZipper** The top position
+
+[Back to Top](#table-of-contents)
+
+
+### rightmost
+
+
+&#x60;function: (zipper: HuetZipper) &#x3D;&gt; HuetZipper&#x60;
+
+Moves to the rightmost position at the current level in a huet zipper
+
+Params: 
+
+	**zipper: HuetZipper** The zipper to operate on
+
+Returns: 
+
+	**HuetZipper** The rightmost position
 
 [Back to Top](#table-of-contents)
 
@@ -1596,6 +1657,60 @@ Params:
 Returns: 
 
 	**List | any** The current element
+
+[Back to Top](#table-of-contents)
+
+
+### next
+
+
+&#x60;function: (zipper: HuetZipper) &#x3D;&gt; HuetZipper&#x60;
+
+Returns the next element in the tree for a DFS traversal
+
+Params: 
+
+	**zipper: HuetZipper** The zipper to operate navigate
+
+Returns: 
+
+	**HuetZipper** The next element
+
+[Back to Top](#table-of-contents)
+
+
+### toArray
+
+
+&#x60;function: (zipper: HuetZipper) &#x3D;&gt; any[]&#x60;
+
+Returns the current tree and it&#39;s sub elements as an array
+
+Params: 
+
+	**zipper: HuetZipper** The zipper to operate on
+
+Returns: 
+
+	**any[]** The tree represented with arrays
+
+[Back to Top](#table-of-contents)
+
+
+### endOfDFS
+
+
+&#x60;function: (zipper: HuetZipper) &#x3D;&gt; boolean&#x60;
+
+Returns whether or not a zipper is at the end of a DFS walk
+
+Params: 
+
+	**zipper: HuetZipper** The zipper to check
+
+Returns: 
+
+	**boolean** Whether or not it is the end of a DFS walk
 
 [Back to Top](#table-of-contents)
 
