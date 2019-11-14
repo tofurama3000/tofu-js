@@ -1,4 +1,4 @@
-export * from './arrays/index';
+import * as Arrays from './arrays/index';
 export const arrays = Arrays;
 
 import * as Fp from './fp/index';
