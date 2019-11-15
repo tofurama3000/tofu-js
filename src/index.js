@@ -20,4 +20,4 @@ import * as Obj from './obj/index';
 export const obj = Obj;
 
 import * as Imut from './immutable/index';
-export const immutale = Imut;
+export const immutable = Imut;
