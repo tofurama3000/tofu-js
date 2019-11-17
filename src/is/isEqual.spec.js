@@ -27,77 +27,12 @@ describe('isEqual', () => {
   });
 
   it('works on maps', () => {
-    expect(
-      isEqual(
-        new Map([
-          [1, 2],
-          [3, 4]
-        ]),
-        new Map([
-          [3, 4],
-          [1, 2]
-        ])
-      )
-    ).toBe(true);
-    expect(
-      isEqual(
-        new Map([
-          [1, 2],
-          [3, 4]
-        ]),
-        new Map([
-          [3, 5],
-          [1, 2]
-        ])
-      )
-    ).toBe(false);
-    expect(
-      isEqual(
-        new Map([
-          [1, 2],
-          [3, 4]
-        ]),
-        new Map([
-          [4, 4],
-          [1, 2]
-        ])
-      )
-    ).toBe(false);
-    expect(
-      isEqual(
-        new Map([
-          [1, 2],
-          [3, 4]
-        ]),
-        new Map([
-          [3, 4],
-          [1, 2],
-          [4, 5]
-        ])
-      )
-    ).toBe(false);
-    expect(
-      isEqual(
-        new Map([
-          [1, 2],
-          [3, 4],
-          [4, 5]
-        ]),
-        new Map([
-          [3, 4],
-          [1, 2]
-        ])
-      )
-    ).toBe(false);
-    expect(
-      isEqual(
-        new Map([
-          [1, 2],
-          [3, 4]
-        ]),
-        { 1: 2, 3: 4 }
-      )
-    ).toBe(false);
+    expect(isEqual(new Map([[1, 2], [3, 4]]), new Map([[3, 4], [1, 2]]))).toBe(true);
+    expect(isEqual(new Map([[1, 2], [3, 4]]), new Map([[3, 5], [1, 2]]))).toBe(false);
+    expect(isEqual(new Map([[1, 2], [3, 4]]), new Map([[4, 4], [1, 2]]))).toBe(false);
+    expect(isEqual(new Map([[1, 2], [3, 4]]), new Map([[3, 4], [1, 2], [4, 5]]))).toBe(false);
+    expect(isEqual(new Map([[1, 2], [3, 4], [4, 5]]), new Map([[3, 4], [1, 2]]))).toBe(false);
+    expect(isEqual(new Map([[1, 2], [3, 4]]), { 1: 2, 3: 4 })).toBe(false);
   });
 
   it('works on lists', () => {

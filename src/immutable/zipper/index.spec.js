@@ -324,18 +324,20 @@ describe('Zipper', () => {
   });
 
   it('can traverse problematic structure', () => {
-    let zipper = createZipper([['/api',
-    ['/v1', {name: 'api-v1'}],
-    ['/v2', ['/:endpoint', {name: 'api-v2-endpoint'}]]]]);
-    expect(zipper.next().node()).toEqual(['/api',
-    ['/v1', {name: 'api-v1'}],
-    ['/v2', ['/:endpoint', {name: 'api-v2-endpoint'}]]]);
+    let zipper = createZipper([
+      ['/api', ['/v1', { name: 'api-v1' }], ['/v2', ['/:endpoint', { name: 'api-v2-endpoint' }]]]
+    ]);
+    expect(zipper.next().node()).toEqual([
+      '/api',
+      ['/v1', { name: 'api-v1' }],
+      ['/v2', ['/:endpoint', { name: 'api-v2-endpoint' }]]
+    ]);
 
-    while(!zipper.endOfDFS()) {
+    while (!zipper.endOfDFS()) {
       zipper = zipper.next();
-      expect(zipper.node()).toBeTruthy()
+      expect(zipper.node()).toBeTruthy();
     }
-  })
+  });
 
   it('can detect end of DFS traversal', () => {
     let zipper = createZipper([[1, 2]]);

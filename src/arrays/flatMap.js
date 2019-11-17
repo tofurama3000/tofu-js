@@ -17,4 +17,10 @@ import { flatten } from './flatten';
  * @param {any[]} array Array to operate on
  * @returns {any[]} The resulting array
  */
-export const flatMap = curry((func, array) => pipe(toArrayOrEmpty(array), map(func), flatten));
+export const flatMap = curry((func, array) =>
+  pipe(
+    toArrayOrEmpty(array),
+    map(func),
+    flatten
+  )
+);

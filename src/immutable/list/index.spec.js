@@ -12,13 +12,7 @@ describe('Immutable list implementation', () => {
 
   it('can recursivley convert nested arrays to lists', () => {
     const arr = [0, [1, 3, 4], 2, 3, 4, 5];
-    const list = [
-      0,
-      [
-        [1, [3, [4, []]]],
-        [2, [3, [4, [5, []]]]]
-      ]
-    ];
+    const list = [0, [[1, [3, [4, []]]], [2, [3, [4, [5, []]]]]]];
 
     assertEqualLists(List.nestedToList(arr), list);
     assertEqualLists(List.nestedToList(new Map([[1, arr]])), new Map([[1, list]]));

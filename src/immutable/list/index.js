@@ -243,26 +243,23 @@ export function __addListFunctions(list) {
 
   list[isListSym] = true;
 
-  bindFuncs(
-    list,
-    {
-      add,
-      concat,
-      count,
-      drop,
-      dropFirst,
-      equals,
-      first,
-      isEmpty,
-      map,
-      reduce,
-      rest,
-      reverse,
-      split,
-      splitOn,
-      toArray
-    }
-  );
+  bindFuncs(list, {
+    add,
+    concat,
+    count,
+    drop,
+    dropFirst,
+    equals,
+    first,
+    isEmpty,
+    map,
+    reduce,
+    rest,
+    reverse,
+    split,
+    splitOn,
+    toArray
+  });
 
   return list;
 }

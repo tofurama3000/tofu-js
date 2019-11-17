@@ -23,7 +23,9 @@ export const entries = param => {
     let index = 0;
     return collectToArray(map(e => [index++, e], param));
   } else if (isObject(param)) {
-    return Object.entries(param).concat(Object.getOwnPropertySymbols(param).map(k => [k, param[k]]));
+    return Object.entries(param).concat(
+      Object.getOwnPropertySymbols(param).map(k => [k, param[k]])
+    );
   } else {
     return [];
   }

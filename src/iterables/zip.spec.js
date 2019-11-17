@@ -14,12 +14,7 @@ describe('zip', () => {
           })()
         )
       )
-    ).toEqual([
-      [1, 1],
-      [2, -1],
-      [3, 3],
-      [4, null]
-    ]);
+    ).toEqual([[1, 1], [2, -1], [3, 3], [4, null]]);
   });
 
   it('works with many iterables', () => {
@@ -35,11 +30,6 @@ describe('zip', () => {
           [0, 10, null, 3]
         )
       )
-    ).toEqual([
-      [1, 1, 0],
-      [2, -1, 10],
-      [3, 3, null],
-      [4, null, 3]
-    ]);
+    ).toEqual([[1, 1, 0], [2, -1, 10], [3, 3, null], [4, null, 3]]);
   });
 });
