@@ -11,6 +11,16 @@ describe('entries', () => {
     ]);
   });
 
+  it('works with symbol properties', () => {
+    const a = Symbol('a')
+    const b = Symbol('b')
+    expect(entries({ [a]: 4 })).toEqual([[a, 4]]);
+    expect(entries({ [a]: 4, [b]: 6 })).toEqual([
+      [a, 4],
+      [b, 6]
+    ]);
+  });
+
   it('works on maps', () => {
     expect(entries(new Map([]))).toEqual([]);
     expect(

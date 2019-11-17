@@ -3,6 +3,11 @@
  * @module immutable
  */
 
-export * from './list/index';
-export * from './stack/index';
-export * from './zipper/index';
+import * as l from './list/index';
+export const List = l;
+
+import * as s from './stack/index';
+export const Stack = s;
+
+import * as z from './zipper/index';
+export const Zipper = z;

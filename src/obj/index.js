@@ -6,3 +6,4 @@
 export * from './toPairs';
 export * from './entries';
 export * from './copyInto';
+export * from './keys';

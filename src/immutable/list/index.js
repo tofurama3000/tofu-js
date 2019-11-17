@@ -245,32 +245,34 @@ export function __addListFunctions(list) {
 
   bindFuncs(
     list,
-    add,
-    concat,
-    count,
-    drop,
-    dropFirst,
-    equals,
-    first,
-    isEmpty,
-    map,
-    reduce,
-    rest,
-    reverse,
-    split,
-    splitOn,
-    toArray
+    {
+      add,
+      concat,
+      count,
+      drop,
+      dropFirst,
+      equals,
+      first,
+      isEmpty,
+      map,
+      reduce,
+      rest,
+      reverse,
+      split,
+      splitOn,
+      toArray
+    }
   );
 
   return list;
 }
 
-function bindFuncs(list, ...funcs) {
-  funcs.forEach(func => bindFunc(list, func));
+function bindFuncs(list, funcs) {
+  Object.entries(funcs).forEach(func => bindFunc(list, func));
 }
 
-function bindFunc(list, func) {
-  list[func.name] = (...args) => func(list, ...args);
+function bindFunc(list, [key, func]) {
+  list[key] = (...args) => func(list, ...args);
 }
 
 function listify(obj, depth = -1) {
