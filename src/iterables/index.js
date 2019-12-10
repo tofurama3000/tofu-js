@@ -4,6 +4,7 @@
  */
 
 export * from './all';
+export * from './any';
 export * from './chunk';
 export * from './collectToArray';
 export * from './collectToList';
