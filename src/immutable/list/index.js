@@ -210,7 +210,12 @@ export function toArray(list) {
  * @returns {any[]} The resulting array
  */
 export function toArrayNested(list) {
+  const convertObject = obj =>
+    fromPairs(entries(obj).map(([key, value]) => [key, toArrayNested(value)]));
   if (!isArray(list)) {
+    if (isObject(list)) {
+      return convertObject(list);
+    }
     return list;
   }
 
@@ -221,7 +226,7 @@ export function toArrayNested(list) {
     if (isArray(elem)) {
       array.push(toArrayNested(elem));
     } else if (isObject(elem)) {
-      array.push(fromPairs(entries(elem).map(([key, value]) => [key, toArrayNested(value)])));
+      array.push(convertObject(elem));
     } else {
       array.push(elem);
     }

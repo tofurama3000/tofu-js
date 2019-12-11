@@ -42,10 +42,15 @@ describe('Immutable list implementation', () => {
     expect(List.toArrayNested(list)).toEqual(array);
   });
 
-  it('can convert a list nested in an object to an array', () => {
+  it('can convert a list nested in an object in an array to an array', () => {
     const list = [1, [{ a: [2, []] }, [3, [4, [5, []]]]]];
     const array = [1, { a: [2] }, 3, 4, 5];
     expect(List.toArrayNested(list)).toEqual(array);
+  });
+
+  it('can convert a list nested in an object to an array', () => {
+    const obj = { a: [2, [3, []]] };
+    expect(List.toArrayNested(obj)).toEqual({ a: [2, 3] });
   });
 
   it('has an iterator', () => {

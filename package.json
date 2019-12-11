@@ -1,6 +1,6 @@
 {
   "name": "@tofurama3000/hat-js",
-  "version": "0.0.17-pre",
+  "version": "0.0.18-pre",
   "types": "./dist/index.d.ts",
   "author": "Matt Tolman",
   "repository": {
