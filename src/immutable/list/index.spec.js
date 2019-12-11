@@ -14,10 +14,18 @@ describe('Immutable list implementation', () => {
     const arr = [0, [1, 3, 4], 2, 3, 4, 5];
     const list = [0, [[1, [3, [4, []]]], [2, [3, [4, [5, []]]]]]];
 
-    assertEqualLists(List.nestedToList(arr), list);
-    assertEqualLists(List.nestedToList(new Map([[1, arr]])), new Map([[1, list]]));
-    assertEqualLists(List.nestedToList(new Set([arr])), new Set([list]));
-    assertEqualLists(List.nestedToList({ a: arr }), { a: list });
+    assertEqualLists(List.nestedToList(arr, true), list);
+    assertEqualLists(List.nestedToList(new Map([[1, arr]]), true), new Map([[1, list]]));
+    assertEqualLists(List.nestedToList(new Set([arr]), true), new Set([list]));
+    assertEqualLists(List.nestedToList({ a: arr }, true), { a: list });
+  });
+
+  it('can doesn\'t recursivley convert nested objects when told not to', () => {
+    const arr = [0, [1, 3, 4], 2, 3, 4, 5];
+
+    assertEqualLists(List.nestedToList(new Map([[1, arr]])), new Map([[1, arr]]));
+    assertEqualLists(List.nestedToList(new Set([arr])), new Set([arr]));
+    assertEqualLists(List.nestedToList({ a: arr }), { a: arr });
   });
 
   it('can get first element', () => {

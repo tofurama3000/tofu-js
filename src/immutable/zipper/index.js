@@ -21,7 +21,7 @@ const Top = Symbol('top');
  */
 export function createZipper(iterable) {
   return addZipperFuncs({
-    tree: nestedToList(iterable),
+    tree: nestedToList(iterable, false),
     path: Top
   });
 }

@@ -18,6 +18,8 @@ import { isArray } from '../../is/isArray';
 import { isObject } from '../../is/isObject';
 import { entries } from '../../obj/entries';
 import { fromPairs } from '../../iterables/fromPairs';
+import { isList } from './isList';
+import { isListLike } from './isListLike';
 
 export function emptyList() {
   return __addListFunctions([]);
@@ -137,10 +139,11 @@ export function map(list, func) {
  * Note: if given a non-iterable it will not wrap it in a list
  *
  * @param {any} obj Object to covert
+ * @param {bool} convertObjects Should convert object elements (defaults to false)
  * @returns {List | any} The resulting list
  */
-export function nestedToList(obj) {
-  return listify(obj);
+export function nestedToList(obj, convertObjects = false) {
+  return listify(obj, convertObjects);
 }
 
 /**
@@ -210,29 +213,21 @@ export function toArray(list) {
  * @returns {any[]} The resulting array
  */
 export function toArrayNested(list) {
-  const convertObject = obj =>
-    fromPairs(entries(obj).map(([key, value]) => [key, toArrayNested(value)]));
-  if (!isArray(list)) {
-    if (isObject(list)) {
-      return convertObject(list);
+  if (isList(list) || isListLike(list)) {
+    const array = [];
+    let curList = list;
+    while (curList.length) {
+      array.push(toArrayNested(curList[0]));
+      curList = curList[1];
     }
+    return array;
+  } else if (isArray(list)) {
+    return list;
+  } else if (isObject(list)) {
+    return fromPairs(entries(list).map(([key, value]) => [key, toArrayNested(value)]));
+  } else {
     return list;
   }
-
-  const array = [];
-  let curList = list;
-  while (curList.length) {
-    const elem = curList[0];
-    if (isArray(elem)) {
-      array.push(toArrayNested(elem));
-    } else if (isObject(elem)) {
-      array.push(convertObject(elem));
-    } else {
-      array.push(elem);
-    }
-    curList = curList[1];
-  }
-  return array;
 }
 
 /**
@@ -247,7 +242,7 @@ export function toList(obj) {
   if (!Array.isArray(obj)) {
     return listify([obj, []]);
   }
-  return listify(obj, 1);
+  return listify(obj, false, 1);
 }
 
 export function __addListFunctions(list) {
@@ -291,28 +286,30 @@ function bindFunc(list, [key, func]) {
   list[key] = (...args) => func(list, ...args);
 }
 
-function listify(obj, depth = -1) {
+function listify(obj, convertObject = false, depth = -1) {
   if (depth == 0) return obj;
   if (Array.isArray(obj)) {
     return obj
-      .map(obj => listify(obj, depth - 1))
+      .map(obj => listify(obj, convertObject, depth - 1))
       .reverse()
       .reduce((list, elem) => __addListFunctions([elem, list]), __addListFunctions([]));
+  } else if (!convertObject) {
+    return obj;
   } else if (obj instanceof Map) {
     const newMap = new Map();
     obj.forEach((v, k) => {
-      newMap.set(listify(k, depth - 1), listify(v, depth - 1));
+      newMap.set(listify(k, convertObject, depth - 1), listify(v, convertObject, depth - 1));
     });
     return newMap;
   } else if (obj instanceof Set) {
     const newSet = new Set();
     obj.forEach(v => {
-      newSet.add(listify(v, depth - 1));
+      newSet.add(listify(v, convertObject, depth - 1));
     });
     return newSet;
   } else if (typeof obj === 'object') {
     return Object.entries(obj)
-      .map(([k, v]) => [k, listify(v, depth - 1)])
+      .map(([k, v]) => [k, listify(v, convertObject, depth - 1)])
       .reduce((acc, [k, v]) => ({ ...acc, ...{ [k]: v } }), {});
   } else {
     return obj;

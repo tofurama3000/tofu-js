@@ -339,6 +339,33 @@ describe('Zipper', () => {
     }
   });
 
+  it('can handle problematic structure with nested lists', () => {
+    let zipper = createZipper([
+      ['/api',
+        {middleware: ['0']},
+        ['/v1', {name: 'api-v1', middleware: ['1', '2', '3']}],
+        ['/v2', ['/:endpoint', {name: 'api-v2-endpoint', middleware: ['4']}]],
+        ['/v3',
+          ['/status', 'ok'],
+          ['/:endpoint/api', {name: 'api-v3-endpoint', middleware: ['6']}],
+          {middleware: ['5']}]]
+    ]);
+    expect(zipper.next().node()).toEqual(['/api',
+      {middleware: ['0']},
+      ['/v1', {name: 'api-v1', middleware: ['1', '2', '3']}],
+      ['/v2', ['/:endpoint', {name: 'api-v2-endpoint', middleware: ['4']}]],
+      ['/v3',
+        ['/status', 'ok'],
+        ['/:endpoint/api', {name: 'api-v3-endpoint', middleware: ['6']}],
+        {middleware: ['5']}]
+    ]);
+
+    while (!zipper.endOfDFS()) {
+      zipper = zipper.next();
+      expect(zipper.node()).toBeTruthy();
+    }
+  });
+
   it('can detect end of DFS traversal', () => {
     let zipper = createZipper([[1, 2]]);
     expect(zipper.next().endOfDFS()).toBe(false);
