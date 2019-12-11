@@ -20,7 +20,7 @@ describe('Immutable list implementation', () => {
     assertEqualLists(List.nestedToList({ a: arr }, true), { a: list });
   });
 
-  it('can doesn\'t recursivley convert nested objects when told not to', () => {
+  it("can doesn't recursivley convert nested objects when told not to", () => {
     const arr = [0, [1, 3, 4], 2, 3, 4, 5];
 
     assertEqualLists(List.nestedToList(new Map([[1, arr]])), new Map([[1, arr]]));

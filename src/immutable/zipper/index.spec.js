@@ -341,23 +341,30 @@ describe('Zipper', () => {
 
   it('can handle problematic structure with nested lists', () => {
     let zipper = createZipper([
-      ['/api',
-        {middleware: ['0']},
-        ['/v1', {name: 'api-v1', middleware: ['1', '2', '3']}],
-        ['/v2', ['/:endpoint', {name: 'api-v2-endpoint', middleware: ['4']}]],
-        ['/v3',
+      [
+        '/api',
+        { middleware: ['0'] },
+        ['/v1', { name: 'api-v1', middleware: ['1', '2', '3'] }],
+        ['/v2', ['/:endpoint', { name: 'api-v2-endpoint', middleware: ['4'] }]],
+        [
+          '/v3',
           ['/status', 'ok'],
-          ['/:endpoint/api', {name: 'api-v3-endpoint', middleware: ['6']}],
-          {middleware: ['5']}]]
+          ['/:endpoint/api', { name: 'api-v3-endpoint', middleware: ['6'] }],
+          { middleware: ['5'] }
+        ]
+      ]
     ]);
-    expect(zipper.next().node()).toEqual(['/api',
-      {middleware: ['0']},
-      ['/v1', {name: 'api-v1', middleware: ['1', '2', '3']}],
-      ['/v2', ['/:endpoint', {name: 'api-v2-endpoint', middleware: ['4']}]],
-      ['/v3',
+    expect(zipper.next().node()).toEqual([
+      '/api',
+      { middleware: ['0'] },
+      ['/v1', { name: 'api-v1', middleware: ['1', '2', '3'] }],
+      ['/v2', ['/:endpoint', { name: 'api-v2-endpoint', middleware: ['4'] }]],
+      [
+        '/v3',
         ['/status', 'ok'],
-        ['/:endpoint/api', {name: 'api-v3-endpoint', middleware: ['6']}],
-        {middleware: ['5']}]
+        ['/:endpoint/api', { name: 'api-v3-endpoint', middleware: ['6'] }],
+        { middleware: ['5'] }
+      ]
     ]);
 
     while (!zipper.endOfDFS()) {
