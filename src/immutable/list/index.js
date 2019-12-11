@@ -15,9 +15,9 @@ import { isEmpty } from './isEmpty';
 import { isListSym } from './__list-sym';
 import { reduce } from './reduce';
 import { isArray } from '../../is/isArray';
-import { isObject } from 'util';
-import { entries } from '../../obj/entries'
-import { fromPairs } from '../../iterables/fromPairs'
+import { isObject } from '../../is/isObject';
+import { entries } from '../../obj/entries';
+import { fromPairs } from '../../iterables/fromPairs';
 
 export function emptyList() {
   return __addListFunctions([]);
@@ -221,7 +221,7 @@ export function toArrayNested(list) {
     if (isArray(elem)) {
       array.push(toArrayNested(elem));
     } else if (isObject(elem)) {
-      array.push(fromPairs(entries(elem).map(([key, value]) => [key, toArrayNested(value)])))
+      array.push(fromPairs(entries(elem).map(([key, value]) => [key, toArrayNested(value)])));
     } else {
       array.push(elem);
     }

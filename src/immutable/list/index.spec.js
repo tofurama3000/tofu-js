@@ -43,8 +43,8 @@ describe('Immutable list implementation', () => {
   });
 
   it('can convert a list nested in an object to an array', () => {
-    const list = [1, [{a: [2, []]}, [3, [4, [5, []]]]]];
-    const array = [1, {a: [2]}, 3, 4, 5];
+    const list = [1, [{ a: [2, []] }, [3, [4, [5, []]]]]];
+    const array = [1, { a: [2] }, 3, 4, 5];
     expect(List.toArrayNested(list)).toEqual(array);
   });
 
