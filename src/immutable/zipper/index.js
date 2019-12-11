@@ -275,7 +275,7 @@ export function deleteNode({ path }) {
  * @returns {any[] | any} The current element
  */
 export function node({ tree }) {
-  return isList(tree) ? toArrayNested(tree) : tree;
+  return toArrayNested(tree);
 }
 
 /**

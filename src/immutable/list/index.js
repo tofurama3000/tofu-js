@@ -14,7 +14,10 @@ import { equals } from './equals';
 import { isEmpty } from './isEmpty';
 import { isListSym } from './__list-sym';
 import { reduce } from './reduce';
-import { isList } from './isList';
+import { isArray } from '../../is/isArray';
+import { isObject } from 'util';
+import { entries } from '../../obj/entries'
+import { fromPairs } from '../../iterables/fromPairs'
 
 export function emptyList() {
   return __addListFunctions([]);
@@ -26,7 +29,7 @@ export function emptyList() {
  * @returns {any} First element of the list
  */
 export function first(list) {
-  return list.isEmpty() ? null : list[0];
+  return isEmpty(list) ? null : list[0];
 }
 
 /**
@@ -35,7 +38,7 @@ export function first(list) {
  * @returns {List} List without the first element
  */
 export function rest(list) {
-  return list.isEmpty() ? emptyList() : list[1];
+  return isEmpty(list) ? emptyList() : list[1];
 }
 
 /**
@@ -207,10 +210,21 @@ export function toArray(list) {
  * @returns {any[]} The resulting array
  */
 export function toArrayNested(list) {
+  if (!isArray(list)) {
+    return list;
+  }
+
   const array = [];
   let curList = list;
   while (curList.length) {
-    array.push(isList(curList[0]) ? toArrayNested(curList[0]) : curList[0]);
+    const elem = curList[0];
+    if (isArray(elem)) {
+      array.push(toArrayNested(elem));
+    } else if (isObject(elem)) {
+      array.push(fromPairs(entries(elem).map(([key, value]) => [key, toArrayNested(value)])))
+    } else {
+      array.push(elem);
+    }
     curList = curList[1];
   }
   return array;
