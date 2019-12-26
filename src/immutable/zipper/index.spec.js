@@ -473,4 +473,15 @@ describe('Zipper', () => {
         .node()
     ).toBe(1);
   });
+
+  it('can work with functions', () => {
+    const zipper = createZipper([x => x + 1, x => x + 2, x => x + 3]);
+    expect(zipper.moveDown().node()(1)).toBe(2);
+    expect(
+      zipper
+        .moveDown()
+        .moveRight()
+        .node()(1)
+    ).toBe(3);
+  });
 });

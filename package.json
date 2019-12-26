@@ -1,6 +1,6 @@
 {
   "name": "@tofurama3000/hat-js",
-  "version": "0.0.19-pre",
+  "version": "0.0.20-pre",
   "types": "./dist/index.d.ts",
   "author": "Matt Tolman",
   "repository": {
@@ -12,6 +12,7 @@
   "module": "hat-js.esm.js",
   "devDependencies": {
     "@babel/preset-env": "^7.6.3",
+    "copyfiles": "^2.1.1",
     "jest": "^25.0.0",
     "prettier": "^1.18.2",
     "rollup": "^1.25.2",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "build": "npm run format && rollup -c && cp package.json dist/ && cp README.md dist/ && cp LICENSE dist/",
+    "build": "npm run format && rollup -c && copyfiles package.json README.md LICENSE dist/",
     "format": "prettier --write \"src/**/*.js\"",
     "clean": "rm -rf dist",
     "pub": "npm run test && npm run build && npm publish dist"

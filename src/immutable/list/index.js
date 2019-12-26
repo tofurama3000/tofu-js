@@ -16,6 +16,7 @@ import { isListSym } from './__list-sym';
 import { reduce } from './reduce';
 import { isArray } from '../../is/isArray';
 import { isObject } from '../../is/isObject';
+import { isFunction } from '../../is/isFunction';
 import { entries } from '../../obj/entries';
 import { fromPairs } from '../../iterables/fromPairs';
 import { isList } from './isList';
@@ -222,6 +223,8 @@ export function toArrayNested(list) {
     }
     return array;
   } else if (isArray(list)) {
+    return list;
+  } else if (isFunction(list)) {
     return list;
   } else if (isObject(list)) {
     return fromPairs(entries(list).map(([key, value]) => [key, toArrayNested(value)]));
