@@ -1,6 +1,6 @@
 {
   "name": "@tofurama3000/hat-js",
-  "version": "0.0.20-pre",
+  "version": "0.0.21-pre",
   "types": "./dist/index.d.ts",
   "author": "Matt Tolman",
   "repository": {
@@ -12,7 +12,7 @@
   "module": "hat-js.esm.js",
   "devDependencies": {
     "@babel/preset-env": "^7.6.3",
-    "copyfiles": "^2.1.1",
+    "copyfiles": "^2.3.0",
     "jest": "^25.0.0",
     "prettier": "^1.18.2",
     "rollup": "^1.25.2",
