@@ -1,0 +1,19 @@
+import { toArrayOrEmpty } from './toArrayOrEmpty';
+import { curry } from '../fp/curry';
+
+/**
+ * @module arrays:join
+ * @ignore
+ */
+
+/**
+ * Joins elements of an array with a string
+ * @kind function
+ * @autocurried
+ * @param {string} separator String to join elements with
+ * @param {any[]} array Array to operate on
+ * @returns {string} The resulting string
+ */
+export const join = curry(function(separator: string, arr: any[]): string {
+  return toArrayOrEmpty(arr).join(separator);
+});

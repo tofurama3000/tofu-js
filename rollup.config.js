@@ -1,8 +1,9 @@
 import { terser } from 'rollup-plugin-terser';
+import typescript from '@rollup/plugin-typescript';
 
 export default [
 	{
-    input: 'src/index.js',
+    input: 'src/index.ts',
 		output: [
 			{
 				name: 'hatJs',
@@ -10,23 +11,21 @@ export default [
 				format: 'umd'
 			}
 		],
-		plugins: [
-			terser()
-		]
+		plugins: [ typescript(), terser() ]
 	},
 	{
-    input: 'src/index.js',
+    input: 'src/index.ts',
 		output: [
 			{
 				file: 'dist/hat-js.esm.js',
 				format: 'es'
 			}
 		],
-		plugins: [terser()]
+		plugins: [ typescript(), terser()]
 	},
 	{
-		input: 'src/index.js',
-		plugins: [],
+		input: 'src/index.ts',
+		plugins: [typescript()],
 		preserveModules: true,
 		output: [
 			{
