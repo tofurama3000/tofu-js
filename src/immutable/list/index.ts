@@ -349,3 +349,10 @@ function listify(obj, convertObject = false, depth = -1) {
     return obj;
   }
 }
+
+export * from './count';
+export * from './equals';
+export * from './isList';
+export * from './isEmpty';
+export * from './isListLike';
+export * from './reduce';

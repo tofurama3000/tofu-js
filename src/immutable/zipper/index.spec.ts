@@ -1,4 +1,5 @@
 import { createZipper } from './index';
+import { isList } from '../list/isList';
 
 describe('Zipper', () => {
   it('can detect if can go down', () => {
@@ -485,5 +486,23 @@ describe('Zipper', () => {
         .moveRight()
         .node()(1)
     ).toBe(3);
+  });
+
+  it('can is composed of lists', () => {
+    const zipper = createZipper(['ignored', [1, 2], [3, 4], 5, [6, 7]]);
+    expect(
+      isList(
+        zipper
+          .moveDown()
+          .moveRight()
+          .nodeRaw()
+      )
+    ).toBe(true);
+    expect(
+      zipper
+        .moveDown()
+        .moveRight()
+        .node()
+    ).toEqual([1, 2]);
   });
 });
