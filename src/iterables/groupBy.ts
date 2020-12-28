@@ -4,6 +4,7 @@
  */
 import { curry } from '../fp/curry';
 import { toIterableOrEmpty } from './toIterableOrEmpty';
+import { get } from '../obj/get';
 
 /**
  * Takes an iterable of values and groups them by the result of calling a function
@@ -26,3 +27,25 @@ export const groupBy = curry(function(
   }
   return result;
 });
+
+export const groupByKey = (
+  key: string,
+  iterable: Iterable<any>
+): { [key: string]: any[]; [key: number]: any[] } => groupBy(get(key), iterable);
+
+export const indexBy = (
+  func: (any) => any,
+  iterable: Iterable<any>
+): { [key: string]: any; [key: number]: any } => {
+  const result = {};
+  for (const val of toIterableOrEmpty(iterable)) {
+    const key = func(val);
+    result[key] = val;
+  }
+  return result;
+};
+
+export const indexByKey = (
+  key: string,
+  iterable: Iterable<any>
+): { [key: string]: any[]; [key: number]: any[] } => indexBy(get(key), iterable);
